@@ -14,4 +14,19 @@
  * limitations under the License.
  **/
  
-print("Hello, world!")
+import KituraRouter
+import KituraNet
+import KituraSys
+
+let router = Router()
+
+router.get("/") {
+request, response, next in
+
+    response.status(HttpStatusCode.OK).send("Hello, tori!")
+
+    next()
+}
+
+let server = HttpServer.listen(8090, delegate: router)
+Server.run()
