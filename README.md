@@ -4,4 +4,8 @@
 
 ## Summary
 
-Tori is a web framework that allow you to create BaaS for your application, is based on [Kitura](https://github.com/IBM-Swift/Kitura) by IBM and written in Swift.
+Tori is a web framework that allows you to create **BaaS** for your application, it is a porting of [torii.js](https://github.com/boostcode/torii.js) based on [Kitura](https://github.com/IBM-Swift/Kitura) framework by **IBM** and written in **Swift**.
+
+## Features
+
+TBA
