@@ -9,3 +9,24 @@ Tori is a web framework that allows you to create **BaaS** for your application,
 ## Features
 
 TBA
+
+
+## Installation
+1) Clone project
+```
+git clone https://github.com/boostcode/tori
+```
+
+2) Build
+```
+cd tori
+swift build
+make
+```
+If any error raises up during ```swift build``` continue instead with make that will fix all those and build the executable
+
+3) Run
+```
+cd .build/debug
+./tori
+```
