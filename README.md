@@ -29,7 +29,7 @@ bower install && swift build && make
 ```
 If any error raises up during ```swift build``` continue instead with make that will fix all those and build the executable
 
-3) Run
+4) Run
 ```
 .build/debug/tori
 ```
