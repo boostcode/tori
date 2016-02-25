@@ -14,11 +14,22 @@
  * limitations under the License.
  **/
  
+// kitura
 import KituraRouter
 import KituraNet
 import KituraSys
 
+// logger
+import HeliumLogger
+import LoggerAPI
+
+import Foundation
+
+// setup Kitura router
 let router = Router()
+
+// setup logger
+Log.logger = HeliumLogger()
 
 router.get("/") {
 request, response, next in
@@ -28,5 +39,8 @@ request, response, next in
     next()
 }
 
+// setup server
 let server = HttpServer.listen(8090, delegate: router)
+
+// run the server
 Server.run()
