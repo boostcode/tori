@@ -17,19 +17,13 @@ TBA
 git clone https://github.com/boostcode/tori
 ```
 
-2) Install bower
+2) Build
 ```
-npm install -g bower
-```
-
-3) Build
-```
-cd tori
-bower install && swift build && make
+cd tori && swift build && make
 ```
 If any error raises up during ```swift build``` continue instead with make that will fix all those and build the executable
 
-4) Run
+3) Run
 ```
 .build/debug/tori
 ```
