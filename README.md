@@ -1,4 +1,4 @@
-![Tori](https://raw.githubusercontent.com/boostcode/tori/master/Documentation/Images/tori-logo.jpg)
+![Tori](https://raw.githubusercontent.com/boostcode/tori/master/.github/tori-logo.jpg)
 
 **A [Kitura](https://github.com/IBM-Swift/Kitura) based framework to develop your custom Backend as a Service in Swift**
 
