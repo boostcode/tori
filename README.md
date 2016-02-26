@@ -18,8 +18,9 @@ TBA
 
 ## Installation
 
-In order to run **tori**, you need to install first ```swift 2.2```, if you want you can use our [docker](https://github.com/boostcode/swift-ubuntu-docker).
+In order to run **tori**, you need to install [Kitura](https://github.com/IBM-Swift/Kitura)'s requirements, if you want a ready-to-run env, you can use our [docker](https://github.com/boostcode/swift-ubuntu-docker) development sandbox.
 
+Then proceed in this way:
 
 1) Clone project
 ```
