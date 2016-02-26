@@ -28,7 +28,7 @@ import CouchDB
 import HeliumLogger
 import LoggerAPI
 
-// setup Kitura router
+// setup kitura router
 let router = Router()
 
 // setup logger
