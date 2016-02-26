@@ -21,6 +21,9 @@ import KituraRouter
 import KituraNet
 import KituraSys
 
+// couchdb
+import CouchDB
+
 // logger
 import HeliumLogger
 import LoggerAPI
@@ -32,7 +35,7 @@ let router = Router()
 Log.logger = HeliumLogger()
 
 // retrieve tori configuration
-let (connectionProperties, dbName, redisHost, redisPort) = getConfiguration()
+let (mongoConnection, mongoDbName) = getConfiguration()
 
 router.get("/") {
 request, response, next in
