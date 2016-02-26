@@ -14,25 +14,6 @@
  * limitations under the License.
  **/
  
- struct User {
-     // id
-     var id: String = ""
+ struct Role {
      
-     // username
-     var username: String = ""
-     
-     // email
-     var email: String = ""
-     
-     // password
-     var password: String = ""
-     
-     // role
-     var role: [Role] = [Role]()
-     
-     // apns tokens
-     var tokenAPNS: [PushToken] = [PushToken]()
-     
-     // gcm tokens
-     var tokenGCM: [PushToken] = [PushToken]()
  }

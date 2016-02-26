@@ -14,25 +14,18 @@
  * limitations under the License.
  **/
  
- struct User {
+ import Foundation
+ 
+  struct PushToken {
      // id
      var id: String = ""
      
-     // username
-     var username: String = ""
+     // token code
+     var token: String = ""
      
-     // email
-     var email: String = ""
+     // date
+     var date: NSDate = NSDate()
      
-     // password
-     var password: String = ""
-     
-     // role
-     var role: [Role] = [Role]()
-     
-     // apns tokens
-     var tokenAPNS: [PushToken] = [PushToken]()
-     
-     // gcm tokens
-     var tokenGCM: [PushToken] = [PushToken]()
+     // isActive
+     var isActive: Bool = true
  }
