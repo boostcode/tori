@@ -39,4 +39,4 @@ If any error raises up during ```swift build``` continue instead with make that 
 ```
 
 ## License
-This project is licensed under Apache 2.0. Full license text is available in LICENSE.
+This project is licensed under Apache 2.0. Full license text is available in [LICENSE](https://raw.githubusercontent.com/boostcode/tori/master/LICENSE).
