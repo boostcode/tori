@@ -13,7 +13,8 @@
 
 ## Features
 
-TBA
+- Responsive HTML5 backend
+
 
 
 ## Installation
