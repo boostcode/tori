@@ -14,6 +14,8 @@
  * limitations under the License.
  **/
  
+ import CryptoSwift
+ 
  struct User {
      // id
      var id: String = ""
@@ -25,7 +27,7 @@
      var email: String = ""
      
      // password
-     var password: String = ""
+     var password: String = "".sha256() // TODO: remove, I know is useless, but acts as reminder
      
      // role
      var role: [Role] = [Role]()
