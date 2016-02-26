@@ -1,3 +1,5 @@
 {
-    
+  "couchDbIpAddress": "localhost",
+  "couchDbPort": 27017,
+  "couchDbDbName": "tori-db"
 }
