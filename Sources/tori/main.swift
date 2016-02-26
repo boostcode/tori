@@ -14,6 +14,8 @@
  * limitations under the License.
  **/
  
+import Foundation
+ 
 // kitura
 import KituraRouter
 import KituraNet
@@ -23,13 +25,14 @@ import KituraSys
 import HeliumLogger
 import LoggerAPI
 
-import Foundation
-
 // setup Kitura router
 let router = Router()
 
 // setup logger
 Log.logger = HeliumLogger()
+
+// retrieve tori configuration
+let (connectionProperties, dbName, redisHost, redisPort) = getConfiguration()
 
 router.get("/") {
 request, response, next in
