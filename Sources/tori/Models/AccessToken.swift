@@ -14,23 +14,21 @@
  * limitations under the License.
  **/
  
- import CryptoSwift
+ import Foundation
  
- struct User {
+ struct AccessToken {
      // id
      var id: String = ""
-     // username
-     var username: String = ""
-     // email
-     var email: String = ""
-     // password
-     var password: String = "".sha256() // TODO: remove, I know is useless, but acts as reminder
-     // access tokens
-     var tokenAccesss: [AccessToken] = [AccessToken]()
-     // role
-     var role: [Role] = [Role]()
-     // apns tokens
-     var tokenAPNS: [PushToken] = [PushToken]()
-     // gcm tokens
-     var tokenGCM: [PushToken] = [PushToken]()
+     
+     // token code
+     var token: String = ""
+     
+     // issued
+     var issued: NSDate = NSDate()
+     
+     // expires
+     var expires: NSDate = NSDate()
+     
+     // isActive
+     var isActive: Bool = true
  }
