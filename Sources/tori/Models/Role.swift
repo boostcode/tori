@@ -26,5 +26,5 @@
     // name
     var name: String = ""
     // rules
-    var rules: [String:Permission] = [String:Permission]() 
+    var rules: [String:Permission] = [String:Permission]() //e.g. "Collection name":Admin
  }

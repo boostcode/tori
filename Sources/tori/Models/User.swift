@@ -28,7 +28,7 @@
      // access tokens
      var tokenAccesss: [AccessToken] = [AccessToken]()
      // role
-     var role: [Role] = [Role]()
+     var role: [Role] = [Role]() // TODO: 1 user 1 role, or N roles?
      // apns tokens
      var tokenAPNS: [PushToken] = [PushToken]()
      // gcm tokens
