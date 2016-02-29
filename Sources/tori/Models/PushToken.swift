@@ -19,13 +19,10 @@
   struct PushToken {
      // id
      var id: String = ""
-     
      // token code
      var token: String = ""
-     
      // date
      var date: NSDate = NSDate()
-     
      // isActive
      var isActive: Bool = true
  }

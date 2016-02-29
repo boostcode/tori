@@ -19,16 +19,12 @@
  struct AccessToken {
      // id
      var id: String = ""
-     
      // token code
      var token: String = ""
-     
      // issued
      var issued: NSDate = NSDate()
-     
      // expires
      var expires: NSDate = NSDate()
-     
      // isActive
      var isActive: Bool = true
  }
