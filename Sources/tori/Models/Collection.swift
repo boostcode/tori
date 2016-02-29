@@ -16,15 +16,9 @@
  
  import Foundation
  
- enum Permission {
-     case None, ReadOnly, WriteOnly, ReadWrite, Admin
- }
- 
- struct Role {
+ struct Collection {
     // id
     var id: String = ""
     // name
     var name: String = ""
-    // rules
-    var rules: [String:Permission] = [String:Permission]() 
  }
