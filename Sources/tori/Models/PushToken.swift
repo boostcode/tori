@@ -25,4 +25,6 @@
      var date: NSDate = NSDate()
      // isActive
      var isActive: Bool = true
+     // architecture type (apns, gcm, etc.)
+     var architecture: String = ""
  }
