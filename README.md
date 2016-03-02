@@ -31,7 +31,7 @@ git clone https://github.com/boostcode/tori
 
 2) Build
 ```
-cd tori && swift build && make
+cd tori && swift build -Xcc -fblocks -Xswiftc -I/usr/local/include -Xlinker -L/usr/local/lib && make
 ```
 If any error raises up during ```swift build``` continue instead with make that will fix all those and build the executable
 
