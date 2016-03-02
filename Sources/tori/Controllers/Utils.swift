@@ -33,7 +33,7 @@ func getConfiguration () -> (ConnectionProperties, String) {
         exit(1)    
     }
     
-   let configJson = JSON(data: configData)
+   let configJson = JSON(data: configData) 
     guard let dbHostName = configJson["couchDbIpAddress"].string else {
         print(errorPrefix+"Missing ip address")
         exit(1)
@@ -42,14 +42,14 @@ func getConfiguration () -> (ConnectionProperties, String) {
         print(errorPrefix+"Missing port address")
         exit(1)
     }
-    guard let dbName = configJson["couchDbDbName"].number else {
+    guard let dbName = configJson["couchDbDbName"].string else {
         print(errorPrefix+"Missing database name")
         exit(1)
     }
 
     return (
-        ConnectionProperties(hostName: dbHostName, port: Int16(dbIpPort), secured: false),
-        "dbName"
+        ConnectionProperties(hostName: dbHostName, port: Int16(dbIpPort.intValue), secured: false),
+        dbName
     )
 
 }
