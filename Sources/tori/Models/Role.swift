@@ -18,10 +18,10 @@
 
  // permissions levels
  enum Permission {
-   case None,
-   case ReadOnly,
-   case WriteOnly,
-   case ReadWrite,
+   case None
+   case ReadOnly
+   case WriteOnly
+   case ReadWrite
    case Admin
  }
 
@@ -30,6 +30,4 @@
     var id: String = ""
     // name
     var name: String = ""
-    // rules
-    var rules: [String:Permission] = [String:Permission]() //e.g. "Collection name":Admin
  }

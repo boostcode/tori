@@ -13,12 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
- 
+
  import Foundation
- 
+
  struct Collection {
     // id
     var id: String = ""
     // name
     var name: String = ""
+    // permissions
+    var permissions: [[String:Int]] = []
  }
+/*
+example
+
+ let UserCollection = {
+   name: "UserCollection",
+   permissions: [
+    "Administrators": .Admin,
+    "Guest": .ReadOnly
+   ]
+ }*/
