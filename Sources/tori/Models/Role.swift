@@ -13,13 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
- 
+
  import Foundation
- 
+
+ // permissions levels
  enum Permission {
-     case None, ReadOnly, WriteOnly, ReadWrite, Admin
+   case None,
+   case ReadOnly,
+   case WriteOnly,
+   case ReadWrite,
+   case Admin
  }
- 
+
  struct Role {
     // id
     var id: String = ""
