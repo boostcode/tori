@@ -24,12 +24,12 @@ func getConfiguration () -> (ConnectionProperties, String) {
     
     let errorPrefix = "Configuration / "
   
-    guard let configDir = String.fromCString(getenv("CONFIG_DIR")) else {
-        print(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export CONFIG_DIR=/var/tori)")
+    guard let configDir = String.fromCString(getenv("TORI_CONFIG_DIR")) else {
+        print(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export TORI_CONFIG_DIR=/var/tori/)")
         exit(1)
     }
-    guard let configData = NSData(contentsOfFile: configDir + "./config.json") else {
-        print(errorPrefix+"Please check your config.json file exists at path "+configDir + "./config.json")
+    guard let configData = NSData(contentsOfFile: configDir + "config.json") else {
+        print(errorPrefix+"Please check your config.json file exists at path "+configDir + "config.json")
         exit(1)    
     }
     
