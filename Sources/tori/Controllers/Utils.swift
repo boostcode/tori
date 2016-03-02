@@ -33,10 +33,7 @@ func getConfiguration () -> (ConnectionProperties, String) {
         exit(1)    
     }
     
-    guard let configJson = JSON(data: configData) else {
-        print("Config JSON parsing error")
-        exit(1)
-    }
+   let configJson = JSON(data: configData)
     guard let dbHostName = configJson["couchDbIpAddress"].string else {
         print(errorPrefix+"Missing ip address")
         exit(1)
