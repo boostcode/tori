@@ -38,7 +38,7 @@ endif
 all: setup tori
 
 dev:
-	export TORI_CONFIG_DIR=/data/swift/tori/
+	export TORI_CONFIG_DIR=/data/swift/tori
 	${BUILD_DIR}/./tori
 
 setup:
