@@ -1,3 +1,0 @@
-#!/bin/bash
-export TORI_CONFIG_DIR=/data/swift/tori/
-.build/debug/tori
