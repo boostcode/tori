@@ -16,6 +16,8 @@
 
 import Foundation
 
+import LoggerAPI
+
 import SwiftyJSON
 
 import Orca
@@ -56,34 +58,38 @@ func getDbConfiguration () -> (String, String, String, UInt16, String) {
   let errorPrefix = "Configuration / "
 
   guard let configDir = String.fromCString(getenv("TORI_CONFIG_DIR")) else {
-    print(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export TORI_CONFIG_DIR=/var/tori)")
+    Log.error(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export TORI_CONFIG_DIR=/var/tori)")
     exit(1)
   }
   guard let configData = NSData(contentsOfFile: configDir + "/config_db.json") else {
-    print(errorPrefix+"Please check your config.json file exists at path "+configDir + "/config_db.json")
+    Log.error(errorPrefix+"Please check your config.json file exists at path "+configDir + "/config_db.json")
     exit(1)
   }
 
   let configJson = JSON(data: configData)
 
+  if let configString = configJson.rawString() {
+    Log.verbose(configString)    
+  }
+
   guard let dbDriver = configJson["dbDriver"].string else {
-    print(errorPrefix+"Missing db driver")
+    Log.error(errorPrefix+"Missing db driver")
     exit(1)
   }
   guard let dbHostname = configJson["dbHost"].string else {
-    print(errorPrefix+"Missing ip address")
+    Log.error(errorPrefix+"Missing ip address")
     exit(1)
   }
   guard let dbIpPort = configJson["dbPort"].number else{
-    print(errorPrefix+"Missing port address")
+    Log.error(errorPrefix+"Missing port address")
     exit(1)
   }
   guard let dbName = configJson["dbName"].string else {
-    print(errorPrefix+"Missing database name")
+    Log.error(errorPrefix+"Missing database name")
     exit(1)
   }
   guard let dbPath = configJson["dbPath"].string else {
-    print(errorPrefix+"Missing database path")
+    Log.error(errorPrefix+"Missing database path")
     exit(1)
   }
 

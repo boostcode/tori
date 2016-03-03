@@ -30,13 +30,13 @@ import OrcaSQLite
 import HeliumLogger
 import LoggerAPI
 
-// setup kitura router
+// router setup
 let router = Router()
 
 // setup logger
 Log.logger = HeliumLogger()
 
-// setup database connection
+// database setup
 let dbDriver = try! setupDbDriver()
 let db = Orca(driver: dbDriver)
 
