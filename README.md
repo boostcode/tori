@@ -43,7 +43,7 @@ If any error raises up during ```make``` continue instead till it is finished.
 ## Credits
 Tori is proudly powered by:
 - [Kitura](https://github.com/IBM-Swift/Kitura)
-- [Orca & OrcaMongoDB](https://github.com/elliottminns/orca)
+- [Orca](https://github.com/elliottminns/orca)
 
 ## License
 This project is licensed under Apache 2.0. Full license text is available in [LICENSE](https://raw.githubusercontent.com/boostcode/tori/master/LICENSE).
