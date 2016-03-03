@@ -1,5 +1,7 @@
 {
-  "couchDbIpAddress": "localhost",
-  "couchDbPort": 27017,
-  "couchDbDbName": "tori-db"
+  "dbDriver": "SQLite",
+  "dbPath": "./Database/",
+  "dbHost": "",
+  "dbPort": ,
+  "dbName": "tori-db.sqlite"
 }
