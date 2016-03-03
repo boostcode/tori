@@ -14,7 +14,7 @@
  * limitations under the License.
  **/
 
- import CryptoSwift
+ //import CryptoSwift
 
  struct User {
      // id
@@ -24,7 +24,7 @@
      // email
      var email: String = ""
      // password
-     var password: String = "".sha256() // TODO: remove, I know is useless, but acts as reminder
+     var password: String //= "".sha256() // TODO: remove, I know is useless, but acts as reminder
      // access tokens
      var tokenAccesss: [AccessToken] = [AccessToken]()
      // role
