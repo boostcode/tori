@@ -13,15 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
- 
+
 import PackageDescription
 
 let package = Package(
     name: "tori",
     dependencies: [
         .Package(url: "https://github.com/IBM-Swift/Kitura-router.git", versions: Version(0,2,0)..<Version(0,3,0)),
-        .Package(url: "https://github.com/IBM-Swift/Kitura-CouchDB.git", versions: Version(0,2,0)..<Version(0,3,0)),
         .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", versions: Version(0,2,0)..<Version(0,3,0)),
-        .Package(url: "https://github.com/boostcode/CryptoSwift.git", majorVersion: 0)
+        .Package(url: "https://github.com/boostcode/CryptoSwift.git", majorVersion: 0),
+        .Package(url: "https://github.com/elliottminns/orca.git", majorVersion: 0),
+        //.Package(url: "https://github.com/boostcode/orca-mongodb.git", majorVersion: 0)
+        .Package(url: "https://github.com/elliottminns/orca-sqlite.git", majorVersion: 0)
     ]
 )
