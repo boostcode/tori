@@ -22,8 +22,7 @@ let package = Package(
         .Package(url: "https://github.com/IBM-Swift/Kitura-router.git", versions: Version(0,2,0)..<Version(0,3,0)),
         .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", versions: Version(0,2,0)..<Version(0,3,0)),
         .Package(url: "https://github.com/boostcode/CryptoSwift.git", majorVersion: 0),
-        .Package(url: "https://github.com/elliottminns/orca.git", majorVersion: 0),
-        //.Package(url: "https://github.com/boostcode/orca-mongodb.git", majorVersion: 0)
-        .Package(url: "https://github.com/elliottminns/orca-sqlite.git", majorVersion: 0)
+        .Package(url: "https://github.com/tannernelson/fluent.git", majorVersion: 0),
+        .Package(url: "https://github.com/boostcode/fluent-sqlite.git", majorVersion: 0)
     ]
 )

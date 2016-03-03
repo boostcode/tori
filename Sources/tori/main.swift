@@ -22,9 +22,7 @@ import KituraNet
 import KituraSys
 
 // db orm
-import Orca
-import OrcaSQLite
-//import OrcaMongoDB
+import Fluent
 
 // logger
 import HeliumLogger
@@ -37,8 +35,7 @@ let router = Router()
 Log.logger = HeliumLogger()
 
 // database setup
-let dbDriver = try! setupDbDriver()
-let db = Orca(driver: dbDriver)
+Database.driver = try! setupDbDriver()
 
 // routing
 router.get("/") {

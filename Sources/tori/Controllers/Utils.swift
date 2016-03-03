@@ -20,8 +20,8 @@ import LoggerAPI
 
 import SwiftyJSON
 
-import Orca
-import OrcaSQLite
+import Fluent
+import SQLiteDriver
 
 // database errors
 enum dbDriverError : ErrorType{
@@ -36,7 +36,7 @@ func setupDbDriver () throws -> Driver {
 
   switch dbDriver {
     case "SQLite":
-      return OrcaSQLite(path: dbPath+"/"+dbName)
+      return SQLiteDriver(path: dbHost)
     case "MongoDB":
       throw dbDriverError.NotSupportedYet
       /*let mongo = OrcaMongoDB()
@@ -69,7 +69,7 @@ func getDbConfiguration () -> (String, String, String, UInt16, String) {
   let configJson = JSON(data: configData)
 
   if let configString = configJson.rawString() {
-    Log.verbose(configString)    
+    Log.verbose(configString)
   }
 
   guard let dbDriver = configJson["dbDriver"].string else {
