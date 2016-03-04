@@ -1,7 +1,5 @@
 {
-  "dbDriver": "SQLite",
-  "dbPath": "./Database/",
-  "dbHost": "",
-  "dbPort": 0,
-  "dbName": "tori-db.sqlite"
+  "dbHost": "192.168.99.100",
+  "dbPort": 32771,
+  "dbName": "tori-db"
 }
