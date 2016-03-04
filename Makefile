@@ -47,8 +47,9 @@ setup:
 
 tori: $(BUILD_DIR)/libcurlHelpers.a $(BUILD_DIR)/libhttpParserHelper.a
 # Runs the swift build for the right system
-	swift build -Xcc -fblocks -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
-	#swift build -Xcc -I/usr/local/lib -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
+	#swift build -Xcc -fblocks -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
+	#swift build -Xcc -fblocks -Xswiftc -I/usr/local/lib -I/usr/local/include -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
+	swift build -Xcc -fblocks -Xswiftc -I/usr/local/include/libbson-1.0/ -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
 
 $(BUILD_DIR)/libcurlHelpers.a:
 	clang -c -fPIC ${CLANG_EXTRA} ${CURL_MODULE}/CurlHelpers.c -o ${BUILD_DIR}/CurlHelpers.o
