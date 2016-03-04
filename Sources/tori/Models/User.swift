@@ -14,7 +14,6 @@
 * limitations under the License.
 **/
 
-import Fluent
 //import CryptoSwift
 
 struct User {

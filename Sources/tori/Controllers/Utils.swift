@@ -20,9 +20,6 @@ import LoggerAPI
 
 import SwiftyJSON
 
-import Fluent
-import SQLiteDriver
-
 // database errors
 enum dbDriverError : ErrorType{
   case MissingDriver
@@ -30,30 +27,8 @@ enum dbDriverError : ErrorType{
   case MongoConnectionError
 }
 
-// database setup
-func setupDbDriver () throws -> Driver {
-  let (dbDriver, dbHost, dbPath, dbPort, dbName) = getDbConfiguration()
-
-  switch dbDriver {
-    case "SQLite":
-      return SQLiteDriver(path: dbHost)
-    case "MongoDB":
-      throw dbDriverError.NotSupportedYet
-      /*let mongo = OrcaMongoDB()
-      mongo.connect(host: dbHost, port: dbPort, database: dbName) { error in
-        if error {
-          throw dbDriverError.MongoConnectionError
-        }
-      }
-      return mongo*/
-    default:
-      throw dbDriverError.MissingDriver
-  }
-
-}
-
 // Retrieves tori db configuration form config.json file
-func getDbConfiguration () -> (String, String, String, UInt16, String) {
+func getDbConfiguration () -> (String, Int, String) {
 
   let errorPrefix = "Configuration / "
 
@@ -72,10 +47,6 @@ func getDbConfiguration () -> (String, String, String, UInt16, String) {
     Log.verbose(configString)
   }
 
-  guard let dbDriver = configJson["dbDriver"].string else {
-    Log.error(errorPrefix+"Missing db driver")
-    exit(1)
-  }
   guard let dbHostname = configJson["dbHost"].string else {
     Log.error(errorPrefix+"Missing ip address")
     exit(1)
@@ -88,16 +59,10 @@ func getDbConfiguration () -> (String, String, String, UInt16, String) {
     Log.error(errorPrefix+"Missing database name")
     exit(1)
   }
-  guard let dbPath = configJson["dbPath"].string else {
-    Log.error(errorPrefix+"Missing database path")
-    exit(1)
-  }
 
   return (
-    dbDriver,
     dbHostname,
-    dbPath,
-    UInt16(dbIpPort.intValue),
+    Int(dbIpPort.intValue),
     dbName
   )
 

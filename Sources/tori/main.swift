@@ -21,8 +21,8 @@ import KituraRouter
 import KituraNet
 import KituraSys
 
-// db orm
-import Fluent
+// mongodb orm
+import SwiftMongoDB
 
 // logger
 import HeliumLogger
@@ -35,7 +35,12 @@ let router = Router()
 Log.logger = HeliumLogger()
 
 // database setup
-Database.driver = try! setupDbDriver()
+let (dbHost, dbPort, dbName) = getDbConfiguration()
+do {
+  let db = try MongoClient(host: dbHost, port: dbPort)
+} catch {
+  Log.error("DB connection error")
+}
 
 // routing
 router.get("/") {
