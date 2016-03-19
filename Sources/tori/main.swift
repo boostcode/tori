@@ -22,7 +22,7 @@ import KituraNet
 import KituraSys
 
 // mongodb orm
-import SwiftMongoDB
+import MongoDB
 
 // logger
 import HeliumLogger
@@ -37,7 +37,7 @@ Log.logger = HeliumLogger()
 // database setup
 let (dbHost, dbPort, dbName) = getDbConfiguration()
 do {
-  let db = try MongoClient(host: dbHost, port: dbPort)
+  let db = try Client(host: dbHost, port: dbPort)
 } catch {
   Log.error("DB connection error")
 }

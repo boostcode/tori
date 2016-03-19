@@ -45,7 +45,7 @@ setup:
 	mkdir -p ${BUILD_DIR}
 	swift build --fetch || true
 
-tori: $(BUILD_DIR)/libcurlHelpers.a $(BUILD_DIR)/libhttpParserHelper.a
+tori: #$(BUILD_DIR)/libcurlHelpers.a $(BUILD_DIR)/libhttpParserHelper.a
 # Runs the swift build for the right system
 	#swift build -Xcc -fblocks -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
 	#swift build -Xcc -fblocks -Xswiftc -I/usr/local/lib -I/usr/local/include -Xlinker -L${BUILD_DIR} ${EXTRA_LINK}
