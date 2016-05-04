@@ -1,0 +1,6 @@
+{
+  "dbURI": "mongodb://192.168.99.100:32768",
+  "dbName": "tori-db",
+  "adminUser": "admin",
+  "adminPassword": "admin"
+}
