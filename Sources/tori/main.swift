@@ -39,16 +39,9 @@ let router = Router()
 Log.logger = HeliumLogger()
 
 // database setup
-let (dbURI, dbName, adminName, adminPassword) = getDbConfiguration()
-Log.debug("ok")
-
-let dbServer = try! MongoKitten.Server(dbURI, automatically: true)
-//print(dbServer)
-
-Log.debug("ok2")
-
-//let db = dbServer[dbName]
-Log.debug("ok3")
+let (dbHost, dbPort, dbName, adminName, adminPassword) = getDbConfiguration()
+let dbServer = try! Server(at: dbHost, port: dbPort)
+let db = dbServer[dbName]
 
 // db setup
 //setupDb()

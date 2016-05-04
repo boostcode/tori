@@ -20,7 +20,7 @@ import SwiftyJSON
 import MongoKitten
 
 // Retrieves tori db configuration form config.json file
-func getDbConfiguration () -> (String, String, String, String) {
+func getDbConfiguration () -> (String, UInt16, String, String, String) {
 
   let errorPrefix = "Configuration / "
 
@@ -43,12 +43,16 @@ func getDbConfiguration () -> (String, String, String, String) {
   if let configString = configJson.rawString() {
     Log.verbose(configString)
   }
-  guard let dbURI = configJson["dbURI"].string else {
-    Log.error(errorPrefix+"Missing db URI")
+  guard let dbHostname = configJson["dbHost"].string else {
+    Log.error(errorPrefix+"Missing ip address")
+    exit(1)
+  }
+  guard let dbIpPort = configJson["dbPort"].number else {
+    Log.error(errorPrefix+"Missing port address")
     exit(1)
   }
   guard let dbName = configJson["dbName"].string else {
-    Log.error(errorPrefix+"Missing db name")
+    Log.error(errorPrefix+"Missing database name")
     exit(1)
   }
   guard let adminName = configJson["adminUser"].string else {
@@ -59,8 +63,10 @@ func getDbConfiguration () -> (String, String, String, String) {
     Log.error(errorPrefix+"Missing admin default password")
     exit(1)
   }
+
   return (
-    dbURI,
+    dbHostname,
+    UInt16(dbIpPort.intValue),
     dbName,
     adminName,
     adminPassword
@@ -74,7 +80,7 @@ func setupDb() {
 
   // TODO: if not existing create collection
 
-  /*let userCollection = db["Users"]
+  let userCollection = db["Users"]
 
   let q: Query = "username" == adminName
   let adminExist = try! userCollection.findOne(matching: q)
@@ -87,5 +93,5 @@ func setupDb() {
     try! userCollection.insert(adminUser)
     //userCollection.addOrUpdate(adminUser)
     Log.debug("Setup / Added default admin user")
-  }*/
+  }
 }
