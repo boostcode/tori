@@ -40,11 +40,11 @@ Log.logger = HeliumLogger()
 
 // database setup
 let (dbHost, dbPort, dbName, adminName, adminPassword) = getDbConfiguration()
-let dbServer = try! Server(at: dbHost, port: dbPort)
+let dbServer = try! Server(at: dbHost, port: dbPort, automatically: true)
 let db = dbServer[dbName]
 
 // db setup
-//setupDb()
+setupDb()
 
 // routes
 router.all("/admin", middleware: StaticFileServer(path:"./public/admin", options:[]))
