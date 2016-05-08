@@ -82,10 +82,7 @@ func setupDb() {
 
   let userCollection = db["Users"]
 
-  let q: Query = "username" == adminName
-  let adminExist = try! userCollection.findOne(matching: q)
-
-  if adminExist!.count == 0 {
+  if try! userCollection.count(matching: "username" == adminName) == 0 {
     let adminUser: Document = [
       "username": Value(stringLiteral: adminName),
       "password": Value(stringLiteral: adminPassword)
