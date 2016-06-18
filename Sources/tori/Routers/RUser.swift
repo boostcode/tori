@@ -20,15 +20,19 @@ import Kitura
 import KituraSys
 import KituraNet
 
+import SwiftyJSON
+
+import MongoKitten
+
 // logger
 import HeliumLogger
 import LoggerAPI
 
-//import CryptoSwift
-
 func routerUser() {
 
+    router.all("/api/user*", middleware: AllRemoteOriginMiddleware())
     router.all("/api/user*", middleware: BodyParser())
+    router.all("/api/user*", middleware: CheckRequestIsValidJson())
     router.all("/api/user*", middleware: TokenAuthentication())
     router.all("/api/user*", middleware: AdminOnly())
 
@@ -88,73 +92,65 @@ func routerUser() {
 
   }
 
-  // login user
-  router.all("/api/log*", middleware: BodyParser())
+    // login user
+    router.all("/api/log*", middleware: AllRemoteOriginMiddleware())
+    router.all("/api/log*", middleware: BodyParser())
+    router.all("/api/log*", middleware: CheckRequestIsValidJson())
+
 
   router.post("/api/login") {
     req, res, next in
 
-    res.setHeader("Content-Type", value: "application/json; charset=utf-8")
-
-    guard let body = req.body else {
-      do {
-        try res.status(HttpStatusCode.BAD_REQUEST).end()
-      } catch {
-        Log.error("Login / Failed to send response")
-      }
-      Log.error("Login / Missing body")
-      return
+    guard case let .Json(json) = req.body! else {
+        return
     }
 
-    print(body)
-
-    // find how to read body data
-    /*guard let json = body.asJson() else {
-      do {
-        try res.status(HttpStatusCode.BAD_REQUEST).end()
-      } catch {
-        Log.error("Login / Failed to send response")
-      }
-      Log.error("Login / Body is invalid JSON")
-      return
+    guard let userName = json["username"].string else {
+        try! res
+            .status(.OK)
+            .send(json: JSON([
+                                 "status": "error",
+                                 "message": "Request body has no username"
+                ]))
+            .end()
+        return
     }
 
-    let userName = json["username"].stringValue
-    let userPassword = json["password"].stringValue
+    guard let userPassword = json["password"].string else {
+        try! res
+            .status(.OK)
+            .send(json: JSON([
+                                 "status": "error",
+                                 "message": "Request body has no password"
+                ]))
+            .end()
+        return
+    }
 
-    if userName == "" || userPassword == "" {
-      do {
-        try res.status(HttpStatusCode.OK).send("{ \"login\": \"failed\" }").end()
-        Log.error("Login / Missing credentials")
-      } catch {
-        Log.error("Failed to send response")
-      }
-    } else {
-      /*var query = BSON.Document()
-      query["username"] = .String(userName)
-      // TODO: need to SHA256 the password as soon CryptoSwift start working back
-      query["password"] = .String(userPassword)
+    let userCollection = db["Users"]
 
-      // FIX: crash here! :x
-      let login = userCollection.query(query)
-      //print(login)
-      if login.count == 0 {
-        do {
-          try res.status(HttpStatusCode.OK).sendJson("{ \"login\": \"failed\" }").end()
-          Log.error("Login / User not found")
-        } catch {
-          Log.error("Login / Failed to send response")
-        }
-      } else {
-        do {
-          try res.status(HttpStatusCode.OK).sendJson("{ \"login\": \"ok\", \"userId\": \"\", \"token\": \"\" }").end()
-          Log.debug("Login / Is valid user")
-        } catch {
-          Log.error("Login / Failed to send response")
-        }
-      }*/
+    let passwordMD5 = "\(userPassword.md5())"
 
-    }*/
+    guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == passwordMD5) else {
+        try! res
+            .status(.OK)
+            .send(json: JSON([
+                                 "status": "error",
+                                 "message": "Wrong user/password provided"
+                ]))
+            .end()
+        return
+    }
+
+    // TODO: Need to generate a token
+
+    // TODO: convert user to json
+    let responseJson = JSON([]) //JSON(user)
+
+    try! res
+        .status(.OK)
+        .send(json: responseJson)
+        .end()
 
   }
 
