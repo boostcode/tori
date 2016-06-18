@@ -18,6 +18,15 @@ import Foundation
 import LoggerAPI
 import MongoKitten
 
+// permissions levels
+enum Permission {
+    case None
+    case ReadOnly
+    case WriteOnly
+    case ReadWrite
+    case Admin
+}
+
 // First time setup database structure
 func setupDb() {
 
