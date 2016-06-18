@@ -1,7 +1,8 @@
 {
-  "dbHost": "192.168.99.100",
-  "dbPort": 32768,
-  "dbName": "tori-db",
-  "adminUser": "admin",
-  "adminPassword": "admin"
+    "dbHost": "192.168.99.100",
+    "dbPort": 32768,
+    "dbName": "tori-db",
+    "toriPort": 8090,
+    "adminUser": "admin",
+    "adminPassword": "admin"
 }
