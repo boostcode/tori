@@ -22,6 +22,8 @@ import KituraNet
 
 import SwiftyJSON
 
+import MongoKitten
+
 // logger
 import HeliumLogger
 import LoggerAPI
@@ -57,6 +59,68 @@ class CheckRequestIsValidJson: RouterMiddleware {
 
     }
 }
+
+class TokenAuthentication: RouterMiddleware {
+    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+
+        let userToken = request.headers["UserToken"]
+        let userId = request.headers["UserId"]
+
+        // first check if token and userId exists
+        if userToken == nil || userId == nil {
+            Log.error("Autentication / Failed, missing token and userId")
+            try! response
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "missing token or userId"
+                    ]))
+                .end()
+
+        } else {
+
+            let userCollection = db["Users"]
+
+            if try! userCollection.count(matching: "username" == userId! && "token" == userToken!) == 0 {
+                Log.error("Autentication / Failed, wrong credentials")
+                try! response
+                    .status(.OK)
+                    .send(json: JSON([
+                                         "status": "error",
+                                         "message": "wrong token or userId"
+                        ]))
+                    .end()
+            }
+        }
+
+        next()
+    }
+}
+
+class AdminOnly: RouterMiddleware {
+    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+
+        let userToken = request.headers["UserToken"]
+        let userId = request.headers["UserId"]
+
+        let userCollection = db["Users"]
+
+        if try! userCollection.count(matching: "username" == userId! && "token" == userToken! && "role.name" == "admin") == 0 {
+            Log.error("Authentication / Failed, this user has no admin rights")
+            try! response
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "user has no admin rights"
+                    ]))
+                .end()
+        }
+        
+        next()
+        
+    }
+}
+
 
 // MARK: - Response
 class AllRemoteOriginMiddleware: RouterMiddleware {
