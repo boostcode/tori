@@ -14,7 +14,6 @@
 * limitations under the License.
 **/
 
-import CryptoSwift
 import Foundation
 import LoggerAPI
 import MongoKitten
@@ -65,7 +64,7 @@ func setupDb() {
 
         let adminUser: Document = [
             "username": .string(adminName),
-            "password": .string(adminPassword.md5()),
+            "password": .string("\(adminPassword.md5())"),
             "role": ~role!
         ]
     
