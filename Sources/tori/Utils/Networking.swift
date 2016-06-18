@@ -20,6 +20,8 @@ import Kitura
 import KituraSys
 import KituraNet
 
+import SwiftyJSON
+
 // logger
 import HeliumLogger
 import LoggerAPI
@@ -29,7 +31,28 @@ import LoggerAPI
 class CheckRequestIsValidJson: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        response.setHeader("Access-Control-Allow-Origin", value: "*")
+        guard let body = request.body else {
+            try! response
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "Request is missing body"
+                    ]))
+                .end()
+            return
+        }
+
+        guard case let .Json(json) = body else {
+            try! response
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "Request body is not in json format"
+                    ]))
+                .end()
+            return
+        }
+
         next()
 
     }
