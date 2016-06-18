@@ -76,7 +76,7 @@ func getDbConfiguration () -> (String, UInt16, String, String, String) {
 // First time setup database structure
 func setupDb() {
 
-  // TODO: if not existing create db
+    // TODO: if not existing create db
 
   // TODO: if not existing create collection
 

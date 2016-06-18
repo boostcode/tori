@@ -28,8 +28,10 @@ import LoggerAPI
 
 func routerUser() {
 
-  router.all("/api/user*", middleware: BodyParser())
-  router.all("/api/user*", middleware: TokenAuthentication())
+    router.all("/api/user*", middleware: BodyParser())
+    router.all("/api/user*", middleware: TokenAuthentication())
+    router.all("/api/user*", middleware: AdminOnly())
+
 
   // gets all the users
   router.get("/api/user") {

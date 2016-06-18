@@ -20,6 +20,9 @@ import Kitura
 import KituraSys
 import KituraNet
 
+import MongoKitten
+import SwiftyJSON
+
 // logger
 import HeliumLogger
 import LoggerAPI
@@ -45,17 +48,30 @@ class TokenAuthentication: RouterMiddleware {
 
         // first check if token and userId exists
         if userToken == nil || userId == nil {
-          Log.error("Autentication / Failed, missing token and userId")
-          response.error = NSError(domain: "AuthFailure", code: 400, userInfo: ["error":"invalidToken"])
+            Log.error("Autentication / Failed, missing token and userId")
+            try! response
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "missing token or userId"
+                                     ]))
+                .end()
+
+        } else {
+
+            let userCollection = db["Users"]
+
+            if try! userCollection.count(matching: "username" == userId! && "token" == userToken!) == 0 {
+                Log.error("Autentication / Failed, wrong credentials")
+                try! response
+                    .status(.OK)
+                    .send(json: JSON([
+                                         "status": "error",
+                                         "message": "wrong token or userId"
+                        ]))
+                    .end()
+            }
         }
-
-        /*let userCollection = Model(db, name:"User")
-
-        // TODO: check if token is valid for this user
-        var query = BSON.Document()
-        query["_id"] = .String(userId!)
-        query["tokenAccess"] = .String(userToken!)
-        let user = userCollection.query(query)*/
 
         next()
     }
