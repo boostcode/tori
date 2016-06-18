@@ -39,7 +39,7 @@ let router = Router()
 Log.logger = HeliumLogger()
 
 // database setup
-let (dbHost, dbPort, dbName, adminName, adminPassword) = getDbConfiguration()
+let (dbHost, dbPort, dbName, toriPort, adminName, adminPassword) = getConfiguration()
 let dbServer = try! Server(at: dbHost, port: dbPort, automatically: true)
 let db = dbServer[dbName]
 
@@ -59,5 +59,6 @@ router.get("/") {
 }
 
 // setup server
-let server = HttpServer.listen(port: 8090, delegate: router)
+let server = HttpServer.listen(port: toriPort, delegate: router)
+Log.debug("Tori is running at port \(toriPort)")
 Server.run()
