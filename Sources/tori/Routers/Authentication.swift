@@ -29,16 +29,6 @@ import LoggerAPI
 
 //import CryptoSwift
 
-// enforce only admin user to manage those routes
-class AdminOnly: RouterMiddleware {
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
-        // TODO: check if current user is Admin
-
-        next()
-    }
-}
-
 // token authentication
 class TokenAuthentication: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
@@ -74,5 +64,30 @@ class TokenAuthentication: RouterMiddleware {
         }
 
         next()
+    }
+}
+
+// enforce only admin user to manage those routes
+class AdminOnly: RouterMiddleware {
+    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+        
+        let userToken = request.headers["UserToken"]
+        let userId = request.headers["UserId"]
+        
+        let userCollection = db["Users"]
+        
+        if try! userCollection.count(matching: "username" == userId! && "token" == userToken! && "role.name" == "admin") == 0 {
+            Log.error("Authentication / Failed, this user has no admin rights")
+            try! response
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "user has no admin rights"
+                    ]))
+                .end()
+        }
+        
+        next()
+        
     }
 }
