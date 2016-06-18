@@ -680,6 +680,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48D3D1421D1595C000CCB265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/tori/Models/AccessToken.swift /* Models/AccessToken.swift */,
+				__PBXFileRef_Sources/tori/Models/Collection.swift /* Models/Collection.swift */,
+				__PBXFileRef_Sources/tori/Models/Model.swift /* Models/Model.swift */,
+				__PBXFileRef_Sources/tori/Models/PushToken.swift /* Models/PushToken.swift */,
+				__PBXFileRef_Sources/tori/Models/Role.swift /* Models/Role.swift */,
+				__PBXFileRef_Sources/tori/Models/User.swift /* Models/User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		48D3D1431D1595D100CCB265 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Sources/tori/Routers/Authentication.swift /* Routers/Authentication.swift */,
+				__PBXFileRef_Sources/tori/Routers/RRole.swift /* Routers/RRole.swift */,
+				__PBXFileRef_Sources/tori/Routers/RUser.swift /* Routers/RUser.swift */,
+				__PBXFileRef_Sources/tori/Routers/Utils.swift /* Routers/Utils.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		Dependencies_ /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,16 +1044,8 @@
 			isa = PBXGroup;
 			children = (
 				__PBXFileRef_Sources/tori/main.swift /* main.swift */,
-				__PBXFileRef_Sources/tori/Models/AccessToken.swift /* Models/AccessToken.swift */,
-				__PBXFileRef_Sources/tori/Models/Collection.swift /* Models/Collection.swift */,
-				__PBXFileRef_Sources/tori/Models/Model.swift /* Models/Model.swift */,
-				__PBXFileRef_Sources/tori/Models/PushToken.swift /* Models/PushToken.swift */,
-				__PBXFileRef_Sources/tori/Models/Role.swift /* Models/Role.swift */,
-				__PBXFileRef_Sources/tori/Models/User.swift /* Models/User.swift */,
-				__PBXFileRef_Sources/tori/Routers/Authentication.swift /* Routers/Authentication.swift */,
-				__PBXFileRef_Sources/tori/Routers/RRole.swift /* Routers/RRole.swift */,
-				__PBXFileRef_Sources/tori/Routers/RUser.swift /* Routers/RUser.swift */,
-				__PBXFileRef_Sources/tori/Routers/Utils.swift /* Routers/Utils.swift */,
+				48D3D1421D1595C000CCB265 /* Models */,
+				48D3D1431D1595D100CCB265 /* Router */,
 			);
 			name = tori;
 			path = Sources/tori;
@@ -1414,6 +1430,7 @@
 			buildPhases = (
 				CompilePhase_tori /* Sources */,
 				"___LinkPhase_tori" /* Frameworks */,
+				48D3D1441D159A7900CCB265 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1488,6 +1505,22 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48D3D1441D159A7900CCB265 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CompilePhase_BSON /* Sources */ = {
