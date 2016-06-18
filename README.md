@@ -28,11 +28,14 @@ Then proceed in this way:
 1) Clone project
 ```
 git clone https://github.com/boostcode/tori
+cd tori
+git submodule update --init --recursive
 ```
 
 2) Build
 ```
-cd tori && make run
+export TORI_CONFIG_DIR=/path/to/tori
+make run
 ```
 If any error raises up during ```make``` continue instead till it is finished.
 
@@ -44,6 +47,7 @@ If any error raises up during ```make``` continue instead till it is finished.
 ## Credits
 Tori is proudly powered by:
 - [Kitura](https://github.com/IBM-Swift/Kitura)
+- [MongoKitten](https://github.com/PlanTeam/MongoKitten)
 
 ## License
 This project is licensed under Apache 2.0. Full license text is available in [LICENSE](https://raw.githubusercontent.com/boostcode/tori/master/LICENSE).
