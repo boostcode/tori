@@ -31,11 +31,11 @@ struct User {
   // password
   var password: String = ""//= "".sha256() // TODO: remove, I know is useless, but acts as reminder
   // access tokens
-  var tokenAccess: AccessToken?
+  //var tokenAccess: AccessToken?
   // role
   //var role: Role = Role()
   // push tokens
-  var pushTokens: [PushToken]?
+  //var pushTokens: [PushToken]?
 
   /*init(bson: BSON.Document) {
     self.mapFromDb(bson)
