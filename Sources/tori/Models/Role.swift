@@ -15,19 +15,39 @@
 **/
 
 import Foundation
+import MongoKitten
 
 // permissions levels
 enum Permission {
-  case None
-  case ReadOnly
-  case WriteOnly
-  case ReadWrite
-  case Admin
+    case None
+    case ReadOnly
+    case WriteOnly
+    case ReadWrite
+    case Admin
 }
 
 struct Role {
-  // id
-  var id: String = ""
-  // name
-  var name: String = ""
+    var name: String = ""
+    var permission = [String: Permission]()
+    
+    init(document: Document) {
+        self.mapFromDocument(document: document)
+    }
+    
+    mutating func mapFromDocument(document: Document) {
+        if let name = document["name"].stringValue {
+            self.name = name
+        }
+        
+        if let permission = document["permission"].storedValue as? [String: Permission] {
+            self.permission = permission
+        }
+    }
+    
+    func toDocument() -> Document {
+        return [
+            "name": .string(self.name),
+            //"permission": Document(array: self.permission)
+        ]
+    }
 }
