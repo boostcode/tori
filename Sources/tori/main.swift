@@ -40,14 +40,22 @@ Log.logger = HeliumLogger()
 
 // database setup
 let (dbHost, dbPort, dbName, toriPort, adminName, adminPassword) = getConfiguration()
-let dbServer = try! Server(at: dbHost, port: dbPort, automatically: true)
+
+let dbServer = try! Server(
+    at: dbHost,
+    port: dbPort,
+    automatically: true
+)
 let db = dbServer[dbName]
 
 // db setup
 setupDb()
 
 // routes
-router.all("/admin", middleware: StaticFileServer(path:"./public/admin", options:[]))
+router.all(
+    "/admin",
+    middleware: StaticFileServer(path:"./public/admin", options:[])
+)
 
 routerUser()
 
@@ -59,6 +67,10 @@ router.get("/") {
 }
 
 // setup server
-let server = HttpServer.listen(port: toriPort, delegate: router)
+let server = HttpServer.listen(
+    port: toriPort,
+    delegate: router
+)
+
 Log.debug("Tori is running at port \(toriPort)")
 Server.run()
