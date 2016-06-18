@@ -1,0 +1,93 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BF54732FAE03A5561B5A06A6DEAC6197900486D0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : 0,
+    "43425688648679ECEC3105C3812E3C82D04FD563" : 0,
+    "25E95323D0B6F897513B275CFAC8493931C6785F" : 0,
+    "AB3B39DF79E140C049FAA89F0028F2088162E212" : 0,
+    "287F3CCB1287376788CD8C8A6441419AFFC4A554" : 0,
+    "1A81AC7E588BE86E760603555BCE76FB0C611997" : 0,
+    "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : 0,
+    "43C021D2F0E746BBB29CA4E06229F111196D4871" : 0,
+    "09E058C67A1F7EC8B3C920635B04A0078313C192" : 0,
+    "BF54732FAE03A5561B5A06A6DEAC6197900486D0" : 0,
+    "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "76361743-9745-4D5C-9D89-A9D3899F721B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : "tori\/Packages\/BSON-2.2.2\/",
+    "43425688648679ECEC3105C3812E3C82D04FD563" : "tori\/Packages\/Kitura-0.11.3\/",
+    "25E95323D0B6F897513B275CFAC8493931C6785F" : "tori\/Packages\/SCRAM-0.5.2\/",
+    "AB3B39DF79E140C049FAA89F0028F2088162E212" : "tori\/Packages\/CryptoEssentials-0.5.2\/",
+    "287F3CCB1287376788CD8C8A6441419AFFC4A554" : "tori\/Packages\/HMAC-0.5.2\/",
+    "1A81AC7E588BE86E760603555BCE76FB0C611997" : "tori\/Packages\/Kitura-TemplateEngine-0.9.0\/",
+    "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : "tori\/Packages\/MongoKitten-0.8.1\/",
+    "43C021D2F0E746BBB29CA4E06229F111196D4871" : "tori\/Packages\/Socket-0.5.20\/",
+    "09E058C67A1F7EC8B3C920635B04A0078313C192" : "tori\/Packages\/Kitura-Sys-0.11.0\/",
+    "BF54732FAE03A5561B5A06A6DEAC6197900486D0" : "tori\/",
+    "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA" : "tori\/Packages\/Strand-1.2.3\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "tori",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "tori.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/Kitura-sys.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "09E058C67A1F7EC8B3C920635B04A0078313C192"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/Kitura-TemplateEngine.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1A81AC7E588BE86E760603555BCE76FB0C611997"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ketzusaka\/Strand.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CryptoKitten\/SCRAM.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25E95323D0B6F897513B275CFAC8493931C6785F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CryptoKitten\/HMAC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "287F3CCB1287376788CD8C8A6441419AFFC4A554"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/Kitura.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43425688648679ECEC3105C3812E3C82D04FD563"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/BlueSocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43C021D2F0E746BBB29CA4E06229F111196D4871"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PlanTeam\/BSON.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PlanTeam\/MongoKitten.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CryptoKitten\/CryptoEssentials.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AB3B39DF79E140C049FAA89F0028F2088162E212"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:boostcode\/tori.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF54732FAE03A5561B5A06A6DEAC6197900486D0"
+    }
+  ]
+}

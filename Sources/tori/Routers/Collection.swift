@@ -14,14 +14,20 @@
  * limitations under the License.
  **/
 
-import PackageDescription
+import Foundation
 
-let package = Package(
-    name: "tori",
-    dependencies: [
-      .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 0, minor: 11),
-      .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 6),
-      .Package(url: "https://github.com/PlanTeam/MongoKitten.git", majorVersion: 0, minor: 8)
-    ],
-    exclude: ["Makefile", "Kitura-Build"]
-)
+import Kitura
+import KituraSys
+import KituraNet
+
+import SwiftyJSON
+
+import MongoKitten
+
+// logger
+import HeliumLogger
+import LoggerAPI
+
+func routerCollection() {
+
+}

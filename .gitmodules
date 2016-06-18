@@ -1,3 +1,4 @@
-[submodule "Public"]
-	path = Public
-	url = https://github.com/boostcode/tori-admin
+[submodule "Kitura-Build"]
+	path = Kitura-Build
+	url = https://github.com/IBM-Swift/Kitura-Build.git
+	branch = develop

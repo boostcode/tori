@@ -17,16 +17,20 @@
 import Foundation
 
 // kitura
-import KituraRouter
-import KituraNet
 import KituraSys
+import KituraNet
+import Kitura
 
 // mongodb orm
-import MongoDB
+import MongoKitten
 
 // logger
-import HeliumLogger
 import LoggerAPI
+import HeliumLogger
+
+#if os(Linux)
+    import Glibc
+#endif
 
 // router setup
 let router = Router()
@@ -35,24 +39,41 @@ let router = Router()
 Log.logger = HeliumLogger()
 
 // database setup
-let (dbHost, dbPort, dbName) = getDbConfiguration()
-do {
-  let db = try Client(host: dbHost, port: dbPort)
-} catch {
-  Log.error("DB connection error")
-}
+let (dbHost, dbPort, dbName, toriPort, adminName, adminPassword) = getConfiguration()
 
-// routing
+let dbServer = try! Server(
+    at: dbHost,
+    port: dbPort,
+    automatically: true
+)
+let db = dbServer[dbName]
+
+// db setup
+setupDb()
+
+// admin
+router.all(
+    "/admin",
+    middleware: StaticFileServer(path:"./public/admin", options:[])
+)
+
+// routes
+routerUser()
+routerRole()
+routerCollection()
+
+// root routing
 router.get("/") {
   request, response, next in
-
   response.status(HttpStatusCode.OK).send("Hello, tori!")
-
   next()
 }
 
 // setup server
-let server = HttpServer.listen(8090, delegate: router)
+let server = HttpServer.listen(
+    port: toriPort,
+    delegate: router
+)
 
-// run the server
+Log.debug("Tori is running at port \(toriPort)")
 Server.run()
