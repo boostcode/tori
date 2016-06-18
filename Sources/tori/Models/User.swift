@@ -33,7 +33,7 @@ struct User {
   // access tokens
   var tokenAccess: AccessToken?
   // role
-  var role: Role = Role()
+  //var role: Role = Role()
   // push tokens
   var pushTokens: [PushToken]?
 
