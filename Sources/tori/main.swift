@@ -51,15 +51,18 @@ let db = dbServer[dbName]
 // db setup
 setupDb()
 
-// routes
+// admin
 router.all(
     "/admin",
     middleware: StaticFileServer(path:"./public/admin", options:[])
 )
 
+// routes
 routerUser()
+routerRole()
+routerCollection()
 
-// routing
+// root routing
 router.get("/") {
   request, response, next in
   response.status(HttpStatusCode.OK).send("Hello, tori!")

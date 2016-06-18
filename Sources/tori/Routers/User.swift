@@ -37,26 +37,26 @@ func routerUser() {
     router.all("/api/user*", middleware: AdminOnly())
 
 
-  // gets all the users
-  router.get("/api/user") {
-    req, res, next in
-    res.setHeader("Content-Type", value: "application/json; charset=utf-8")
-    // TODO: remove password, token & push
-    do {
-      //try res.status(HttpStatusCode.OK).sendJson("").end()
-      try res.status(HttpStatusCode.OK).send("").end()
-    } catch {
-      Log.error("Failed to send response")
+    // gets all the users
+    router.get("/api/user") {
+        req, res, next in
+        res.setHeader("Content-Type", value: "application/json; charset=utf-8")
+        // TODO: remove password, token & push
+        do {
+            //try res.status(HttpStatusCode.OK).sendJson("").end()
+            try res.status(HttpStatusCode.OK).send("").end()
+        } catch {
+            Log.error("Failed to send response")
+        }
     }
-  }
 
-  // gets information for a single user
-  router.get("/api/user/:id") {
-    req, res, next in
-    let userId = req.params["id"]
-    // TODO: remove password, token & push
+    // gets information for a single user
+    router.get("/api/user/:id") {
+        req, res, next in
+        let userId = req.params["id"]
+        // TODO: remove password, token & push
 
-    res.setHeader("Content-Type", value: "application/json; charset=utf-8")
+        res.setHeader("Content-Type", value: "application/json; charset=utf-8")
 
     //let user = User(bson: userCollection.getById(userId!)!)
     do {
@@ -98,59 +98,59 @@ func routerUser() {
     router.all("/api/log*", middleware: CheckRequestIsValidJson())
 
 
-  router.post("/api/login") {
-    req, res, next in
+    router.post("/api/login") {
+        req, res, next in
 
-    guard case let .Json(json) = req.body! else {
-        return
-    }
+        guard case let .Json(json) = req.body! else {
+            return
+        }
 
-    guard let userName = json["username"].string else {
-        try! res
-            .status(.OK)
-            .send(json: JSON([
-                                 "status": "error",
-                                 "message": "Request body has no username"
+        guard let userName = json["username"].string else {
+            try! res
+                .status(.OK)
+                .send(json: JSON([
+                    "status": "error",
+                    "message": "Request body has no username"
                 ]))
             .end()
-        return
-    }
+            return
+        }
 
-    guard let userPassword = json["password"].string else {
-        try! res
-            .status(.OK)
-            .send(json: JSON([
+        guard let userPassword = json["password"].string else {
+            try! res
+                .status(.OK)
+                .send(json: JSON([
                                  "status": "error",
                                  "message": "Request body has no password"
                 ]))
-            .end()
-        return
-    }
+                .end()
+            return
+        }
 
-    let userCollection = db["Users"]
+        let userCollection = db["Users"]
 
-    let passwordMD5 = "\(userPassword.md5())"
+        let passwordMD5 = "\(userPassword.md5())"
 
-    guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == passwordMD5) else {
-        try! res
-            .status(.OK)
-            .send(json: JSON([
+        guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == passwordMD5) else {
+            try! res
+                .status(.OK)
+                .send(json: JSON([
                                  "status": "error",
                                  "message": "Wrong user/password provided"
                 ]))
+                .end()
+            return
+        }
+
+        // TODO: Need to generate a token
+
+        // TODO: convert user to json
+        let responseJson = JSON([]) //JSON(user)
+
+        try! res
+            .status(.OK)
+            .send(json: responseJson)
             .end()
-        return
-    }
-
-    // TODO: Need to generate a token
-
-    // TODO: convert user to json
-    let responseJson = JSON([]) //JSON(user)
-
-    try! res
-        .status(.OK)
-        .send(json: responseJson)
-        .end()
 
   }
 
