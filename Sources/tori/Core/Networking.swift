@@ -28,31 +28,43 @@ import MongoKitten
 import HeliumLogger
 import LoggerAPI
 
+// MARK: - Quick handlers for response
+extension RouterResponse {
+    func error(withMsg msg: String) {
+        Log.error("Route / \(msg)")
+        try! self
+            .status(.OK)
+            .send(json: JSON([
+                                 "status": "error",
+                                 "message": msg
+                ]))
+            .end()
+    }
+
+    func json(withJson json: JSON) {
+        try! self
+            .status(.OK)
+            .send(json: json)
+            .end()
+    }
+}
+
 
 // MARK: - Request
 class CheckRequestIsValidJson: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        guard let body = request.body else {
-            try! response
-                .status(.OK)
-                .send(json: JSON([
-                                     "status": "error",
-                                     "message": "Request is missing body"
-                    ]))
-                .end()
-            return
-        }
+        if request.method != RouterMethod.Get {
 
-        guard case let .Json(json) = body else {
-            try! response
-                .status(.OK)
-                .send(json: JSON([
-                                     "status": "error",
-                                     "message": "Request body is not in json format"
-                    ]))
-                .end()
-            return
+            guard let body = request.body else {
+                response.error(withMsg: "request is missing body")
+                return
+            }
+
+            guard case let .Json(json) = body else {
+                response.error(withMsg: "request is not in json format")
+                return
+            }
         }
 
         next()
@@ -63,35 +75,42 @@ class CheckRequestIsValidJson: RouterMiddleware {
 class TokenAuthentication: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        let userToken = request.headers["UserToken"]
-        let userId = request.headers["UserId"]
-
-        // first check if token and userId exists
-        if userToken == nil || userId == nil {
-            Log.error("Autentication / Failed, missing token and userId")
-            try! response
-                .status(.OK)
-                .send(json: JSON([
-                                     "status": "error",
-                                     "message": "missing token or userId"
-                    ]))
-                .end()
-
-        } else {
-
-            let userCollection = db["Users"]
-
-            if try! userCollection.count(matching: "username" == userId! && "token" == userToken!) == 0 {
-                Log.error("Autentication / Failed, wrong credentials")
-                try! response
-                    .status(.OK)
-                    .send(json: JSON([
-                                         "status": "error",
-                                         "message": "wrong token or userId"
-                        ]))
-                    .end()
-            }
+        guard let userToken = request.headers["Tori-Token"] else {
+            response.error(withMsg: "missing Tori-Token")
+            return
         }
+
+        request.userInfo.updateValue(userToken, forKey: "Tori-Token")
+
+        guard let userName = request.headers["Tori-User"] else {
+            response.error(withMsg: "missing Tori-User")
+            return
+        }
+
+        request.userInfo.updateValue(userName, forKey: "Tori-User")
+
+        let userCollection = db["User"]
+
+        if try! userCollection.count(matching: "username" == userName && "token" == userToken) == 0 {
+            response.error(withMsg: "invalid Tori-Token")
+            return
+        }
+
+        next()
+    }
+}
+
+class GetUser: RouterMiddleware {
+    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+
+        guard let userName = request.userInfo["Tori-User"] as? String else {
+            response.error(withMsg: "missing Tori-User")
+            return
+        }
+        let userCollection = db["User"]
+        let user = try! userCollection.findOne(matching: "username" == userName)
+
+        request.userInfo.updateValue(user!["role"].int, forKey: "Tori-Role")
 
         next()
     }
@@ -100,42 +119,15 @@ class TokenAuthentication: RouterMiddleware {
 class AdminOnly: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        let userToken = request.headers["UserToken"]
-        let userId = request.headers["UserId"]
+        let userRole = Role(rawValue:request.userInfo["Tori-Role"] as! Int)
 
-        let userCollection = db["Users"]
-
-
-        // TODO: update Admin check
-        if try! userCollection.count(matching: "username" == userId! && "token" == userToken! && "role" == "admin") == 0 {
-            Log.error("Authentication / Failed, this user has no admin rights")
-            try! response
-                .status(.OK)
-                .send(json: JSON([
-                                     "status": "error",
-                                     "message": "user has no admin rights"
-                    ]))
-                .end()
+        if userRole != .Admin {
+            response.error(withMsg: "user has no admin rights")
+            return
         }
-        
-        next()
-        
-    }
-}
-
-class CheckPermission: RouterMiddleware {
-
-    var acl: [[Role: ACL]]
-
-    init(withACLRules acl: [[Role: ACL]]) {
-        self.acl = acl
-    }
-
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
-        // TODO: manage permission check
 
         next()
+
     }
 }
 
@@ -147,6 +139,6 @@ class AllRemoteOriginMiddleware: RouterMiddleware {
         response.setHeader("Access-Control-Allow-Origin", value: "*")
         response.setHeader("Content-Type", value: "application/json; charset=utf-8")
         next()
-
+        
     }
 }

@@ -27,6 +27,7 @@ import MongoKitten
 // logger
 import LoggerAPI
 import HeliumLogger
+Log.logger = HeliumLogger()
 
 #if os(Linux)
     import Glibc
@@ -35,32 +36,28 @@ import HeliumLogger
 // router setup
 let router = Router()
 
-// setup logger
-Log.logger = HeliumLogger()
+// roles
+enum Role: Int {
+    case Admin
+    case Guest
+    
+    // add your extra roles here
+}
 
 // database setup
-let (dbHost, dbPort, dbName, toriPort, adminName, adminPassword) = getConfiguration()
+let db = setupDb()
 
-let dbServer = try! Server(
-    at: dbHost,
-    port: dbPort,
-    automatically: true
-)
-let db = dbServer[dbName]
-
-// db setup
-setupDb()
-
-// admin
-router.all(
-    "/admin",
-    middleware: StaticFileServer(path:"./public/admin", options:[])
-)
 
 // routes
-routerUser()
-routerRole()
-routerCollection()
+routerAuth()
+
+let routeUser = Route(
+    withPath: "user",
+    withACL: [
+                 [.Admin: adminPermission]
+    ])
+routeUser.enableRoutes()
+
 
 // root routing
 router.get("/") {
@@ -68,6 +65,9 @@ router.get("/") {
   response.status(HttpStatusCode.OK).send("Hello, tori!")
   next()
 }
+
+// get config
+let (_, _, _, toriPort, _, _) = getConfiguration()
 
 // setup server
 let server = HttpServer.listen(

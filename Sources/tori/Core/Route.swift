@@ -20,6 +20,8 @@ import Kitura
 import KituraSys
 import KituraNet
 
+import SwiftyJSON
+
 import MongoKitten
 
 // logger
@@ -31,6 +33,9 @@ class Route {
     var slug = ""
     var model: String {
         return self.slug.capitalized
+    }
+    var collection: MongoKitten.Collection {
+        return db[self.model]
     }
     var acl: [[Role: ACL]]
 
@@ -46,11 +51,39 @@ class Route {
         router.all("/api/\(slug)*", middleware: BodyParser())
         router.all("/api/\(slug)*", middleware: CheckRequestIsValidJson())
         router.all("/api/\(slug)*", middleware: TokenAuthentication())
-        router.all("/api/\(slug)*", middleware: CheckPermission(withACLRules: acl))
+        router.all("/api/\(slug)*", middleware: GetUser())
 
         // GET all items
         router.get("/api/\(slug)") {
             req, res, next in
+            let userRole =  Role(rawValue: req.userInfo["role"] as! Int)
+
+            for rule in self.acl {
+                if (rule.index(forKey: userRole!) != nil) {
+                    if rule.values.first?.read == .All {
+
+                        let items = try! self.collection.find()
+                        let allItems = Array(items)
+
+                        try! res
+                            .status(.OK)
+                            .send(json: JSON([
+                                                 "status": "ok",
+                                                 //"\(self.slug)": allItems
+                                ]))
+                            .end()
+
+                    }
+                }
+            }
+
+            try! res
+                .status(.OK)
+                .send(json: JSON([
+                                     "status": "error",
+                                     "message": "User has no permissions"
+                    ]))
+                .end()
 
         }
 
@@ -72,7 +105,7 @@ class Route {
             let itemId = req.params["id"]
 
         }
-        
+
         // DELETE removes an existing item
         router.delete("/api/\(slug)/:id") {
             req, res, next in

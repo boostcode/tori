@@ -31,7 +31,9 @@ import LoggerAPI
 
 func routerAuth() {
 
-    // login user
+    let userCollection = db["User"]
+
+    // MARK: - Login
     router.all("/api/log*", middleware: AllRemoteOriginMiddleware())
     router.all("/api/log*", middleware: BodyParser())
     router.all("/api/log*", middleware: CheckRequestIsValidJson())
@@ -41,64 +43,79 @@ func routerAuth() {
         req, res, next in
 
         guard case let .Json(json) = req.body! else {
+            res.error(withMsg: "request is not in json format")
             return
         }
 
         guard let userName = json["username"].string else {
-            try! res
-                .status(.OK)
-                .send(json: JSON([
-                    "status": "error",
-                    "message": "Request body has no username"
-                ]))
-            .end()
+            res.error(withMsg: "missing username value")
             return
         }
 
         guard let userPassword = json["password"].string else {
-            try! res
-                .status(.OK)
-                .send(json: JSON([
-                                 "status": "error",
-                                 "message": "Request body has no password"
-                ]))
-                .end()
+            res.error(withMsg: "missing password value")
             return
         }
-
-        let userCollection = db["Users"]
 
         let passwordMD5 = "\(userPassword.md5())"
 
         guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == passwordMD5) else {
-            try! res
-                .status(.OK)
-                .send(json: JSON([
-                                 "status": "error",
-                                 "message": "Wrong user/password provided"
-                ]))
-                .end()
+            res.error(withMsg: "wrong user or password provided")
             return
         }
 
-        // TODO: Need to generate a token
+        // generate an unique token
+        let userToken = NSUUID().uuidString
 
-        // TODO: convert user to json
-        let responseJson = JSON([]) //JSON(user)
+        var newUser = user
+        newUser["token"] = .string(userToken)
 
-        try! res
-            .status(.OK)
-            .send(json: responseJson)
-            .end()
+        // add new token
+        try! userCollection.update(matching: user, to: newUser)
 
-  }
+        let responseJson = JSON([
+                                    "status": "ok",
+                                    "token": userToken,
+                                    "user": userName])
 
-  // logout user
-  router.get("/api/logout") {
-    req, res, next in
+        res.json(withJson: responseJson)
 
-    // TODO: revoke token
+    }
 
-    // TODO: add response
-  }
+    // MARK: - Registration
+    // TODO: implement registration, figure out how to manage default role
+    
+    // MARK: - Logout
+    router.all("/api/logout", middleware: TokenAuthentication())
+    router.get("/api/logout") {
+        req, res, next in
+
+        guard let userName = req.userInfo["Tori-User"] as? String else {
+            res.error(withMsg: "missing Tori-User")
+            return
+        }
+
+        guard let userToken = req.userInfo["Tori-Token"] as? String else {
+            res.error(withMsg: "missing Tori-Token")
+            return
+        }
+
+        guard let user = try! userCollection.findOne(matching: "username" == userName && "token" == userToken) else {
+            res.error(withMsg: "user not found")
+            return
+        }
+
+        var newUser = user
+        newUser["token"] = .null
+
+        // remove token
+        try! userCollection.update(matching: user, to: newUser)
+
+        let responseJson = JSON([
+                                    "status": "ok",
+                                    "action": "logout"])
+
+        res.json(withJson: responseJson)
+
+    }
 }
