@@ -46,7 +46,7 @@ class Route {
         router.all("/api/\(slug)*", middleware: BodyParser())
         router.all("/api/\(slug)*", middleware: CheckRequestIsValidJson())
         router.all("/api/\(slug)*", middleware: TokenAuthentication())
-        router.all("/api/\(slug)*", middleware: CheckPermission())
+        router.all("/api/\(slug)*", middleware: CheckPermission(withACLRules: acl))
 
         // GET all items
         router.get("/api/\(slug)") {
