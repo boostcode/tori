@@ -40,31 +40,16 @@ let router = Router()
 enum Role: Int {
     case Admin
     case Guest
-    
+
     // add your extra roles here
 }
 
 // database setup
 let db = setupDb()
 
+setupTori()
 
-// routes
-routerAuth()
-
-let routeUser = Route(
-    withPath: "user",
-    withACL: [
-                 [.Admin: adminPermission]
-    ])
-routeUser.enableRoutes()
-
-
-// root routing
-router.get("/") {
-  request, response, next in
-  response.status(HttpStatusCode.OK).send("Hello, tori!")
-  next()
-}
+// MARK: - Start adding here your collections
 
 // get config
 let (_, _, _, toriPort, _, _) = getConfiguration()

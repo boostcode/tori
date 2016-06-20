@@ -37,11 +37,17 @@ class Route {
     var collection: MongoKitten.Collection {
         return db[self.model]
     }
+    // manages access to the collection
     var acl: [[Role: ACL]]
 
-    init(withPath slug: String, withACL acl: [[Role: ACL]]) {
+    // contains the keys that need to be skipped on response
+    var skip: [String]
+
+
+    init(withPath slug: String, withACL acl: [[Role: ACL]], andSkipping skip: [String] = []) {
         self.slug = slug
         self.acl = acl
+        self.skip = skip
     }
 
     func enableRoutes() {
@@ -65,32 +71,28 @@ class Route {
                         let items = try! self.collection.find()
                         let allItems = Array(items)
 
-                        try! res
-                            .status(.OK)
-                            .send(json: JSON([
-                                                 "status": "ok",
-                                                 //"\(self.slug)": allItems
-                                ]))
-                            .end()
+                        // TODO: items needs to be filtered according skip
+
+                        res.json(withJson: JSON([
+                                                    "status": "ok",
+                                                    //"\(self.slug)": allItems
+                            ]))
 
                     }
                 }
             }
 
-            try! res
-                .status(.OK)
-                .send(json: JSON([
-                                     "status": "error",
-                                     "message": "User has no permissions"
-                    ]))
-                .end()
+            res.error(withMsg: "user has no permission")
 
         }
 
         // GET single item with Id
         router.get("/api/\(slug)/:id") {
             req, res, next in
-            let itemId = req.params["id"]
+            guard let itemId = req.params["id"] else {
+                res.error(withMsg: "missing id")
+                return
+            }
 
         }
 
@@ -102,15 +104,21 @@ class Route {
         // PUT updates an existing item
         router.put("/api/\(slug)/:id") {
             req, res, next in
-            let itemId = req.params["id"]
+            guard let itemId = req.params["id"] else {
+                res.error(withMsg: "missing id")
+                return
+            }
 
         }
 
         // DELETE removes an existing item
         router.delete("/api/\(slug)/:id") {
             req, res, next in
-            let itemId = req.params["id"]
-            
+            guard let itemId = req.params["id"] else {
+                res.error(withMsg: "missing id")
+                return
+            }
+
         }
     }
 }
