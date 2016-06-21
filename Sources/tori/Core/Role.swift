@@ -16,18 +16,17 @@
 
 import Foundation
 
-import Kitura
-import KituraSys
-import KituraNet
+struct ACL {
 
-import SwiftyJSON
+    enum AccessType {
+        case None
+        case Mine
+        case All
+    }
 
-import MongoKitten
-
-// logger
-import HeliumLogger
-import LoggerAPI
-
-func routerCollection() {
+    let read: AccessType
+    let write: AccessType
 
 }
+
+let adminPermission = ACL(read: .All, write: .All)

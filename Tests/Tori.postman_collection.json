@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tori",
+		"_postman_id": "d08a842e-9923-8367-ca63-2cb08b4e3bcf",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:8090/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"url": "http://localhost:8090/api/logout",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Tori-User",
+						"value": "admin",
+						"description": ""
+					},
+					{
+						"key": "Tori-Token",
+						"value": "04092E2F-1824-4EFA-858A-B04B3EB847B9",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User / Get all",
+			"request": {
+				"url": "http://localhost:8090/api/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Tori-Token",
+						"value": "7D772451-2355-4731-A630-50F782F52B2C",
+						"description": ""
+					},
+					{
+						"key": "Tori-User",
+						"value": "admin",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}"
+				},
+				"description": "Only admin user can retrieve these info"
+			},
+			"response": []
+		}
+	]
+}
