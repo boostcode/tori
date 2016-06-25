@@ -16,7 +16,7 @@
 
 import Foundation
 
-struct ACL {
+struct AccessRights {
 
     enum AccessType {
         case None // cannot access any data
@@ -29,5 +29,18 @@ struct ACL {
 
 }
 
+typealias ACLRuleElement = [Role: AccessRights]
+
+struct ACLRule {
+    var rules = [ACLRuleElement]()
+
+    // easy way to generate acl rules
+    mutating func addRule(forRole role: Role, withACL acl: AccessRights) {
+        rules.append([role: acl])
+    }
+}
+
+
 // admin user has rights over all the fields, even third party ones
-let adminPermission = ACL(read: .All, write: .All)
+let adminPermission = AccessRights(read: .All, write: .All)
+

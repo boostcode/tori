@@ -28,26 +28,85 @@ import MongoKitten
 import HeliumLogger
 import LoggerAPI
 
+// document types
+enum RouteDocumentType {
+    case Role
+    case ObjectId
+    case String
+    case Boolean
+    case Int
+    case Double
+    case Array
+    case Document
+}
+
 class Route {
 
     var slug = ""
-    var model: String {
+    var dbModelName: String {
         return self.slug.capitalized
     }
     var collection: MongoKitten.Collection {
-        return db[self.model]
+        return db[self.dbModelName]
     }
     // manages access to the collection
-    var acl: [[Role: ACL]]
+    var acl: [ACLRuleElement]
+
+    // manages the schema connected to the route
+    var schema: [String: RouteDocumentType]
 
     // contains the keys that need to be skipped on response
-    var skip: [String]
+    var blacklistedKeys: [String]
 
 
-    init(withPath slug: String, withACL acl: [[Role: ACL]], andSkipping skip: [String] = []) {
+    init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withACL acl: ACLRule, andBlacklistingKeys blacklistedKeys: [String] = []) {
+        assert(slug.characters.count > 0, "Schema must contain at least a key")
         self.slug = slug
-        self.acl = acl
-        self.skip = skip
+        assert(schema.count > 0, "Schema must contain at least a key")
+        self.schema = schema
+        assert(acl.rules.count > 0, "Acl must contain at least a rule")
+        self.acl = acl.rules
+        self.blacklistedKeys = blacklistedKeys
+    }
+
+    func bsonToDict(bson: Cursor<Document>) -> [String: AnyObject] {
+
+        var dict = [String: AnyObject]()
+
+        for item in bson {
+
+            for obj in self.schema {
+
+                // check for blacklisting
+                if self.blacklistedKeys.contains(obj.key) {
+                    break
+                }
+
+                switch obj.value {
+
+                case .Boolean:
+                    dict[obj.key] = item[obj.key].bool
+                case .Double:
+                    dict[obj.key] = item[obj.key].double
+                case .Int:
+                    dict[obj.key] = item[obj.key].int
+                case .ObjectId:
+                    dict[obj.key] = item[obj.key].objectIdValue!.hexString
+                case .Role:
+                    dict[obj.key] = item[obj.key].int
+                case .String:
+                    dict[obj.key] = item[obj.key].string
+                default:
+                    // TODO: Document is not handled
+                    // TODO: Array is not handled
+                    break
+                }
+
+            }
+
+        }
+
+        return dict
     }
 
     func enableRoutes() {
@@ -62,22 +121,26 @@ class Route {
         // GET all items
         router.get("/api/\(slug)") {
             req, res, next in
-            let userRole =  Role(rawValue: req.userInfo["role"] as! Int)
+            let userRole =  Role(rawValue: req.userInfo["Tori-Role"] as! Int)
 
             for rule in self.acl {
                 if (rule.index(forKey: userRole!) != nil) {
                     if rule.values.first?.read == .All {
 
-                        let items = try! self.collection.find()
-                        let allItems = Array(items)
+                        let allItems = try! self.collection.find()
 
-                        // TODO: items needs to be filtered according skip
+                        let dict = self.bsonToDict(bson: allItems)
 
-                        res.json(withJson: JSON([
-                                                    "status": "ok",
-                                                    //"\(self.slug)": allItems
-                            ]))
+                        let response: [String: AnyObject] = [
+                                           "status": "ok",
+                                           "model": self.slug,
+                                           "data": dict
+                                           ]
 
+                        print(response)
+
+                        res.json(withJson: JSON(response))
+                        return
                     }
                 }
             }

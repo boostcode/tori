@@ -21,14 +21,21 @@ func setupTori() {
     // routes
     routerAuth()
 
-    let routeUser = Route(
-        withPath: "user",
-        withACL: [
-                     [.Admin: adminPermission],
-                     [.Guest: ACL(read: .None, write: .None)]
-        ])
-    routeUser.enableRoutes()
+    var aclRules = ACLRule()
+    aclRules.addRule(forRole: .Admin, withACL: adminPermission)
+    aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .None, write: .None))
 
+    _ = Route(
+        withPath: "user",
+        withSchema: [
+            "username": .String,
+            "password": .String,
+            "email": .String,
+            "role": .Role,
+        ],
+        withACL: aclRules,
+        andBlacklistingKeys: ["password"]
+    ).enableRoutes()
 
     // root routing
     router.get("/") {
@@ -36,6 +43,5 @@ func setupTori() {
         response.json(withJson: JSON([ "msg": "Hello, tori!"]))
         next()
     }
-
 
 }

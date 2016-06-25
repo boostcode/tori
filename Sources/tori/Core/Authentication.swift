@@ -76,7 +76,8 @@ func routerAuth() {
         let responseJson = JSON([
                                     "status": "ok",
                                     "token": userToken,
-                                    "user": userName])
+                                    "user": userName
+            ])
 
         res.json(withJson: responseJson)
 

@@ -52,7 +52,7 @@ setupTori()
 // MARK: - Start adding here your collections
 
 // get config
-let (_, _, _, toriPort, _, _) = getConfiguration()
+let (_, _, _, toriPort, _, _, _) = getConfiguration()
 
 // setup server
 let server = HttpServer.listen(

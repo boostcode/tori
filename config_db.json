@@ -4,5 +4,6 @@
     "dbName": "tori-db",
     "toriPort": 8090,
     "adminUser": "admin",
-    "adminPassword": "admin"
+    "adminPassword": "admin",
+    "adminEmail": "admin@a.dmin"
 }

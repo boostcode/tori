@@ -19,7 +19,7 @@ import LoggerAPI
 import SwiftyJSON
 
 // Retrieves tori db configuration form config.json file
-func getConfiguration () -> (String, UInt16, String, Int, String, String) {
+func getConfiguration () -> (String, UInt16, String, Int, String, String, String) {
 
     let errorPrefix = "Configuration / "
 
@@ -66,6 +66,10 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String) {
         Log.error(errorPrefix+"Missing admin default password")
         exit(1)
     }
+    guard let adminEmail = configJson["adminEmail"].string else {
+        Log.error(errorPrefix+"Missing admin default email")
+        exit(1)
+    }
 
     return (
         dbHostname,
@@ -73,6 +77,7 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String) {
         dbName,
         toriPort.intValue,
         adminName,
-        adminPassword
+        adminPassword,
+        adminEmail
     )
 }

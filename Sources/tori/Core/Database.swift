@@ -23,7 +23,7 @@ func setupDb() -> MongoKitten.Database {
     // TODO: if not existing create db
 
     // database setup
-    let (dbHost, dbPort, dbName, _, adminName, adminPassword) = getConfiguration()
+    let (dbHost, dbPort, dbName, _, adminName, adminPassword, adminEmail) = getConfiguration()
 
     let dbServer = try! Server(
         at: dbHost,
@@ -38,8 +38,9 @@ func setupDb() -> MongoKitten.Database {
     if try! userCollection.count(matching: "username" == adminName) == 0 {
 
         let adminUser: Document = [
-                                      "username": .string(adminName),
-                                      "password": .string("\(adminPassword.md5())"),
+                                      "username": ~adminName,
+                                      "password": ~"\(adminPassword.md5())",
+                                      "email": ~adminEmail,
                                       "role": ~Role.Admin.hashValue
         ]
 

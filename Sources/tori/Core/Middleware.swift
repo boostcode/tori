@@ -35,13 +35,14 @@ extension RouterResponse {
         try! self
             .status(.OK)
             .send(json: JSON([
-                                 "status": "error",
-                                 "message": msg
+                    "status": "error",
+                    "message": msg
                 ]))
             .end()
     }
 
     func json(withJson json: JSON) {
+
         try! self
             .status(.OK)
             .send(json: json)
