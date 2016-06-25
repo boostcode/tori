@@ -19,9 +19,9 @@ import Foundation
 struct ACL {
 
     enum AccessType {
-        case None
-        case Mine
-        case All
+        case None // cannot access any data
+        case Mine // can access only personal data
+        case All // can access everything (except blacklisted)
     }
 
     let read: AccessType
@@ -29,4 +29,5 @@ struct ACL {
 
 }
 
+// admin user has rights over all the fields, even third party ones
 let adminPermission = ACL(read: .All, write: .All)
