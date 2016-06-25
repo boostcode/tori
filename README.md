@@ -7,6 +7,7 @@
 ![Linux](https://img.shields.io/badge/linux-compatible-green.svg?style=flat)
 ![macOS](https://img.shields.io/badge/macOS-compatible-4BC51D.svg?style=flat)
 ![Swift 3 compatible](https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat)
+[![Build Status](https://travis-ci.org/boostcode/tori.svg?branch=develop)](https://travis-ci.org/boostcode/tori)
 ![Apache 2](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat)
 
 ## Summary
