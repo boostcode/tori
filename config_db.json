@@ -1,4 +1,5 @@
 {
+    "allowRegistration": true,
     "dbHost": "192.168.99.100",
     "dbPort": 32768,
     "dbName": "tori-db",
