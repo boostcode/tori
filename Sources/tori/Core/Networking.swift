@@ -61,7 +61,7 @@ class CheckRequestIsValidJson: RouterMiddleware {
                 return
             }
 
-            guard case let .Json(json) = body else {
+            guard case .Json(_) = body else {
                 response.error(withMsg: "request is not in json format")
                 return
             }
