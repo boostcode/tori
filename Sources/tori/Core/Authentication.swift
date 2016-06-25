@@ -84,8 +84,20 @@ func routerAuth() {
     }
 
     // MARK: - Registration
-    // TODO: implement registration, figure out how to manage default role
-    
+    router.all("/api/register", middleware: AllRemoteOriginMiddleware())
+    router.all("/api/register", middleware: BodyParser())
+    router.all("/api/register", middleware: CheckRequestIsValidJson())
+    router.post("/api/register") {
+        req, res, next in
+
+        guard isRegistrationEnabled() else {
+            res.error(withMsg: "Registration disabled")
+        }
+
+        // TODO: implement registration, figure out how to manage default role
+
+    }
+
     // MARK: - Logout
     router.all("/api/logout", middleware: TokenAuthentication())
     router.get("/api/logout") {

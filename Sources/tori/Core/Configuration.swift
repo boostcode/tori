@@ -18,8 +18,8 @@ import Foundation
 import LoggerAPI
 import SwiftyJSON
 
-// Retrieves tori db configuration form config.json file
-func getConfiguration () -> (String, UInt16, String, Int, String, String, String) {
+// 
+func openConfigFile() -> JSON {
 
     let errorPrefix = "Configuration / "
 
@@ -37,11 +37,22 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String, String
         exit(1)
     }
 
-    let configJson = JSON(data: configData)
+    let cfgJson = JSON(data: configData)
 
-    if let configString = configJson.rawString() {
+    if let configString = cfgJson.rawString() {
         Log.verbose(configString)
     }
+
+    return cfgJson
+}
+
+// Retrieves tori db configuration form config.json file
+func getConfiguration () -> (String, UInt16, String, Int, String, String, String) {
+
+    let errorPrefix = "Configuration / "
+
+    let configJson = openConfigFile()
+
     guard let dbHostname = configJson["dbHost"].string else {
         Log.error(errorPrefix+"Missing ip address")
         exit(1)
@@ -80,4 +91,18 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String, String
         adminPassword,
         adminEmail
     )
+}
+
+// return if registration is enabled
+func isRegistrationEnabled() -> Bool {
+    let errorPrefix = "Configuration / "
+
+    let configJson = openConfigFile()
+
+    guard let registrationAllowed = configJson["allowRegistration"].bool else {
+        Log.error(errorPrefix+"Missing allowRegistration")
+        return false
+    }
+
+    return registrationAllowed
 }
