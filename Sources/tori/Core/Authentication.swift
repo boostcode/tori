@@ -92,6 +92,7 @@ func routerAuth() {
 
         guard isRegistrationEnabled() else {
             res.error(withMsg: "Registration disabled")
+            return
         }
 
         // TODO: implement registration, figure out how to manage default role
