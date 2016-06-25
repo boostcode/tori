@@ -41,7 +41,7 @@ enum Role: Int {
     case Admin
     case Guest
 
-    // add your extra roles here
+    // MARK: - Add your extra roles here
 }
 
 // database setup
