@@ -1,11 +1,11 @@
 
 ![Tori](https://raw.githubusercontent.com/boostcode/tori/master/.github/tori-logo.png)
 
-**A [Kitura](https://github.com/IBM-Swift/Kitura) based framework to develop your custom Backend as a Service in Swift**
-
 [![Issues](https://img.shields.io/github/issues/boostcode/tori.svg?style=flat)](https://github.com/boostcode/tori/issues)
 [![codebeat badge](https://codebeat.co/badges/8ddbd93f-ef3a-4ccc-9479-23dfbd3fe233)](https://codebeat.co/projects/github-com-boostcode-tori)
-![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
+
+![Linux](https://img.shields.io/badge/linux-compatible-green.svg?style=flat)
+![macOS](https://img.shields.io/badge/macOS-compatible-4BC51D.svg?style=flat)
 ![Swift 3 compatible](https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat)
 ![Apache 2](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat)
 
