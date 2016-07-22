@@ -18,8 +18,16 @@ import Foundation
 import LoggerAPI
 import SwiftyJSON
 
-// 
-func openConfigFile() -> JSON {
+enum ConfigFile: String {
+    case db = "config_db.json"
+    case roles = "config_roles.json"
+    case models = "config_models.json"
+}
+
+
+
+// base func to open config files
+func openConfigFile(type: ConfigFile) -> JSON {
 
     let errorPrefix = "Configuration / "
 
@@ -32,7 +40,7 @@ func openConfigFile() -> JSON {
         Log.error(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export TORI_CONFIG_DIR=/var/tori)")
         exit(1)
     }
-    guard let configData = NSData(contentsOfFile: configDir + "/config_db.json") else {
+    guard let configData = NSData(contentsOfFile: configDir + "/" + type.rawValue) else {
         Log.error(errorPrefix+"Please check your config.json file exists at path "+configDir + "/config_db.json")
         exit(1)
     }
@@ -51,7 +59,7 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String, String
 
     let errorPrefix = "Configuration / "
 
-    let configJson = openConfigFile()
+    let configJson = openConfigFile(.db)
 
     guard let dbHostname = configJson["dbHost"].string else {
         Log.error(errorPrefix+"Missing ip address")

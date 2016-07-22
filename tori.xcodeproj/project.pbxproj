@@ -7,49 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		486259A81D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
-		486259A91D1E92F9008DF82A /* libCHttpParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHttpParser" /* libCHttpParser.dylib */; };
-		486259AA1D1E92F9008DF82A /* libSocket.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* libSocket.dylib */; };
-		486259AB1D1E92F9008DF82A /* libKituraSys.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* libKituraSys.dylib */; };
-		486259AC1D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
-		486259AD1D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
-		486259AE1D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259AF1D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259B01D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
-		486259B11D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259B21D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259B31D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
-		486259B41D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259B51D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259B61D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
-		486259B71D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259B81D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259B91D1E92F9008DF82A /* libHMAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HMAC" /* libHMAC.dylib */; };
-		486259BA1D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
-		486259BB1D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259BC1D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259BD1D1E92F9008DF82A /* libHMAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HMAC" /* libHMAC.dylib */; };
-		486259BE1D1E92F9008DF82A /* libPBKDF2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_PBKDF2" /* libPBKDF2.dylib */; };
-		486259BF1D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
-		486259C01D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259C11D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259C21D1E92F9008DF82A /* libHMAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HMAC" /* libHMAC.dylib */; };
-		486259C31D1E92F9008DF82A /* libPBKDF2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_PBKDF2" /* libPBKDF2.dylib */; };
-		486259C41D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
-		486259C51D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
-		486259C61D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
-		486259C71D1E92F9008DF82A /* libCHttpParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHttpParser" /* libCHttpParser.dylib */; };
-		486259C81D1E92F9008DF82A /* libSocket.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* libSocket.dylib */; };
-		486259C91D1E92F9008DF82A /* libKituraSys.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* libKituraSys.dylib */; };
-		486259CA1D1E92F9008DF82A /* libStrand.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Strand" /* libStrand.dylib */; };
-		486259CB1D1E92F9008DF82A /* libSHA1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SHA1" /* libSHA1.dylib */; };
-		486259CC1D1E92F9008DF82A /* libBSON.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_BSON" /* libBSON.dylib */; };
-		486259CD1D1E92F9008DF82A /* libSCRAM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SCRAM" /* libSCRAM.dylib */; };
-		486259CE1D1E92F9008DF82A /* libMD5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_MD5" /* libMD5.dylib */; };
-		486259CF1D1E92F9008DF82A /* libKitura-TemplateEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraTemplateEngine" /* libKitura-TemplateEngine.dylib */; };
-		486259D01D1E92F9008DF82A /* libSwiftyJSON.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SwiftyJSON" /* libSwiftyJSON.dylib */; };
-		486259D11D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
-		486259D21D1E92F9008DF82A /* libKituraNet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraNet" /* libKituraNet.dylib */; };
+		48580DFC1D429FF600074081 /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
+		48580DFD1D429FF600074081 /* libCHttpParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHttpParser" /* libCHttpParser.dylib */; };
+		48580DFE1D429FF600074081 /* libSocket.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* libSocket.dylib */; };
+		48580DFF1D429FF600074081 /* libKituraSys.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* libKituraSys.dylib */; };
+		48580E001D429FF600074081 /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
+		48580E011D429FF600074081 /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
+		48580E021D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E031D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E041D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
+		48580E051D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E061D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E071D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
+		48580E081D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E091D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E0A1D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
+		48580E0B1D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E0C1D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E0D1D429FF600074081 /* libHMAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HMAC" /* libHMAC.dylib */; };
+		48580E0E1D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
+		48580E0F1D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E101D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E111D429FF600074081 /* libHMAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HMAC" /* libHMAC.dylib */; };
+		48580E121D429FF600074081 /* libPBKDF2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_PBKDF2" /* libPBKDF2.dylib */; };
+		48580E131D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
+		48580E141D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E151D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E161D429FF600074081 /* libHMAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HMAC" /* libHMAC.dylib */; };
+		48580E171D429FF600074081 /* libPBKDF2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_PBKDF2" /* libPBKDF2.dylib */; };
+		48580E181D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
+		48580E191D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift2" /* libCryptoEssentialsSwift2.dylib */; };
+		48580E1A1D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentialsSwift3" /* libCryptoEssentialsSwift3.dylib */; };
+		48580E1B1D429FF600074081 /* libCHttpParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHttpParser" /* libCHttpParser.dylib */; };
+		48580E1C1D429FF600074081 /* libSocket.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* libSocket.dylib */; };
+		48580E1D1D429FF600074081 /* libKituraSys.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* libKituraSys.dylib */; };
+		48580E1E1D429FF600074081 /* libStrand.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Strand" /* libStrand.dylib */; };
+		48580E1F1D429FF600074081 /* libSHA1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SHA1" /* libSHA1.dylib */; };
+		48580E201D429FF600074081 /* libBSON.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_BSON" /* libBSON.dylib */; };
+		48580E211D429FF600074081 /* libSCRAM.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SCRAM" /* libSCRAM.dylib */; };
+		48580E221D429FF600074081 /* libMD5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_MD5" /* libMD5.dylib */; };
+		48580E231D429FF600074081 /* libKitura-TemplateEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraTemplateEngine" /* libKitura-TemplateEngine.dylib */; };
+		48580E241D429FF600074081 /* libSwiftyJSON.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SwiftyJSON" /* libSwiftyJSON.dylib */; };
+		48580E251D429FF600074081 /* libLoggerAPI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* libLoggerAPI.dylib */; };
+		48580E261D429FF600074081 /* libKituraNet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraNet" /* libKituraNet.dylib */; };
 		_LinkFileRef_BSON /* libBSON.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_BSON" /* libBSON.dylib */; };
 		_LinkFileRef_CHttpParser /* libCHttpParser.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHttpParser" /* libCHttpParser.dylib */; };
 		_LinkFileRef_CryptoEssentials /* libCryptoEssentials.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* libCryptoEssentials.dylib */; };
@@ -183,140 +183,140 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		486259D31D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E271D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_LoggerAPI";
 			remoteInfo = LoggerAPI;
 		};
-		486259D41D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E281D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_CHttpParser";
 			remoteInfo = CHttpParser;
 		};
-		486259D51D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E291D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_Socket";
 			remoteInfo = Socket;
 		};
-		486259D61D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E2A1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_KituraSys";
 			remoteInfo = KituraSys;
 		};
-		486259D71D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E2B1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_KituraTemplateEngine";
 			remoteInfo = "Kitura-TemplateEngine";
 		};
-		486259D81D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E2C1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SwiftyJSON";
 			remoteInfo = SwiftyJSON;
 		};
-		486259D91D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E2D1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_KituraNet";
 			remoteInfo = KituraNet;
 		};
-		486259DA1D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E2E1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_CryptoEssentialsSwift2";
 			remoteInfo = CryptoEssentialsSwift2;
 		};
-		486259DB1D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E2F1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_CryptoEssentialsSwift3";
 			remoteInfo = CryptoEssentialsSwift3;
 		};
-		486259DC1D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E301D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_CryptoEssentials";
 			remoteInfo = CryptoEssentials;
 		};
-		486259DD1D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E311D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_HMAC";
 			remoteInfo = HMAC;
 		};
-		486259DE1D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E321D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_PBKDF2";
 			remoteInfo = PBKDF2;
 		};
-		486259DF1D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E331D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_Strand";
 			remoteInfo = Strand;
 		};
-		486259E01D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E341D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SHA1";
 			remoteInfo = SHA1;
 		};
-		486259E11D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E351D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_BSON";
 			remoteInfo = BSON;
 		};
-		486259E21D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E361D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SCRAM";
 			remoteInfo = SCRAM;
 		};
-		486259E31D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E371D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_MD5";
 			remoteInfo = MD5;
 		};
-		486259E41D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E381D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_MongoKitten";
 			remoteInfo = MongoKitten;
 		};
-		486259E51D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E391D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_HeliumLogger";
 			remoteInfo = HeliumLogger;
 		};
-		486259E61D1E92F9008DF82A /* PBXContainerItemProxy */ = {
+		48580E3A1D429FF700074081 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
@@ -326,7 +326,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = /Users/matteocrippa/Repository/tori/Package.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = /Users/matteocrippa/Repositories/tori/Package.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/BSON-2.2.2/Sources/Document+LiteralConvertibles.swift" /* Document+LiteralConvertibles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+LiteralConvertibles.swift"; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/BSON-2.2.2/Sources/Document+Operators.swift" /* Document+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+Operators.swift"; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/BSON-2.2.2/Sources/Document+SequenceType.swift" /* Document+SequenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+SequenceType.swift"; sourceTree = "<group>"; };
@@ -502,9 +502,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259B01D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */,
-				486259B11D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259B21D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E041D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */,
+				48580E051D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E061D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +512,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259AD1D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */,
+				48580E011D429FF600074081 /* libLoggerAPI.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,12 +520,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259A91D1E92F9008DF82A /* libCHttpParser.dylib in Frameworks */,
-				486259AA1D1E92F9008DF82A /* libSocket.dylib in Frameworks */,
-				486259AB1D1E92F9008DF82A /* libKituraSys.dylib in Frameworks */,
+				48580DFD1D429FF600074081 /* libCHttpParser.dylib in Frameworks */,
+				48580DFE1D429FF600074081 /* libSocket.dylib in Frameworks */,
+				48580DFF1D429FF600074081 /* libKituraSys.dylib in Frameworks */,
 				_LinkFileRef_KituraTemplateEngine /* libKitura-TemplateEngine.dylib in Frameworks */,
 				_LinkFileRef_SwiftyJSON /* libSwiftyJSON.dylib in Frameworks */,
-				486259AC1D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */,
+				48580E001D429FF600074081 /* libLoggerAPI.dylib in Frameworks */,
 				_LinkFileRef_KituraNet /* libKituraNet.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,7 +535,7 @@
 			buildActionMask = 0;
 			files = (
 				_LinkFileRef_CHttpParser /* libCHttpParser.dylib in Frameworks */,
-				486259A81D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */,
+				48580DFC1D429FF600074081 /* libLoggerAPI.dylib in Frameworks */,
 				_LinkFileRef_Socket /* libSocket.dylib in Frameworks */,
 				_LinkFileRef_KituraSys /* libKituraSys.dylib in Frameworks */,
 			);
@@ -568,8 +568,8 @@
 			buildActionMask = 0;
 			files = (
 				_LinkFileRef_CryptoEssentials /* libCryptoEssentials.dylib in Frameworks */,
-				486259AE1D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259AF1D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E021D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E031D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,11 +577,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259BD1D1E92F9008DF82A /* libHMAC.dylib in Frameworks */,
-				486259BE1D1E92F9008DF82A /* libPBKDF2.dylib in Frameworks */,
-				486259BF1D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */,
-				486259C01D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259C11D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E111D429FF600074081 /* libHMAC.dylib in Frameworks */,
+				48580E121D429FF600074081 /* libPBKDF2.dylib in Frameworks */,
+				48580E131D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */,
+				48580E141D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E151D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
 				_LinkFileRef_Strand /* libStrand.dylib in Frameworks */,
 				_LinkFileRef_SHA1 /* libSHA1.dylib in Frameworks */,
 				_LinkFileRef_BSON /* libBSON.dylib in Frameworks */,
@@ -594,9 +594,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259B31D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */,
-				486259B41D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259B51D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E071D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */,
+				48580E081D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E091D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
 				_LinkFileRef_HMAC /* libHMAC.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,10 +605,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259B61D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */,
-				486259B71D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259B81D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
-				486259B91D1E92F9008DF82A /* libHMAC.dylib in Frameworks */,
+				48580E0A1D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */,
+				48580E0B1D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E0C1D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E0D1D429FF600074081 /* libHMAC.dylib in Frameworks */,
 				_LinkFileRef_PBKDF2 /* libPBKDF2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,9 +617,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259BA1D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */,
-				486259BB1D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259BC1D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E0E1D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */,
+				48580E0F1D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E101D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,23 +648,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				486259C21D1E92F9008DF82A /* libHMAC.dylib in Frameworks */,
-				486259C31D1E92F9008DF82A /* libPBKDF2.dylib in Frameworks */,
-				486259C41D1E92F9008DF82A /* libCryptoEssentials.dylib in Frameworks */,
-				486259C51D1E92F9008DF82A /* libCryptoEssentialsSwift2.dylib in Frameworks */,
-				486259C61D1E92F9008DF82A /* libCryptoEssentialsSwift3.dylib in Frameworks */,
-				486259C71D1E92F9008DF82A /* libCHttpParser.dylib in Frameworks */,
-				486259C81D1E92F9008DF82A /* libSocket.dylib in Frameworks */,
-				486259C91D1E92F9008DF82A /* libKituraSys.dylib in Frameworks */,
-				486259CA1D1E92F9008DF82A /* libStrand.dylib in Frameworks */,
-				486259CB1D1E92F9008DF82A /* libSHA1.dylib in Frameworks */,
-				486259CC1D1E92F9008DF82A /* libBSON.dylib in Frameworks */,
-				486259CD1D1E92F9008DF82A /* libSCRAM.dylib in Frameworks */,
-				486259CE1D1E92F9008DF82A /* libMD5.dylib in Frameworks */,
-				486259CF1D1E92F9008DF82A /* libKitura-TemplateEngine.dylib in Frameworks */,
-				486259D01D1E92F9008DF82A /* libSwiftyJSON.dylib in Frameworks */,
-				486259D11D1E92F9008DF82A /* libLoggerAPI.dylib in Frameworks */,
-				486259D21D1E92F9008DF82A /* libKituraNet.dylib in Frameworks */,
+				48580E161D429FF600074081 /* libHMAC.dylib in Frameworks */,
+				48580E171D429FF600074081 /* libPBKDF2.dylib in Frameworks */,
+				48580E181D429FF600074081 /* libCryptoEssentials.dylib in Frameworks */,
+				48580E191D429FF600074081 /* libCryptoEssentialsSwift2.dylib in Frameworks */,
+				48580E1A1D429FF600074081 /* libCryptoEssentialsSwift3.dylib in Frameworks */,
+				48580E1B1D429FF600074081 /* libCHttpParser.dylib in Frameworks */,
+				48580E1C1D429FF600074081 /* libSocket.dylib in Frameworks */,
+				48580E1D1D429FF600074081 /* libKituraSys.dylib in Frameworks */,
+				48580E1E1D429FF600074081 /* libStrand.dylib in Frameworks */,
+				48580E1F1D429FF600074081 /* libSHA1.dylib in Frameworks */,
+				48580E201D429FF600074081 /* libBSON.dylib in Frameworks */,
+				48580E211D429FF600074081 /* libSCRAM.dylib in Frameworks */,
+				48580E221D429FF600074081 /* libMD5.dylib in Frameworks */,
+				48580E231D429FF600074081 /* libKitura-TemplateEngine.dylib in Frameworks */,
+				48580E241D429FF600074081 /* libSwiftyJSON.dylib in Frameworks */,
+				48580E251D429FF600074081 /* libLoggerAPI.dylib in Frameworks */,
+				48580E261D429FF600074081 /* libKituraNet.dylib in Frameworks */,
 				_LinkFileRef_MongoKitten /* libMongoKitten.dylib in Frameworks */,
 				_LinkFileRef_HeliumLogger /* libHeliumLogger.dylib in Frameworks */,
 				_LinkFileRef_Kitura /* libKitura.dylib in Frameworks */,
@@ -1744,102 +1744,102 @@
 		__Dependency_BSON /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_BSON" /* BSON */;
-			targetProxy = 486259E11D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E351D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_CHttpParser /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_CHttpParser" /* CHttpParser */;
-			targetProxy = 486259D41D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E281D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_CryptoEssentials /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_CryptoEssentials" /* CryptoEssentials */;
-			targetProxy = 486259DC1D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E301D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_CryptoEssentialsSwift2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_CryptoEssentialsSwift2" /* CryptoEssentialsSwift2 */;
-			targetProxy = 486259DA1D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E2E1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_CryptoEssentialsSwift3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_CryptoEssentialsSwift3" /* CryptoEssentialsSwift3 */;
-			targetProxy = 486259DB1D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E2F1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_HMAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_HMAC" /* HMAC */;
-			targetProxy = 486259DD1D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E311D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_HeliumLogger /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_HeliumLogger" /* HeliumLogger */;
-			targetProxy = 486259E51D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E391D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Kitura /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Kitura" /* Kitura */;
-			targetProxy = 486259E61D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E3A1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_KituraNet /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_KituraNet" /* KituraNet */;
-			targetProxy = 486259D91D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E2D1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_KituraSys /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_KituraSys" /* KituraSys */;
-			targetProxy = 486259D61D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E2A1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_KituraTemplateEngine /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_KituraTemplateEngine" /* Kitura-TemplateEngine */;
-			targetProxy = 486259D71D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E2B1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_LoggerAPI /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_LoggerAPI" /* LoggerAPI */;
-			targetProxy = 486259D31D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E271D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_MD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_MD5" /* MD5 */;
-			targetProxy = 486259E31D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E371D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_MongoKitten /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_MongoKitten" /* MongoKitten */;
-			targetProxy = 486259E41D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E381D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_PBKDF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_PBKDF2" /* PBKDF2 */;
-			targetProxy = 486259DE1D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E321D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SCRAM /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SCRAM" /* SCRAM */;
-			targetProxy = 486259E21D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E361D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SHA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SHA1" /* SHA1 */;
-			targetProxy = 486259E01D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E341D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Socket /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Socket" /* Socket */;
-			targetProxy = 486259D51D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E291D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Strand /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Strand" /* Strand */;
-			targetProxy = 486259DF1D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E331D429FF700074081 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SwiftyJSON /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SwiftyJSON" /* SwiftyJSON */;
-			targetProxy = 486259D81D1E92F9008DF82A /* PBXContainerItemProxy */;
+			targetProxy = 48580E2C1D429FF700074081 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1963,8 +1963,8 @@
 				DYLIB_INSTALL_NAME_BASE = "$(CONFIGURATION_BUILD_DIR)";
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/matteocrippa/Repository/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
-					"/Users/matteocrippa/Repository/tori/Packages/CCurl-0.1.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.1.1",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1983,8 +1983,8 @@
 				DYLIB_INSTALL_NAME_BASE = "$(CONFIGURATION_BUILD_DIR)";
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/matteocrippa/Repository/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
-					"/Users/matteocrippa/Repository/tori/Packages/CCurl-0.1.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.1.1",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -2177,8 +2177,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/matteocrippa/Repository/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
-					"/Users/matteocrippa/Repository/tori/Packages/CCurl-0.1.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.1.1",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -2318,8 +2318,8 @@
 				DYLIB_INSTALL_NAME_BASE = "$(CONFIGURATION_BUILD_DIR)";
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/matteocrippa/Repository/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
-					"/Users/matteocrippa/Repository/tori/Packages/CCurl-0.1.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.1.1",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -2339,8 +2339,8 @@
 				DYLIB_INSTALL_NAME_BASE = "$(CONFIGURATION_BUILD_DIR)";
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/matteocrippa/Repository/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
-					"/Users/matteocrippa/Repository/tori/Packages/CCurl-0.1.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.1.1",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -2545,8 +2545,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				HEADER_SEARCH_PATHS = (
-					"/Users/matteocrippa/Repository/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
-					"/Users/matteocrippa/Repository/tori/Packages/CCurl-0.1.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include",
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.1.1",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
