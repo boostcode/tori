@@ -17,7 +17,10 @@
     "000B17277859E4768F3F95539783DD07734FAE00" : 0,
     "B48A9580752F9C43885C949B19DDA563AC9BB228" : 0,
     "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : 0,
+    "F5C516C47506A9D397E80AC3A167806F3F811B4D" : 9223372036854775807,
     "1A81AC7E588BE86E760603555BCE76FB0C611997" : 0,
+    "4A88C7F5F6EA13C3C2A03CD1950D7F655F1E4F26" : 9223372036854775807,
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
     "43425688648679ECEC3105C3812E3C82D04FD563" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "76361743-9745-4D5C-9D89-A9D3899F721B",
@@ -35,7 +38,10 @@
     "000B17277859E4768F3F95539783DD07734FAE00" : "tori\/Packages\/MD5-0.5.2\/",
     "B48A9580752F9C43885C949B19DDA563AC9BB228" : "tori\/Packages\/CHttpParser-0.1.1\/",
     "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : "tori\/Packages\/MongoKitten-0.8.1\/",
+    "F5C516C47506A9D397E80AC3A167806F3F811B4D" : "tori\/Packages\/PBKDF2-0.5.2\/",
     "1A81AC7E588BE86E760603555BCE76FB0C611997" : "tori\/Packages\/Kitura-TemplateEngine-0.9.0\/",
+    "4A88C7F5F6EA13C3C2A03CD1950D7F655F1E4F26" : "tori\/Packages\/SHA1-0.5.2\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "tori\/Packages\/SwiftyJSON-6.1.0\/",
     "43425688648679ECEC3105C3812E3C82D04FD563" : "tori\/Packages\/Kitura-0.11.3\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "tori",
@@ -88,6 +94,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43C021D2F0E746BBB29CA4E06229F111196D4871"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CryptoKitten\/SHA1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4A88C7F5F6EA13C3C2A03CD1950D7F655F1E4F26"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PlanTeam\/BSON.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7"
@@ -116,6 +127,16 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:boostcode\/tori.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF54732FAE03A5561B5A06A6DEAC6197900486D0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/SwiftyJSON.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CryptoKitten\/PBKDF2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5C516C47506A9D397E80AC3A167806F3F811B4D"
     }
   ]
 }

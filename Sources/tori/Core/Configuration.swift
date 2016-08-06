@@ -59,7 +59,7 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String, String
 
     let errorPrefix = "Configuration / "
 
-    let configJson = openConfigFile(.db)
+    let configJson = openConfigFile(type: .db)
 
     guard let dbHostname = configJson["dbHost"].string else {
         Log.error(errorPrefix+"Missing ip address")
@@ -105,7 +105,7 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String, String
 func isRegistrationEnabled() -> Bool {
     let errorPrefix = "Configuration / "
 
-    let configJson = openConfigFile()
+    let configJson = openConfigFile(type: .db)
 
     guard let registrationAllowed = configJson["allowRegistration"].bool else {
         Log.error(errorPrefix+"Missing allowRegistration")

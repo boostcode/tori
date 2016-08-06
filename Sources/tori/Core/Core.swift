@@ -14,6 +14,7 @@
  * limitations under the License.
  **/
 
+import Kitura
 import SwiftyJSON
 
 func setupTori() {
