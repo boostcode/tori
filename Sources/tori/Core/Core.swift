@@ -37,11 +37,7 @@ func setupTori() {
         andBlacklistingKeys: ["password"]
     ).enableRoutes()
 
-    // root routing
-    router.get("/") {
-        request, response, next in
-        response.json(withJson: JSON([ "msg": "Hello, tori!"]))
-        next()
-    }
-
+    // static routing
+    router.all("/", middleware: StaticFileServer())
+    
 }
