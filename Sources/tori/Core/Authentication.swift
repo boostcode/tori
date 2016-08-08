@@ -57,11 +57,7 @@ func routerAuth() {
             return
         }
 
-        // FIXME: restore md5
-        //let passwordMD5 = "\(userPassword.md5())"
-        let passwordMD5 = "\(userPassword)"
-
-        guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == passwordMD5) else {
+        guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == userPassword.md5) else {
             res.error(withMsg: "wrong user or password provided")
             return
         }

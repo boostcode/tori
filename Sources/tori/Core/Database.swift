@@ -39,9 +39,7 @@ func setupDb() -> MongoKitten.Database {
 
         let adminUser: Document = [
                                       "username": ~adminName,
-                                      //"password": ~"\(adminPassword.md5())",
-            // FIXME: re-enable md5
-                                      "password": ~"\(adminPassword)",
+                                      "password": ~"\(adminPassword.md5)",
                                       "email": ~adminEmail,
                                       "role": ~Role.Admin.hashValue
         ]
