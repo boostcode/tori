@@ -22,7 +22,7 @@ let package = Package(
       .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 0, minor: 20),
       .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 8),
       .Package(url: "https://github.com/PlanTeam/MongoKitten.git", majorVersion: 1, minor: 1),
-      //.Package(url: "https://github.com/boostcode/tori-APNS.git", majorVersion: 0, minor: 1)
+      .Package(url: "https://github.com/boostcode/tori-APNS.git", majorVersion: 0, minor: 1)
     ],
     exclude: ["Makefile", "Kitura-Build", "Tests"]
 )

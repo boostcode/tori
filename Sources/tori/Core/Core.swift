@@ -15,6 +15,7 @@
  **/
 
 import Kitura
+import MD5
 import SwiftyJSON
 
 func setupTori() {
@@ -41,4 +42,10 @@ func setupTori() {
     // static routing
     router.all("/", middleware: StaticFileServer())
     
+}
+
+extension String {
+    var md5: String {
+        return MD5.calculate(self).hexString
+    }
 }
