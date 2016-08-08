@@ -14,6 +14,9 @@
 
 [Tori](https://github.com/boostcode/tori) is a web framework that allows you to create **BaaS** for your application, it is a porting of [torii.js](https://github.com/boostcode/torii.js) based on [Kitura](https://github.com/IBM-Swift/Kitura) framework by **IBM** and written in **Swift**.
 
+## Setup
+
+Install Swift **DEVELOPMENT-SNAPSHOT-2016-06-20-a** first.
 
 ## Installation
 
@@ -39,9 +42,6 @@ If any error raises up during ```make``` continue instead till it is finished.
 ```
 .build/debug/tori
 ```
-
-## Setup
-
 
 ## Credits
 Tori is proudly powered by:

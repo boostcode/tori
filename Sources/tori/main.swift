@@ -27,7 +27,7 @@ import MongoKitten
 // logger
 import LoggerAPI
 import HeliumLogger
-Log.logger = HeliumLogger()
+HeliumLogger.use()
 
 #if os(Linux)
     import Glibc
@@ -54,11 +54,8 @@ setupTori()
 // get config
 let (_, _, _, toriPort, _, _, _) = getConfiguration()
 
-// setup server
-let server = HttpServer.listen(
-    port: toriPort,
-    delegate: router
-)
+// start server
+Kitura.addHTTPServer(onPort: toriPort, with: router)
+Kitura.run()
 
 Log.debug("Tori is running at port \(toriPort)")
-Server.run()

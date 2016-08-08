@@ -42,7 +42,7 @@ func routerAuth() {
     router.post("/api/login") {
         req, res, next in
 
-        guard case let .Json(json) = req.body! else {
+        guard case let .json(json) = req.body! else {
             res.error(withMsg: "request is not in json format")
             return
         }
@@ -57,7 +57,9 @@ func routerAuth() {
             return
         }
 
-        let passwordMD5 = "\(userPassword.md5())"
+        // FIXME: restore md5
+        //let passwordMD5 = "\(userPassword.md5())"
+        let passwordMD5 = "\(userPassword)"
 
         guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == passwordMD5) else {
             res.error(withMsg: "wrong user or password provided")

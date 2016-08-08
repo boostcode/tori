@@ -55,14 +55,14 @@ extension RouterResponse {
 class CheckRequestIsValidJson: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        if request.method != RouterMethod.Get {
+        if request.method != RouterMethod.get {
 
             guard let body = request.body else {
                 response.error(withMsg: "request is missing body")
                 return
             }
 
-            guard case .Json(_) = body else {
+            guard case .json(_) = body else {
                 response.error(withMsg: "request is not in json format")
                 return
             }
@@ -137,8 +137,9 @@ class AdminOnly: RouterMiddleware {
 class AllRemoteOriginMiddleware: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        response.setHeader("Access-Control-Allow-Origin", value: "*")
-        response.setHeader("Content-Type", value: "application/json; charset=utf-8")
+        //response.header["Access-Control-Allow-Origin", "*"]
+        //response.header["Content-Type", "application/json; charset=utf-8"]
+        response.headers.append("Content-Type", value: "application/json; charset=utf-8")
         next()
         
     }

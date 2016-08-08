@@ -152,7 +152,7 @@ class Route {
         // GET single item with Id
         router.get("/api/\(slug)/:id") {
             req, res, next in
-            guard let itemId = req.params["id"] else {
+            guard let itemId = req.parameters["id"] else {
                 res.error(withMsg: "missing id")
                 return
             }
@@ -167,7 +167,7 @@ class Route {
         // PUT updates an existing item
         router.put("/api/\(slug)/:id") {
             req, res, next in
-            guard let itemId = req.params["id"] else {
+            guard let itemId = req.parameters["id"] else {
                 res.error(withMsg: "missing id")
                 return
             }
@@ -177,7 +177,7 @@ class Route {
         // DELETE removes an existing item
         router.delete("/api/\(slug)/:id") {
             req, res, next in
-            guard let itemId = req.params["id"] else {
+            guard let itemId = req.parameters["id"] else {
                 res.error(withMsg: "missing id")
                 return
             }

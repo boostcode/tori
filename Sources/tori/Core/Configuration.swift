@@ -31,11 +31,10 @@ func openConfigFile(type: ConfigFile) -> JSON {
 
     let errorPrefix = "Configuration / "
 
-    if getenv("TORI_CONFIG_DIR") == nil {
+    guard let envVar = getenv("TORI_CONFIG_DIR") else {
         Log.error(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export TORI_CONFIG_DIR=/var/tori)")
         exit(1)
     }
-    let envVar = getenv("TORI_CONFIG_DIR")
     guard let configDir = String(validatingUTF8: envVar) else {
         Log.error(errorPrefix+"Please set your CONFIG_DIR env var (e.g. export TORI_CONFIG_DIR=/var/tori)")
         exit(1)
