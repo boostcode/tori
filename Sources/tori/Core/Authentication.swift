@@ -117,10 +117,12 @@ func routerAuth() {
             return
         }
 
+        // remove token
         var newUser = user
         newUser["token"] = .null
 
-        // remove token
+
+        // store to db
         try! userCollection.update(matching: user, to: newUser)
 
         let responseJson = JSON([

@@ -25,7 +25,6 @@ enum ConfigFile: String {
 }
 
 
-
 // base func to open config files
 func openConfigFile(type: ConfigFile) -> JSON {
 
