@@ -17,7 +17,7 @@
             productRefGroup = ____Products_;
             projectDirPath = '';
             projectRoot = '';
-            targets = (______Target_LoggerAPI, ______Target_KituraSys, ______Target_Socket, ______Target_CHttpParser, ______Target_KituraNet, ______Target_SwiftyJSON, ______Target_KituraTemplateEngine, ______Target_Kitura, ______Target_HeliumLogger, ______Target_CryptoEssentials, ______Target_MD5, ______Target_HMAC, ______Target_PBKDF2, ______Target_SCRAM, ______Target_SHA1, ______Target_BSON, ______Target_Strand, ______Target_MongoKitten, ______Target_tori);
+            targets = (______Target_LoggerAPI, ______Target_KituraSys, ______Target_Socket, ______Target_CHttpParser, ______Target_KituraNet, ______Target_SwiftyJSON, ______Target_KituraTemplateEngine, ______Target_Kitura, ______Target_HeliumLogger, ______Target_CryptoEssentials, ______Target_MD5, ______Target_HMAC, ______Target_PBKDF2, ______Target_SCRAM, ______Target_SHA1, ______Target_BSON, ______Target_Strand, ______Target_MongoKitten, ______Target_tori_APNS, ______Target_tori);
         };
         '__PBXFileRef_Package.swift' = {
             isa = PBXFileReference;
@@ -2335,12 +2335,80 @@
             isa = PBXTargetDependency;
             target = ______Target_MongoKitten;
         };
+        _______Group_tori_APNS = {
+            isa = PBXGroup;
+            name = tori-APNS;
+            path = 'Packages/tori-APNS-0.1.0/Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/tori-APNS-0.1.0/Sources/main.swift');
+        };
+        '__PBXFileRef_Packages/tori-APNS-0.1.0/Sources/main.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'main.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_tori_APNS = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_tori_APNS;
+            buildPhases = (CompilePhase_tori_APNS, ___LinkPhase_tori_APNS);
+            buildRules = ();
+            dependencies = (__Dependency_SwiftyJSON);
+            name = tori-APNS;
+            productName = tori_APNS;
+            productReference = _____Product_tori_APNS;
+            productType = 'com.apple.product-type.tool';
+        };
+        _____Product_tori_APNS = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.executable';
+            path = 'tori-APNS';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_tori_APNS = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/tori-APNS-0.1.0/Sources/main.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/tori-APNS-0.1.0/Sources/main.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/tori-APNS-0.1.0/Sources/main.swift';
+        };
+        ___LinkPhase_tori_APNS = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_SwiftyJSON_via_tori_APNS);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_SwiftyJSON_via_tori_APNS = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_SwiftyJSON;
+        };
+        _______Confs_tori_APNS = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_tori_APNS, _ReleaseConf_tori_APNS);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_tori_APNS = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.3'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/curl/7.50.1/include'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/curl/7.50.1/lib -lcurl'; };
+            name = Debug;
+        };
+        _ReleaseConf_tori_APNS = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.3'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/curl/7.50.1/include'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/curl/7.50.1/lib -lcurl'; };
+            name = Release;
+        };
+        __Dependency_tori_APNS = {
+            isa = PBXTargetDependency;
+            target = ______Target_tori_APNS;
+        };
         _______Group_tori = {
             isa = PBXGroup;
             name = tori;
             path = 'Sources/tori';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Sources/tori/main.swift', '__PBXFileRef_Sources/tori/Core/Authentication.swift', '__PBXFileRef_Sources/tori/Core/Configuration.swift', '__PBXFileRef_Sources/tori/Core/Core.swift', '__PBXFileRef_Sources/tori/Core/Database.swift', '__PBXFileRef_Sources/tori/Core/Middleware.swift', '__PBXFileRef_Sources/tori/Core/Role.swift', '__PBXFileRef_Sources/tori/Core/Route.swift');
+            children = ('__PBXFileRef_Sources/tori/main.swift', '__PBXFileRef_Sources/tori/Core/Authentication.swift', '__PBXFileRef_Sources/tori/Core/Configuration.swift', '__PBXFileRef_Sources/tori/Core/Core.swift', '__PBXFileRef_Sources/tori/Core/Database.swift', '__PBXFileRef_Sources/tori/Core/Middleware.swift', '__PBXFileRef_Sources/tori/Core/Role.swift', '__PBXFileRef_Sources/tori/Core/Route.swift', '__PBXFileRef_Sources/tori/Extension/String+Extension.swift');
         };
         '__PBXFileRef_Sources/tori/main.swift' = {
             isa = PBXFileReference;
@@ -2390,6 +2458,12 @@
             name = 'Core/Route.swift';
             sourceTree = '<group>';
         };
+        '__PBXFileRef_Sources/tori/Extension/String+Extension.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Extension/String+Extension.swift';
+            sourceTree = '<group>';
+        };
         ______Target_tori = {
             isa = PBXNativeTarget;
             buildConfigurationList = _______Confs_tori;
@@ -2409,7 +2483,7 @@
         };
         CompilePhase_tori = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Sources/tori/main.swift', '__src_cc_ref_Sources/tori/Core/Authentication.swift', '__src_cc_ref_Sources/tori/Core/Configuration.swift', '__src_cc_ref_Sources/tori/Core/Core.swift', '__src_cc_ref_Sources/tori/Core/Database.swift', '__src_cc_ref_Sources/tori/Core/Middleware.swift', '__src_cc_ref_Sources/tori/Core/Role.swift', '__src_cc_ref_Sources/tori/Core/Route.swift');
+            files = ('__src_cc_ref_Sources/tori/main.swift', '__src_cc_ref_Sources/tori/Core/Authentication.swift', '__src_cc_ref_Sources/tori/Core/Configuration.swift', '__src_cc_ref_Sources/tori/Core/Core.swift', '__src_cc_ref_Sources/tori/Core/Database.swift', '__src_cc_ref_Sources/tori/Core/Middleware.swift', '__src_cc_ref_Sources/tori/Core/Role.swift', '__src_cc_ref_Sources/tori/Core/Route.swift', '__src_cc_ref_Sources/tori/Extension/String+Extension.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
         '__src_cc_ref_Sources/tori/main.swift' = {
@@ -2443,6 +2517,10 @@
         '__src_cc_ref_Sources/tori/Core/Route.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/tori/Core/Route.swift';
+        };
+        '__src_cc_ref_Sources/tori/Extension/String+Extension.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/tori/Extension/String+Extension.swift';
         };
         ___LinkPhase_tori = {
             isa = PBXFrameworksBuildPhase;
@@ -2529,12 +2607,12 @@
         };
         ___DebugConf_tori = {
             isa = XCBuildConfiguration;
-            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include /Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1'; OTHER_SWIFT_FLAGS = '$(inherited)'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; OTHER_LDFLAGS = '$(inherited)'; };
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include /Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1 /Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.3'; OTHER_SWIFT_FLAGS = '$(inherited)'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; OTHER_LDFLAGS = '$(inherited)'; };
             name = Debug;
         };
         _ReleaseConf_tori = {
             isa = XCBuildConfiguration;
-            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include /Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1'; OTHER_SWIFT_FLAGS = '$(inherited)'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; OTHER_LDFLAGS = '$(inherited)'; };
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/matteocrippa/Repositories/tori/Packages/CHttpParser-0.1.1/Sources/CHttpParser/include /Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1 /Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.3'; OTHER_SWIFT_FLAGS = '$(inherited)'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; OTHER_LDFLAGS = '$(inherited)'; };
             name = Release;
         };
         __Dependency_tori = {
@@ -2556,19 +2634,19 @@
         };
         _____Sources_ = {
             isa = PBXGroup;
-            children = (_______Group_LoggerAPI, _______Group_KituraSys, _______Group_Socket, _______Group_CHttpParser, _______Group_KituraNet, _______Group_SwiftyJSON, _______Group_KituraTemplateEngine, _______Group_Kitura, _______Group_HeliumLogger, _______Group_CryptoEssentials, _______Group_MD5, _______Group_HMAC, _______Group_PBKDF2, _______Group_SCRAM, _______Group_SHA1, _______Group_BSON, _______Group_Strand, _______Group_MongoKitten, _______Group_tori);
+            children = (_______Group_LoggerAPI, _______Group_KituraSys, _______Group_Socket, _______Group_CHttpParser, _______Group_KituraNet, _______Group_SwiftyJSON, _______Group_KituraTemplateEngine, _______Group_Kitura, _______Group_HeliumLogger, _______Group_CryptoEssentials, _______Group_MD5, _______Group_HMAC, _______Group_PBKDF2, _______Group_SCRAM, _______Group_SHA1, _______Group_BSON, _______Group_Strand, _______Group_MongoKitten, _______Group_tori_APNS, _______Group_tori);
             name = Sources;
             sourceTree = '<group>';
         };
         Dependencies_ = {
             isa = PBXGroup;
-            children = (_______Group_LoggerAPI, _______Group_KituraSys, _______Group_Socket, _______Group_CHttpParser, _______Group_KituraNet, _______Group_SwiftyJSON, _______Group_KituraTemplateEngine, _______Group_Kitura, _______Group_HeliumLogger, _______Group_CryptoEssentials, _______Group_MD5, _______Group_HMAC, _______Group_PBKDF2, _______Group_SCRAM, _______Group_SHA1, _______Group_BSON, _______Group_Strand, _______Group_MongoKitten);
+            children = (_______Group_LoggerAPI, _______Group_KituraSys, _______Group_Socket, _______Group_CHttpParser, _______Group_KituraNet, _______Group_SwiftyJSON, _______Group_KituraTemplateEngine, _______Group_Kitura, _______Group_HeliumLogger, _______Group_CryptoEssentials, _______Group_MD5, _______Group_HMAC, _______Group_PBKDF2, _______Group_SCRAM, _______Group_SHA1, _______Group_BSON, _______Group_Strand, _______Group_MongoKitten, _______Group_tori_APNS);
             name = Dependencies;
             sourceTree = '<group>';
         };
         ____Products_ = {
             isa = PBXGroup;
-            children = (_____Product_LoggerAPI, _____Product_KituraSys, _____Product_Socket, _____Product_CHttpParser, _____Product_KituraNet, _____Product_SwiftyJSON, _____Product_KituraTemplateEngine, _____Product_Kitura, _____Product_HeliumLogger, _____Product_CryptoEssentials, _____Product_MD5, _____Product_HMAC, _____Product_PBKDF2, _____Product_SCRAM, _____Product_SHA1, _____Product_BSON, _____Product_Strand, _____Product_MongoKitten, _____Product_tori);
+            children = (_____Product_LoggerAPI, _____Product_KituraSys, _____Product_Socket, _____Product_CHttpParser, _____Product_KituraNet, _____Product_SwiftyJSON, _____Product_KituraTemplateEngine, _____Product_Kitura, _____Product_HeliumLogger, _____Product_CryptoEssentials, _____Product_MD5, _____Product_HMAC, _____Product_PBKDF2, _____Product_SCRAM, _____Product_SHA1, _____Product_BSON, _____Product_Strand, _____Product_MongoKitten, _____Product_tori_APNS, _____Product_tori);
             name = Products;
             sourceTree = '<group>';
         };

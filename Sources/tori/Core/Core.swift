@@ -43,9 +43,3 @@ func setupTori() {
     router.all("/", middleware: StaticFileServer())
     
 }
-
-extension String {
-    var md5: String {
-        return MD5.calculate(self).hexString
-    }
-}

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>tori-APNS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>tori.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>______Target_CryptoEssentials</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_Extension</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -108,6 +118,11 @@
 			<true/>
 		</dict>
 		<key>______Target_tori</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_tori_APNS</key>
 		<dict>
 			<key>primary</key>
 			<true/>

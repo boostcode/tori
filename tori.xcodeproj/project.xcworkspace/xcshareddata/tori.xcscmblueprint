@@ -5,6 +5,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : 0,
+    "7841C960AC50AD96AB2A3FE760C2C20A89F3BCC0" : 0,
     "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA" : 0,
     "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : 0,
     "40635794C1929E96A4709153927459486D34FA7B" : 0,
@@ -24,6 +25,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "08D5B672-385E-4119-8E27-E4C48E55A0BC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : "tori\/Packages\/HeliumLogger-0.8.0\/",
+    "7841C960AC50AD96AB2A3FE760C2C20A89F3BCC0" : "tori\/Packages\/tori-APNS-0.1.0\/",
     "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA" : "tori\/Packages\/Strand-1.4.1\/",
     "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : "tori\/Packages\/BSON-3.1.2\/",
     "40635794C1929E96A4709153927459486D34FA7B" : "tori\/Packages\/Kitura-net-0.20.0\/",
@@ -88,6 +90,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PlanTeam\/MongoKitten.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/boostcode\/tori-APNS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7841C960AC50AD96AB2A3FE760C2C20A89F3BCC0"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/LoggerAPI.git",
