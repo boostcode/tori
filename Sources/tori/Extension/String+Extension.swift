@@ -17,7 +17,6 @@
 import Foundation
 import MD5
 
-
 extension String {
     
     // MARK: - MD5 encoding

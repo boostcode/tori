@@ -101,7 +101,7 @@ func getConfiguration () -> (String, UInt16, String, Int, String, String, String
 
 // return if registration is enabled
 func isRegistrationEnabled() -> Bool {
-    let errorPrefix = "Configuration / "
+    let errorPrefix = "Configuration Registration / "
 
     let configJson = openConfigFile(type: .db)
 
@@ -111,4 +111,9 @@ func isRegistrationEnabled() -> Bool {
     }
 
     return registrationAllowed
+}
+
+// return the list of datamodels
+func getModels() -> JSON {
+    return openConfigFile(type: .models)
 }

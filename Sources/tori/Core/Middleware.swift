@@ -53,6 +53,7 @@ extension RouterResponse {
 
 // MARK: - Request
 class CheckRequestIsValidJson: RouterMiddleware {
+    // validate current json request
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
         if request.method != RouterMethod.get {
@@ -74,6 +75,7 @@ class CheckRequestIsValidJson: RouterMiddleware {
 }
 
 class TokenAuthentication: RouterMiddleware {
+    // token based authentication
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
         guard let userToken = request.headers["Tori-Token"] else {
@@ -102,6 +104,7 @@ class TokenAuthentication: RouterMiddleware {
 }
 
 class GetUser: RouterMiddleware {
+    // retrieve current user information according headers
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
         guard let userName = request.userInfo["Tori-User"] as? String else {
@@ -118,6 +121,7 @@ class GetUser: RouterMiddleware {
 }
 
 class AdminOnly: RouterMiddleware {
+    // shall pass only users with admin privileges
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
         let userRole = Role(rawValue:request.userInfo["Tori-Role"] as! Int)
@@ -133,12 +137,14 @@ class AdminOnly: RouterMiddleware {
 }
 
 
+
 // MARK: - Response
 class AllRemoteOriginMiddleware: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
 
-        //response.header["Access-Control-Allow-Origin", "*"]
-        //response.header["Content-Type", "application/json; charset=utf-8"]
+        // enable cors
+        response.headers.append("Access-Control-Allow-Origin", value: "*")
+        // set response to be only json formatted
         response.headers.append("Content-Type", value: "application/json; charset=utf-8")
         next()
         
