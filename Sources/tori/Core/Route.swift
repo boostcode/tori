@@ -53,12 +53,15 @@ enum RouteTypes {
 class Route {
 
     var slug = ""
+    
     var dbModelName: String {
         return self.slug.capitalized
     }
+    
     var collection: MongoKitten.Collection {
         return db[self.dbModelName]
     }
+    
     // manages access to the collection
     var acl: [ACLRuleElement]
 
