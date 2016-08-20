@@ -47,21 +47,22 @@ class CoreTori {
                             
                             
             ], withACL: aclRules)
-        film.delegate = self
+        
+        film.preHook = { type in
+            
+            print("test pre hook \(type)")
+            
+            return true
+        }
+        
+        film.postHook = { type in
+            return true
+        }
+        
+        film.enableRoutes()
         
         
         // static routing
         router.all("/", middleware: StaticFileServer())
-    }
-}
-
-private typealias RouterHooks = CoreTori
-extension RouterHooks: RouterDelegate {
-    func preHook(forType type: RouteTypes) {
-        print("test pre")
-    }
-    
-    func postHook(forType type: RouteTypes) {
-        print("test post")        
     }
 }

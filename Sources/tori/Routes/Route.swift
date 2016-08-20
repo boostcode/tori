@@ -42,18 +42,12 @@ enum RouteDocumentType {
 }
 
 // route types
-@objc enum RouteTypes: Int {
+enum RouteTypes {
     case getAll
     case get
     case set
     case update
     case delete
-}
-
-// protocols
-@objc protocol RouterDelegate {
-    @objc optional func preHook(forType type: RouteTypes)
-    @objc optional func postHook(forType type: RouteTypes)
 }
 
 class Route {
@@ -74,9 +68,9 @@ class Route {
     // contains the keys that need to be skipped on response
     var blacklistedKeys: [String]
     
-    // set delegate for routing hooks
-    var delegate: RouterDelegate?
-
+    // hooks
+    var preHook: ((type: RouteTypes)-> Bool)?
+    var postHook: ((type: RouteTypes)-> Bool)?
 
     init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withACL acl: ACLRule, andBlacklistingKeys blacklistedKeys: [String] = []) {
         assert(slug.characters.count > 0, "Schema must contain at least a key")
@@ -152,6 +146,10 @@ class Route {
                 Log.error("User role not found")
                 return
             }
+            
+            if self.preHook?(type: .getAll) == false {
+                return
+            }
 
             for rule in self.acl {
                 if (rule.index(forKey: userRole) != nil) {
@@ -178,50 +176,32 @@ class Route {
             res.error(withMsg: "user has no permission")
 
         }
-
+        // FIXME: swift crashes, need to user later version where lvalue bug has been fixed already
+        /*
         // GET single item with Id
-        router.get("/api/\(slug)/:id") {
+        router.get("/api/\(slug)/:id", middleware: HasId()) {
             req, res, next in
-            guard let itemId = req.parameters["id"] else {
-                res.error(withMsg: "missing id")
-                return
-            }
-
-            self.delegate?.preHook?(forType: .get)
-            self.delegate?.postHook?(forType: .get)
+            Log.debug(req)
         }
 
         // POST creates a new item
         router.post("/api/\(slug)") {
             req, res, next in
-            
-            self.delegate?.preHook?(forType: .set)
-            self.delegate?.postHook?(forType: .set)
+            Log.debug(req)
+
         }
 
         // PUT updates an existing item
-        router.put("/api/\(slug)/:id") {
+        router.put("/api/\(slug)/:id", middleware: HasId()) {
             req, res, next in
-            guard let itemId = req.parameters["id"] else {
-                res.error(withMsg: "missing id")
-                return
-            }
-            
-            self.delegate?.preHook?(forType: .update)
-            self.delegate?.postHook?(forType: .update)
+            Log.debug(req)
 
         }
 
         // DELETE removes an existing item
-        router.delete("/api/\(slug)/:id") {
+        router.delete("/api/\(slug)/:id", middleware: HasId()) {
             req, res, next in
-            guard let itemId = req.parameters["id"] else {
-                res.error(withMsg: "missing id")
-                return
-            }
-            
-            self.delegate?.preHook?(forType: .delete)
-            self.delegate?.postHook?(forType: .delete)
-        }
+            Log.debug(req)
+        }*/
     }
 }
