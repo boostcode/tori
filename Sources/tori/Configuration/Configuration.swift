@@ -110,8 +110,3 @@ func isRegistrationEnabled() -> Bool {
 
     return registrationAllowed
 }
-
-// return the list of datamodels
-func getModels() -> JSON {
-    return openConfigFile(type: .models)
-}
