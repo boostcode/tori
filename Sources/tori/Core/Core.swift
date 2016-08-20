@@ -18,28 +18,50 @@ import Kitura
 import MD5
 import SwiftyJSON
 
-func setupTori() {
+class CoreTori {
+    init() {
+        // routes
+        routerAuth()
+        
+        var aclRules = ACLRule()
+        aclRules.addRule(forRole: .Admin, withACL: adminPermission)
+        aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .none, write: .none))
+        
+        _ = Route(withPath: "user",
+                  withSchema: [
+                    "username": .string,
+                    "password": .string,
+                    "email": .string,
+                    "role": .role,
+            ],
+                  withACL: aclRules,
+                  andBlacklistingKeys: ["password"]
+            ).enableRoutes()
+        
+        // create hookable route
+        
+        let film = Route(withPath: "film",
+                         withSchema: [
+                            "name": .string,
+                            "date": .date
+                            
+                            
+            ], withACL: aclRules)
+        film.delegate = self
+        
+        
+        // static routing
+        router.all("/", middleware: StaticFileServer())
+    }
+}
+
+private typealias RouterHooks = CoreTori
+extension RouterHooks: RouterDelegate {
+    func preHook(forType type: RouteTypes) {
+        print("test pre")
+    }
     
-    // routes
-    routerAuth()
-
-    var aclRules = ACLRule()
-    aclRules.addRule(forRole: .Admin, withACL: adminPermission)
-    aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .None, write: .None))
-
-    _ = Route(
-        withPath: "user",
-        withSchema: [
-            "username": .String,
-            "password": .String,
-            "email": .String,
-            "role": .Role,
-        ],
-        withACL: aclRules,
-        andBlacklistingKeys: ["password"]
-    ).enableRoutes()
-
-    // static routing
-    router.all("/", middleware: StaticFileServer())
-    
+    func postHook(forType type: RouteTypes) {
+        print("test post")        
+    }
 }
