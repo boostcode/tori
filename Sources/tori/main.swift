@@ -52,39 +52,12 @@ var aclRules = ACLRule()
 aclRules.addRule(forRole: .Admin, withACL: adminPermission)
 aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .none, write: .none))
 
-
-
+// Extra routes
 var customRoutes: [Route] = []
-
-// create hookable route
-
-let film = Route(withPath: "film",
-                 withSchema: [
-                    "name": .string,
-                    "date": .date
-                    
-                    
-    ], withACL: aclRules)
-
-film.preHook = { type in
-    
-    print("test pre hook \(type)")
-    
-    return true
-}
-
-film.postHook = { type in
-    return true
-}
-
-customRoutes.append(film)
+customRoutes.append(DummyRoute())
 
 // setup tori with routes
-let tori = CoreTori(withRoutes: customRoutes)
-
-
-
-
+let tori = Tori(withRoutes: customRoutes)
 
 // get config
 let (_, _, _, toriPort, _, _, _) = getConfiguration()
