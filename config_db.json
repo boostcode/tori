@@ -1,8 +1,10 @@
 {
     "allowRegistration": true,
-    "dbHost": "192.168.99.100",
-    "dbPort": 32768,
+    "dbHost": "localhost",
+    "dbPort": 32771,
     "dbName": "tori-db",
+    "dbUsername": "",
+    "dbPassword": "",
     "toriPort": 8090,
     "adminUser": "admin",
     "adminPassword": "admin",
