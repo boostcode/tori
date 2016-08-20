@@ -16,11 +16,24 @@
 
 import Foundation
 
+protocol Group {
+    var name: String { get }
+}
+
+protocol UserProtocol {
+    var name: String { get }
+}
+
+protocol PermissionSafe {
+    var permission: Permission { get }
+}
+
 struct Permission {
     
     struct UGO {
         
         enum Rights {
+            case none // nothing
             case r // only read
             case w // only write
             case rw // read & write
@@ -31,14 +44,9 @@ struct Permission {
         let other: Rights
     }
     
-    let owner: String
-    let group: String
+    let owner: UserProtocol?
+    let group: Group
     let ugo: UGO
-}
-
-struct Group {
-    
-    let name: String
 }
 
 let ugoAdmin = Permission.UGO(user: .rw, group: .rw, other: .r)
