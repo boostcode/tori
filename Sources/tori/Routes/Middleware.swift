@@ -123,19 +123,34 @@ class GetUser: RouterMiddleware {
 class AdminOnly: RouterMiddleware {
     // shall pass only users with admin privileges
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
+        
         let userRole = Role(rawValue:request.userInfo["Tori-Role"] as! Int)
-
+        
         if userRole != .Admin {
             response.error(withMsg: "user has no admin rights")
             return
         }
-
+        
         next()
-
+        
     }
 }
 
+
+class HasId: RouterMiddleware {
+    // shall pass only if an id is in querystring
+    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+        
+        guard let itemId = request.parameters["id"] else {
+            response.error(withMsg: "missing id in request")
+            return
+        }
+
+        next()
+        
+    }
+
+}
 
 
 // MARK: - Response
