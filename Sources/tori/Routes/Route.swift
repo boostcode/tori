@@ -30,14 +30,30 @@ import LoggerAPI
 
 // document types
 enum RouteDocumentType {
-    case Role
-    case ObjectId
-    case String
-    case Boolean
-    case Int
-    case Double
-    case Array
-    case Document
+    case role
+    case objectId
+    case string
+    case boolean
+    case int
+    case double
+    case array
+    case document
+    case date
+}
+
+// route types
+@objc enum RouteTypes: Int {
+    case getAll
+    case get
+    case set
+    case update
+    case delete
+}
+
+// protocols
+@objc protocol RouterDelegate {
+    @objc optional func preHook(forType type: RouteTypes)
+    @objc optional func postHook(forType type: RouteTypes)
 }
 
 class Route {
@@ -57,6 +73,9 @@ class Route {
 
     // contains the keys that need to be skipped on response
     var blacklistedKeys: [String]
+    
+    // set delegate for routing hooks
+    var delegate: RouterDelegate?
 
 
     init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withACL acl: ACLRule, andBlacklistingKeys blacklistedKeys: [String] = []) {
@@ -84,17 +103,19 @@ class Route {
 
                 switch obj.value {
 
-                case .Boolean:
+                case .date:
+                    dict[obj.key] = item[obj.key].string
+                case .boolean:
                     dict[obj.key] = item[obj.key].bool
-                case .Double:
+                case .double:
                     dict[obj.key] = item[obj.key].double
-                case .Int:
+                case .int:
                     dict[obj.key] = item[obj.key].int
-                case .ObjectId:
+                case .objectId:
                     dict[obj.key] = item[obj.key].objectIdValue!.hexString
-                case .Role:
+                case .role:
                     dict[obj.key] = item[obj.key].int
-                case .String:
+                case .string:
                     dict[obj.key] = item[obj.key].string
                 default:
                     // TODO: Document is not handled
@@ -108,7 +129,7 @@ class Route {
 
         return dict
     }
-
+    
     func enableRoutes() {
 
         // sets all headers & validators
@@ -121,11 +142,20 @@ class Route {
         // GET all items
         router.get("/api/\(slug)") {
             req, res, next in
-            let userRole =  Role(rawValue: req.userInfo["Tori-Role"] as! Int)
+            
+            guard let roleId = req.userInfo["Tori-Role"] as? Int else {
+                Log.error("User role not passed")
+                return
+            }
+            
+            guard let userRole = Role(rawValue: roleId) else {
+                Log.error("User role not found")
+                return
+            }
 
             for rule in self.acl {
-                if (rule.index(forKey: userRole!) != nil) {
-                    if rule.values.first?.read == .All {
+                if (rule.index(forKey: userRole) != nil) {
+                    if rule.values.first?.read == .all {
 
                         let allItems = try! self.collection.find()
 
@@ -137,7 +167,7 @@ class Route {
                                            "data": dict
                                            ]
 
-                        print(response)
+                        Log.debug(response.description)
 
                         res.json(withJson: JSON(response))
                         return
@@ -157,11 +187,16 @@ class Route {
                 return
             }
 
+            self.delegate?.preHook?(forType: .get)
+            self.delegate?.postHook?(forType: .get)
         }
 
         // POST creates a new item
         router.post("/api/\(slug)") {
             req, res, next in
+            
+            self.delegate?.preHook?(forType: .set)
+            self.delegate?.postHook?(forType: .set)
         }
 
         // PUT updates an existing item
@@ -171,6 +206,9 @@ class Route {
                 res.error(withMsg: "missing id")
                 return
             }
+            
+            self.delegate?.preHook?(forType: .update)
+            self.delegate?.postHook?(forType: .update)
 
         }
 
@@ -181,7 +219,9 @@ class Route {
                 res.error(withMsg: "missing id")
                 return
             }
-
+            
+            self.delegate?.preHook?(forType: .delete)
+            self.delegate?.postHook?(forType: .delete)
         }
     }
 }
