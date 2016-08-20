@@ -15,6 +15,9 @@
 **/
 
 import Foundation
+#if os(Linux)
+import Glibc
+#endif
 
 // kitura
 import KituraSys
@@ -29,9 +32,6 @@ import LoggerAPI
 import HeliumLogger
 HeliumLogger.use()
 
-#if os(Linux)
-import Glibc
-#endif
 
 // router setup
 let router = Router()

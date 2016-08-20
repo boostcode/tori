@@ -19,6 +19,7 @@ import MD5
 import SwiftyJSON
 
 class CoreTori {
+    
     init() {
         // routes
         routerAuth()
