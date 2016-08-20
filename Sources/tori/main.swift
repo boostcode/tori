@@ -47,9 +47,44 @@ enum Role: Int {
 // database setup
 let db = setupDb()
 
-let tori = CoreTori()
+// ACL
+var aclRules = ACLRule()
+aclRules.addRule(forRole: .Admin, withACL: adminPermission)
+aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .none, write: .none))
 
-// MARK: - Start adding here your collections
+
+
+var customRoutes: [Route] = []
+
+// create hookable route
+
+let film = Route(withPath: "film",
+                 withSchema: [
+                    "name": .string,
+                    "date": .date
+                    
+                    
+    ], withACL: aclRules)
+
+film.preHook = { type in
+    
+    print("test pre hook \(type)")
+    
+    return true
+}
+
+film.postHook = { type in
+    return true
+}
+
+customRoutes.append(film)
+
+// setup tori with routes
+let tori = CoreTori(withRoutes: customRoutes)
+
+
+
+
 
 // get config
 let (_, _, _, toriPort, _, _, _) = getConfiguration()

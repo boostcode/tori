@@ -15,19 +15,15 @@
  **/
 
 import Kitura
-import MD5
-import SwiftyJSON
 
 class CoreTori {
     
-    init() {
-        // routes
+    init(withRoutes routes: [Route]) {
+        
+        // tori authentication routing
         routerAuth()
         
-        var aclRules = ACLRule()
-        aclRules.addRule(forRole: .Admin, withACL: adminPermission)
-        aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .none, write: .none))
-        
+        // tori user routing
         _ = Route(withPath: "user",
                   withSchema: [
                     "username": .string,
@@ -39,29 +35,11 @@ class CoreTori {
                   andBlacklistingKeys: ["password"]
             ).enableRoutes()
         
-        // create hookable route
         
-        let film = Route(withPath: "film",
-                         withSchema: [
-                            "name": .string,
-                            "date": .date
-                            
-                            
-            ], withACL: aclRules)
-        
-        film.preHook = { type in
-            
-            print("test pre hook \(type)")
-            
-            return true
+        // enable extra routes
+        for route in routes {
+            route.enableRoutes()
         }
-        
-        film.postHook = { type in
-            return true
-        }
-        
-        film.enableRoutes()
-        
         
         // static routing
         router.all("/", middleware: StaticFileServer())
