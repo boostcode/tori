@@ -40,7 +40,5 @@ struct ACLRule {
     }
 }
 
-
 // admin user has rights over all the fields, even third party ones
 let adminPermission = AccessRights(read: .all, write: .all)
-
