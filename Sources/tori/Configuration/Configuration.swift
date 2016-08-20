@@ -20,8 +20,6 @@ import SwiftyJSON
 
 enum ConfigFile: String {
     case db = "config_db.json"
-    case roles = "config_roles.json"
-    case models = "config_models.json"
 }
 
 
