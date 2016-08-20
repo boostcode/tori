@@ -47,7 +47,7 @@ enum Role: Int {
 // database setup
 let db = setupDb()
 
-setupTori()
+let tori = CoreTori()
 
 // MARK: - Start adding here your collections
 
