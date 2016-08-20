@@ -16,17 +16,24 @@
 
 import Foundation
 
-struct UGO {
+struct Permission {
     
-    enum Permission {
-        case r // only read
-        case w // only write
-        case rw // read & write
+    struct UGO {
+        
+        enum Rights {
+            case r // only read
+            case w // only write
+            case rw // read & write
+        }
+        
+        let user: Rights
+        let group: Rights
+        let other: Rights
     }
     
-    let user: Permission
-    let group: Permission
-    let other: Permission
+    let owner: String
+    let group: String
+    let ugo: UGO
 }
 
 struct Group {
@@ -34,4 +41,4 @@ struct Group {
     let name: String
 }
 
-let ugoAdmin = UGO(user: .rw, group: .rw, other: .r)
+let ugoAdmin = Permission.UGO(user: .rw, group: .rw, other: .r)
