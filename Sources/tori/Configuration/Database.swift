@@ -20,8 +20,6 @@ import MongoKitten
 
 func setupDb() -> MongoKitten.Database {
 
-    // TODO: if not existing create db
-
     // database setup
     let (dbHost, dbPort, dbName, _, adminName, adminPassword, adminEmail) = getConfiguration()
 
