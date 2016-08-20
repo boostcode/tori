@@ -2408,7 +2408,7 @@
             name = tori;
             path = 'Sources/tori';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Sources/tori/main.swift', '__PBXFileRef_Sources/tori/Core/Authentication.swift', '__PBXFileRef_Sources/tori/Core/Configuration.swift', '__PBXFileRef_Sources/tori/Core/Database.swift', '__PBXFileRef_Sources/tori/Core/Middleware.swift', '__PBXFileRef_Sources/tori/Core/Role.swift', '__PBXFileRef_Sources/tori/Core/Route.swift', '__PBXFileRef_Sources/tori/Core/Tori.swift', '__PBXFileRef_Sources/tori/Extension/BSON+Extension.swift', '__PBXFileRef_Sources/tori/Extension/String+Extension.swift', '__PBXFileRef_Sources/tori/Routes/Dummy.swift');
+            children = ('__PBXFileRef_Sources/tori/main.swift', '__PBXFileRef_Sources/tori/Core/Authentication.swift', '__PBXFileRef_Sources/tori/Core/Configuration.swift', '__PBXFileRef_Sources/tori/Core/Database.swift', '__PBXFileRef_Sources/tori/Core/Middleware.swift', '__PBXFileRef_Sources/tori/Core/Permission.swift', '__PBXFileRef_Sources/tori/Core/Route.swift', '__PBXFileRef_Sources/tori/Core/Tori.swift', '__PBXFileRef_Sources/tori/Core/User.swift', '__PBXFileRef_Sources/tori/Extension/BSON+Extension.swift', '__PBXFileRef_Sources/tori/Extension/String+Extension.swift', '__PBXFileRef_Sources/tori/Routes/Dummy.swift');
         };
         '__PBXFileRef_Sources/tori/main.swift' = {
             isa = PBXFileReference;
@@ -2440,10 +2440,10 @@
             name = 'Core/Middleware.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Sources/tori/Core/Role.swift' = {
+        '__PBXFileRef_Sources/tori/Core/Permission.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
-            name = 'Core/Role.swift';
+            name = 'Core/Permission.swift';
             sourceTree = '<group>';
         };
         '__PBXFileRef_Sources/tori/Core/Route.swift' = {
@@ -2456,6 +2456,12 @@
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Core/Tori.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/tori/Core/User.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Core/User.swift';
             sourceTree = '<group>';
         };
         '__PBXFileRef_Sources/tori/Extension/BSON+Extension.swift' = {
@@ -2495,7 +2501,7 @@
         };
         CompilePhase_tori = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Sources/tori/main.swift', '__src_cc_ref_Sources/tori/Core/Authentication.swift', '__src_cc_ref_Sources/tori/Core/Configuration.swift', '__src_cc_ref_Sources/tori/Core/Database.swift', '__src_cc_ref_Sources/tori/Core/Middleware.swift', '__src_cc_ref_Sources/tori/Core/Role.swift', '__src_cc_ref_Sources/tori/Core/Route.swift', '__src_cc_ref_Sources/tori/Core/Tori.swift', '__src_cc_ref_Sources/tori/Extension/BSON+Extension.swift', '__src_cc_ref_Sources/tori/Extension/String+Extension.swift', '__src_cc_ref_Sources/tori/Routes/Dummy.swift');
+            files = ('__src_cc_ref_Sources/tori/main.swift', '__src_cc_ref_Sources/tori/Core/Authentication.swift', '__src_cc_ref_Sources/tori/Core/Configuration.swift', '__src_cc_ref_Sources/tori/Core/Database.swift', '__src_cc_ref_Sources/tori/Core/Middleware.swift', '__src_cc_ref_Sources/tori/Core/Permission.swift', '__src_cc_ref_Sources/tori/Core/Route.swift', '__src_cc_ref_Sources/tori/Core/Tori.swift', '__src_cc_ref_Sources/tori/Core/User.swift', '__src_cc_ref_Sources/tori/Extension/BSON+Extension.swift', '__src_cc_ref_Sources/tori/Extension/String+Extension.swift', '__src_cc_ref_Sources/tori/Routes/Dummy.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
         '__src_cc_ref_Sources/tori/main.swift' = {
@@ -2518,9 +2524,9 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/tori/Core/Middleware.swift';
         };
-        '__src_cc_ref_Sources/tori/Core/Role.swift' = {
+        '__src_cc_ref_Sources/tori/Core/Permission.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/tori/Core/Role.swift';
+            fileRef = '__PBXFileRef_Sources/tori/Core/Permission.swift';
         };
         '__src_cc_ref_Sources/tori/Core/Route.swift' = {
             isa = PBXBuildFile;
@@ -2529,6 +2535,10 @@
         '__src_cc_ref_Sources/tori/Core/Tori.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/tori/Core/Tori.swift';
+        };
+        '__src_cc_ref_Sources/tori/Core/User.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/tori/Core/User.swift';
         };
         '__src_cc_ref_Sources/tori/Extension/BSON+Extension.swift' = {
             isa = PBXBuildFile;

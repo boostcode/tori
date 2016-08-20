@@ -23,10 +23,9 @@ func setupDb() -> MongoKitten.Database {
     // database setup
     let (dbHost, dbPort, dbName, _, adminName, adminPassword, adminEmail) = getConfiguration()
 
-    let dbServer = try! Server(
-        at: dbHost,
-        port: dbPort,
-        automatically: true
+    let dbServer = try! Server(at: dbHost,
+                               port: dbPort,
+                               automatically: true
     )
     let db = dbServer[dbName]
 
@@ -34,15 +33,15 @@ func setupDb() -> MongoKitten.Database {
     let userCollection = db["User"]
 
     if try! userCollection.count(matching: "username" == adminName) == 0 {
-
-        let adminUser: Document = [
-                                      "username": ~adminName,
-                                      "password": ~"\(adminPassword.md5)",
-                                      "email": ~adminEmail,
-                                      "role": ~Role.Admin.hashValue
-        ]
-
-        let _ = try! userCollection.insert(adminUser)
+        
+        let admin = User(withName: adminName,
+                         andPassword: adminPassword,
+                         andEmail: adminEmail)
+        
+        print(admin)
+        print(admin.bson)
+        
+        let _ = try! userCollection.insert(admin.bson)
         Log.debug("Setup / Added default admin user: \(adminName)")
     }
     

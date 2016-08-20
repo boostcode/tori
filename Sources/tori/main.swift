@@ -32,25 +32,27 @@ import LoggerAPI
 import HeliumLogger
 HeliumLogger.use()
 
-
 // router setup
 let router = Router()
 
 // roles
-enum Role: Int {
-    case Admin
-    case Guest
+enum Role {
+    case admin
+    case user
 
-    // MARK: - Add your extra roles here
+    var type: Group {
+        switch self {
+        case admin:
+            return Group(name: "Admin")
+        case user:
+            return Group(name: "User")
+        }        
+    }
 }
 
 // database setup
 let db = setupDb()
 
-// ACL
-var aclRules = ACLRule()
-aclRules.addRule(forRole: .Admin, withACL: adminPermission)
-aclRules.addRule(forRole: .Guest, withACL: AccessRights(read: .none, write: .none))
 
 // Extra routes
 var customRoutes: [Route] = []
