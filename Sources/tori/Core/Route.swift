@@ -141,7 +141,6 @@ class Route: PermissionSafe {
         router.all("/api/\(slug)*", middleware: BodyParser())
         router.all("/api/\(slug)*", middleware: CheckRequestIsValidJson())
         router.all("/api/\(slug)*", middleware: TokenAuthentication())
-        router.all("/api/\(slug)*", middleware: GetUser())
 
         // GET all items
         router.get("/api/\(slug)") {

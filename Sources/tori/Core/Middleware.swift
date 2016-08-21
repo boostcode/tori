@@ -83,38 +83,14 @@ class TokenAuthentication: RouterMiddleware {
             return
         }
 
-        request.userInfo.updateValue(userToken, forKey: "Tori-Token")
-
-        guard let userName = request.headers["Tori-User"] else {
-            response.error(withMsg: "missing Tori-User")
-            return
-        }
-
-        request.userInfo.updateValue(userName, forKey: "Tori-User")
-
         let userCollection = db["User"]
 
-        if try! userCollection.count(matching: "username" == userName && "token" == userToken) == 0 {
+        guard let user = try! userCollection.findOne(matching: "token" == userToken) else {
             response.error(withMsg: "invalid Tori-Token")
             return
         }
 
-        next()
-    }
-}
-
-class GetUser: RouterMiddleware {
-    // retrieve current user information according headers
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
-        guard let userName = request.userInfo["Tori-User"] as? String else {
-            response.error(withMsg: "missing Tori-User")
-            return
-        }
-        let userCollection = db["User"]
-        let user = try! userCollection.findOne(matching: "username" == userName)
-
-        request.userInfo.updateValue(user!["role"].int, forKey: "Tori-Role")
+        request.userInfo.updateValue(userToken, forKey: "Tori-Token")
 
         next()
     }
@@ -165,5 +141,24 @@ class AllRemoteOriginMiddleware: RouterMiddleware {
         response.headers.append("Content-Type", value: "application/json; charset=utf-8")
         next()
         
+    }
+}
+
+
+extension RouterRequest {
+    func getUser() -> User? {
+        
+        guard let userToken = self.userInfo["Tori-Token"] as? String else { return nil }
+
+        let userCollection = db["User"]
+
+        guard let user = try! userCollection.findOne(matching: "token" == userToken) else {
+            return nil
+        }
+        
+        let userData = User()
+        userData.map(fromBSON: user)
+        
+        return userData
     }
 }

@@ -45,6 +45,10 @@ class User: UserProtocol {
         ]
     }
     
+    init() {
+        
+    }
+    
     init(withName name: String, andUsername username: String, andPassword password: String, andEmail email: String, andGroup group: Groups = Groups.user) {
         
         self.name = name
