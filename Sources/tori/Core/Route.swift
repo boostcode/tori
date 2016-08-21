@@ -80,8 +80,8 @@ class Route: PermissionSafe {
     var blacklistedKeys: [String]
     
     // hooks
-    var preHook: ((type: RouteTypes)-> Bool)?
-    var postHook: ((type: RouteTypes)-> Bool)?
+    var preHook: ((type: RouteTypes) -> Bool)?
+    var postHook: ((type: RouteTypes, response: JSON) -> JSON)?
 
     init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withPermission permission: Permission, andBlacklistingKeys blacklistedKeys: [String] = []) {
         assert(slug.characters.count > 0, "Schema must contain at least a key")
@@ -146,40 +146,46 @@ class Route: PermissionSafe {
         router.get("/api/\(slug)") {
             req, res, next in
             
-            /*guard let roleId = req.userInfo["Tori-Role"] as? Int else {
-                Log.error("User role not passed")
-                return
-            }*/
-                        
+            // pre hook handler
             if self.preHook?(type: .getAll) == false {
                 return
             }
             
-            // TODO: convert to UGO
+            // retrieve user
+            guard let user = req.getUser() else {
+                res.error(withMsg: "missing user")
+                return
+            }
             
-            /*for rule in self.acl {
-                if (rule.index(forKey: userRole) != nil) {
-                    if rule.values.first?.read == .all {
+            // retrieve permission for current user
+            let permission = user.checkPermission(forRoute: self)
+            
+            // check permission
+            switch permission {
+            case .none, .w:
+                res.error(withMsg: "user non allowed")
+                return
+            default: break
+            }
+            
+            let allItems = try! self.collection.find()
+            // TODO: need to be improved
+            let dict = self.bsonToDict(bson: allItems)
+            
+            var response: JSON = [
+                "status": "ok",
+                "model": self.slug,
+                "data": dict
+            ]
 
-                        let allItems = try! self.collection.find()
-
-                        let dict = self.bsonToDict(bson: allItems)
-
-                        let response: [String: AnyObject] = [
-                                           "status": "ok",
-                                           "model": self.slug,
-                                           "data": dict
-                                           ]
-
-                        Log.debug(response.description)
-
-                        res.json(withJson: JSON(response))
-                        return
-                    }
-                }
-            }*/
-
-            res.error(withMsg: "user has no permission")
+            // post hook handler
+            if let hookedResponse = self.postHook?(type: .getAll, response: response) {
+                response = hookedResponse
+            }
+            
+            Log.debug(response.description)
+            
+            res.json(withJson: response)
 
         }
         // FIXME: swift crashes, need to user later version where lvalue bug has been fixed already
