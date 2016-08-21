@@ -17,7 +17,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "tori",
+    name: "Tori",
     dependencies: [
       .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 0, minor: 27),
       .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 15),
