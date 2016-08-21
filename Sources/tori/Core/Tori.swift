@@ -24,14 +24,19 @@ class Tori {
         _ = AuthenticationRouter()
         
         // tori user routing
+        let userPermission = Permission(andGroup: Groups.admin,
+                                        andUGO: Permission.UGO(user: .none,
+                                            group: .rw,
+                                            other: .none)
+        )
+        
         _ = Route(withPath: "user",
                   withSchema: [
                     "username": .string,
                     "password": .string,
-                    "email": .string,
-                    "role": .role,
+                    "email": .string
             ],
-                  withACL: aclRules,
+                  withPermission: userPermission,
                   andBlacklistingKeys: ["password"]
             ).enableRoutes()
         

@@ -22,8 +22,10 @@ class DummyRoute: Route {
                    withSchema: [
                     "name": .string,
                     "date": .date
-            ],
-                   withACL: aclRules
+                    ],
+                   withPermission: Permission(andGroup: Groups.user,
+                    andUGO: Permission.UGO(user: .rw, group: .r, other: .r)
+                )
         )
         
         super.preHook = { type in

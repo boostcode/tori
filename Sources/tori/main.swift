@@ -35,21 +35,6 @@ HeliumLogger.use()
 // router setup
 let router = Router()
 
-// roles
-enum Role {
-    case admin
-    case user
-
-    var type: Group {
-        switch self {
-        case admin:
-            return Group(name: "Admin")
-        case user:
-            return Group(name: "User")
-        }        
-    }
-}
-
 // database setup
 let db = setupDb()
 

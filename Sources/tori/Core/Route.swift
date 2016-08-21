@@ -30,7 +30,7 @@ import LoggerAPI
 
 // document types
 enum RouteDocumentType {
-    case role
+    case permission
     case objectId
     case string
     case boolean
@@ -50,7 +50,15 @@ enum RouteTypes {
     case delete
 }
 
-class Route {
+protocol Jsonable {
+    var json: JSON { get }
+}
+
+protocol Bsonable {
+    var bson: JSON { get }
+}
+
+class Route: PermissionSafe {
 
     var slug = ""
     
@@ -62,9 +70,9 @@ class Route {
         return db[self.dbModelName]
     }
     
-    // manages access to the collection
-    var acl: [ACLRuleElement]
-
+    // stores the permission for this route
+    var permission: Permission
+    
     // manages the schema connected to the route
     var schema: [String: RouteDocumentType]
 
@@ -75,13 +83,12 @@ class Route {
     var preHook: ((type: RouteTypes)-> Bool)?
     var postHook: ((type: RouteTypes)-> Bool)?
 
-    init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withACL acl: ACLRule, andBlacklistingKeys blacklistedKeys: [String] = []) {
+    init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withPermission permission: Permission, andBlacklistingKeys blacklistedKeys: [String] = []) {
         assert(slug.characters.count > 0, "Schema must contain at least a key")
         self.slug = slug
         assert(schema.count > 0, "Schema must contain at least a key")
         self.schema = schema
-        assert(acl.rules.count > 0, "Acl must contain at least a rule")
-        self.acl = acl.rules
+        self.permission = permission
         self.blacklistedKeys = blacklistedKeys
     }
 
@@ -99,7 +106,9 @@ class Route {
                 }
 
                 switch obj.value {
-
+                
+                case .permission:
+                    dict[obj.key] = item[obj.key].string
                 case .date:
                     dict[obj.key] = item[obj.key].string
                 case .boolean:
@@ -110,8 +119,6 @@ class Route {
                     dict[obj.key] = item[obj.key].int
                 case .objectId:
                     dict[obj.key] = item[obj.key].objectIdValue!.hexString
-                case .role:
-                    dict[obj.key] = item[obj.key].int
                 case .string:
                     dict[obj.key] = item[obj.key].string
                 default:
@@ -140,21 +147,18 @@ class Route {
         router.get("/api/\(slug)") {
             req, res, next in
             
-            guard let roleId = req.userInfo["Tori-Role"] as? Int else {
+            /*guard let roleId = req.userInfo["Tori-Role"] as? Int else {
                 Log.error("User role not passed")
                 return
-            }
-            
-            guard let userRole = Role(rawValue: roleId) else {
-                Log.error("User role not found")
-                return
-            }
-            
+            }*/
+                        
             if self.preHook?(type: .getAll) == false {
                 return
             }
-
-            for rule in self.acl {
+            
+            // TODO: convert to UGO
+            
+            /*for rule in self.acl {
                 if (rule.index(forKey: userRole) != nil) {
                     if rule.values.first?.read == .all {
 
@@ -174,7 +178,7 @@ class Route {
                         return
                     }
                 }
-            }
+            }*/
 
             res.error(withMsg: "user has no permission")
 

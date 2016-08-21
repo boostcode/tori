@@ -35,7 +35,7 @@ class AuthenticationRouter {
         let userCollection = db["User"]
         
         // MARK: - Login
-        router.all("/api/log*",
+        _ = router.all("/api/log*",
                    middleware: [
                     AllRemoteOriginMiddleware(),
                     BodyParser(),
@@ -85,7 +85,7 @@ class AuthenticationRouter {
         }
         
         // MARK: - Registration
-        router.all("/api/register",
+        _ = router.all("/api/register",
                    middleware: [
                     AllRemoteOriginMiddleware(),
                     BodyParser(),

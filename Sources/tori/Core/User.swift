@@ -22,41 +22,79 @@ struct Token {
     var value: String
 }
 
-class User {
+class User: UserProtocol {
 
-    var name: String
-    var password: String
-    var email: String
-    var token: String
+    var name = ""
+    var username = ""
+    var password = ""
+    var email = ""
+    var group = Groups.user
+    var token = ""
     var pushTokens: [Token]?
+    var permission: Permission?
     
     var bson: Document {
         return [
             "username": ~name,
             "password": ~"\(password.md5)",
+            "group": ~group.rawValue,
+            "permission": ~permission!.bson,
             "email": ~email,
-            "tokens": ~tokens
+            "token": ~token,
+            //"pushTokens": ~pushTokens // FIXME: manage tokens array
         ]
     }
     
-    init(withName name: String, andPassword password: String, andEmail email: String) {
+    init(withName name: String, andUsername username: String, andPassword password: String, andEmail email: String, andGroup group: Groups = Groups.user) {
+        
         self.name = name
+        self.username = username
         self.password = password
+        self.email = email
+        self.group = group
         
-        if email.isEmail == true {
-            self.email = email
-        } else {
-            // TODO: manage invalid email
-        }
+        self.permission = Permission(withOwner: name,
+                                     andGroup: group,
+                                     andUGO: Permission.UGO(user: .rw,
+                                        group: .rw,
+                                        other: .r
+            )
+        )
         
     }
     
-    init(fromBSON bson: BSON) {
-        self.bson = bson
+    func map(fromUsername userName: String) {
+        let userCollection = db["User"]
+        guard let user = try! userCollection.findOne(matching: "username" == userName) else { return }
+
+        map(fromBSON: user)
     }
     
-    func checkPermission(forObject object: BSON) -> UGO.Permission {
-        // TODO: check if owner
-        return UGO.Permission.r
+    func map(fromBSON bson: Document) {
+        
+        name =  bson["name"].string
+        username = bson["username"].string
+        password = bson["password"].string
+        email = bson["email"].string
+        group = Groups(rawValue: bson["group"].int)!
+        permission = Permission(fromBson: bson["permission"])
+        
     }
+    
+    func save() {
+        // TODO: db update
+    }
+    
+}
+
+private typealias CheckPermission = User
+extension CheckPermission {
+    func checkPermission(forObject object: Document) -> Permission.UGO.Rights {
+        return self ~= Permission(fromBson: object["permission"])
+    }
+
+    func checkPermission(forRoute route: Route) -> Permission.UGO.Rights {
+        return self ~= route.permission
+    }
+    
 }
