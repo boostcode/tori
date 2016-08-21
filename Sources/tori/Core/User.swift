@@ -87,6 +87,7 @@ class User: UserProtocol {
         email = bson["email"].string
         group = Groups(rawValue: bson["group"].int)!
         permission = Permission(fromBson: bson["permission"])
+        token = bson["token"].string 
         
     }
     
