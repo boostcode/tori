@@ -30,6 +30,7 @@ import LoggerAPI
 
 // MARK: - Quick handlers for response
 extension RouterResponse {
+    
     func error(withMsg msg: String) {
         Log.error("Route / \(msg)")
         try! self
@@ -38,7 +39,7 @@ extension RouterResponse {
                     "status": "error",
                     "message": msg
                 ]))
-            .end()
+        .end()
     }
 
     func json(withJson json: JSON) {
@@ -46,7 +47,7 @@ extension RouterResponse {
         try! self
             .status(.OK)
             .send(json: json)
-            .end()
+        .end()
     }
 }
 
@@ -156,7 +157,7 @@ extension RouterRequest {
             return nil
         }
         
-        let userData = User()
+        var userData = User()
         userData.map(fromBSON: user)
         
         return userData

@@ -22,8 +22,9 @@ struct Token {
     var value: String
 }
 
-class User: UserProtocol {
+struct User: UserProtocol {
 
+    var id: ObjectId?
     var name = ""
     var username = ""
     var password = ""
@@ -42,6 +43,11 @@ class User: UserProtocol {
             "email": ~email
             //"pushTokens": ~pushTokens // FIXME: manage tokens array
         ]
+        // check for id
+        guard id != nil else { return data }
+        
+        // add it
+        data["id"] = .objectId(id!)
         
         // check for token
         guard token != nil else { return data }
@@ -72,15 +78,16 @@ class User: UserProtocol {
         
     }
     
-    func map(fromUsername userName: String) {
+    mutating func map(fromUsername userName: String) {
         let userCollection = db["User"]
         guard let user = try! userCollection.findOne(matching: "username" == userName) else { return }
 
         map(fromBSON: user)
     }
     
-    func map(fromBSON bson: Document) {
+    mutating func map(fromBSON bson: Document) {
         
+        id = bson["_id"].objectIdValue
         name =  bson["name"].string
         username = bson["username"].string
         password = bson["password"].string

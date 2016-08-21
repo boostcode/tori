@@ -60,22 +60,22 @@ class AuthenticationRouter {
                 return
             }
             
-            guard let user = try! self.userCollection.findOne(matching: "username" == userName && "password" == userPassword.md5) else {
+            guard let userData = try! self.userCollection.findOne(matching: "username" == userName && "password" == userPassword.md5) else {
                 res.error(withMsg: "wrong user or password provided")
                 return
             }
+            
+            var user = User()
+            user.map(fromBSON: userData)
             
             // generate an unique token
             let userToken = NSUUID().uuidString
             
             var newUser = user
-            newUser["token"] = .string(userToken)
-            
-            print(user)
-            print(newUser)
+            newUser.token = userToken
             
             // update new token
-            try self.userCollection.update(matching: user, to: newUser)
+            try self.userCollection.update(matching: user.bson, to: newUser.bson)
             
             let responseJson = JSON([
                 "status": "ok",
@@ -85,6 +85,7 @@ class AuthenticationRouter {
             
             res.json(withJson: responseJson)
             
+            next()
         }
         
         // MARK: - Registration
@@ -112,34 +113,26 @@ class AuthenticationRouter {
         router.get("/api/logout") {
             req, res, next in
             
-            guard let userName = req.userInfo["Tori-User"] as? String else {
-                res.error(withMsg: "missing Tori-User")
-                return
-            }
-            
-            guard let userToken = req.userInfo["Tori-Token"] as? String else {
-                res.error(withMsg: "missing Tori-Token")
-                return
-            }
-            
-            guard let user = try! self.userCollection.findOne(matching: "username" == userName && "token" == userToken) else {
+            guard let user = req.getUser() else {
                 res.error(withMsg: "user not found")
                 return
             }
             
             // remove token
             var newUser = user
-            newUser["token"] = .null
+            newUser.token = ""
             
             // store to db
-            try! self.userCollection.update(matching: user, to: newUser)
+            try! self.userCollection.update(matching: user.bson, to: newUser.bson)
             
             let responseJson = JSON([
                 "status": "ok",
                 "action": "logout"])
             
             res.json(withJson: responseJson)
-            
+
+            next()
+
         }
 
     }
