@@ -32,7 +32,6 @@ Then proceed in this way:
 ```shell
 $ git clone https://github.com/boostcode/tori
 $ cd tori
-$ git submodule update --init --recursive
 ```
 
 2) Build
@@ -41,7 +40,10 @@ $ export TORI_CONFIG_DIR=/path/to/tori
 $ swift build
 ```
 
-3) Run
+3) Setup
+Update `config_db.json` file according your setup.
+
+4) Run
 ```shell
 $ .build/debug/tori
 ```
