@@ -17,89 +17,18 @@
 import Foundation
 import MongoKitten
 
-struct Token {
-    var type: String
-    var value: String
-}
-
 struct User: UserProtocol {
-
-    var id: ObjectId?
-    var name = ""
-    var username = ""
-    var password = ""
-    var email = ""
-    var group = Groups.user
-    var token: String?
-    var pushTokens: [Token]?
-    var permission: Permission?
     
-    var bson: Document {
-        var data: Document = [
-            "username": ~name,
-            "password": ~"\(password.md5)",
-            "group": ~group.rawValue,
-            "permission": ~permission!.bson,
-            "email": ~email
-            //"pushTokens": ~pushTokens // FIXME: manage tokens array
-        ]
-        // check for id
-        guard id != nil else { return data }
-        
-        // add it
-        data["id"] = .objectId(id!)
-        
-        // check for token
-        guard token != nil else { return data }
-        
-        // add it
-        data["token"] = .string(token!)
-        
-        return data
+    var bson = Document()
+    
+    var name: String {
+        return bson["name"].string
     }
-    
-    init() {}
-    
-    init(withName name: String, andUsername username: String, andPassword password: String, andEmail email: String, andGroup group: Groups = Groups.user) {
-        
-        self.name = name
-        self.username = username
-        self.password = password
-        self.email = email
-        self.group = group
-        
-        self.permission = Permission(withOwner: name,
-                                     andGroup: group,
-                                     andUGO: Permission.UGO(user: .rw,
-                                        group: .rw,
-                                        other: .r
-            )
-        )
-        
+    var group: Groups {
+        return Groups(rawValue: bson["group"].int)!
     }
-    
-    mutating func map(fromUsername userName: String) {
-        let userCollection = db["User"]
-        guard let user = try! userCollection.findOne(matching: "username" == userName) else { return }
-
-        map(fromBSON: user)
-    }
-    
-    mutating func map(fromBSON bson: Document) {
-        
-        id = bson["_id"].objectIdValue
-        name =  bson["name"].string
-        username = bson["username"].string
-        password = bson["password"].string
-        email = bson["email"].string
-        group = Groups(rawValue: bson["group"].int)!
-        permission = Permission(fromBson: bson["permission"])
-        token = bson["token"].string 
-        
-    }
-    
-    func save() {
-        // TODO: db update
+    var permission: Permission {
+        return Permission(fromBSON: bson["permission"])
     }
     
 }
@@ -107,7 +36,7 @@ struct User: UserProtocol {
 private typealias CheckPermission = User
 extension CheckPermission {
     func checkPermission(forObject object: Document) -> Permission.UGO.Rights {
-        return self ~= Permission(fromBson: object["permission"])
+        return self ~= Permission(fromBSON: object["permission"])
     }
 
     func checkPermission(forRoute route: Route) -> Permission.UGO.Rights {

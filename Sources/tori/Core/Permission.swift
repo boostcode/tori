@@ -71,7 +71,7 @@ struct Permission {
         self.ugo = ugo
     }
     
-    init(fromBson bson: Value) {
+    init(fromBSON bson: Value) {
         self.owner = bson["owner"].string
         self.group = Groups(rawValue: bson["owner"].int)!
         self.ugo = UGO(user: Permission.UGO.Rights(rawValue: bson["ugo"]["user"].int)!,
@@ -80,7 +80,8 @@ struct Permission {
         )
     }
     
-    init(fromJson json: JSON) {
+    // TODO: remove
+/*    init(fromJson json: JSON) {
         self.owner = json["owner"].stringValue
         
         self.group = Groups(rawValue: json["group"].intValue)!
@@ -90,7 +91,7 @@ struct Permission {
         let permissionOther = Permission.UGO.Rights(rawValue: json["ugo"]["other"].intValue)!
         
         self.ugo = UGO(user: permissionUser, group: permissionGroup, other: permissionOther)
-    }
+    }*/
 }
 
 func ~=(lhs: UserProtocol, rhs: Permission) -> Permission.UGO.Rights {

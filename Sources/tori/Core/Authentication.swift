@@ -65,14 +65,13 @@ class AuthenticationRouter {
                 return
             }
             
-            var user = User()
-            user.map(fromBSON: userData)
+            let user = User(bson: userData)
             
             // generate an unique token
             let userToken = NSUUID().uuidString
             
             var newUser = user
-            newUser.token = userToken
+            newUser.bson["token"] = .string(userToken)
             
             // update new token
             try self.userCollection.update(matching: user.bson, to: newUser.bson)
@@ -120,7 +119,7 @@ class AuthenticationRouter {
             
             // remove token
             var newUser = user
-            newUser.token = ""
+            newUser.bson["token"] = .string("")
             
             // store to db
             try! self.userCollection.update(matching: user.bson, to: newUser.bson)

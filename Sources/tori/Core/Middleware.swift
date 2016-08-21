@@ -157,9 +157,6 @@ extension RouterRequest {
             return nil
         }
         
-        var userData = User()
-        userData.map(fromBSON: user)
-        
-        return userData
+        return User(bson: user)
     }
 }

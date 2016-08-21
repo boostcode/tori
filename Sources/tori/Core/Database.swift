@@ -34,12 +34,14 @@ func setupDb() -> MongoKitten.Database {
 
     if try! userCollection.count(matching: "username" == adminName) == 0 {
         
-        let admin = User(withName: adminName,
-                         andUsername: adminName,
-                         andPassword: adminPassword,
-                         andEmail: adminEmail,
-                         andGroup: Groups.admin)
+        var admin = User()
         
+        // TODO: create user func?
+        admin.bson["name"] = ~adminName
+        admin.bson["username"] = ~adminName
+        admin.bson["password"] = ~adminPassword.md5
+        admin.bson["email"] = ~adminEmail
+        admin.bson["group"] = ~Groups.admin.rawValue
         
         print(admin)
         
