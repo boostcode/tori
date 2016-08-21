@@ -16,7 +16,7 @@
 
 ## Setup
 
-Install Swift **DEVELOPMENT-SNAPSHOT-2016-07-25-a** first, if you are using ()[] you can easily do that with command:
+Install Swift **DEVELOPMENT-SNAPSHOT-2016-07-25-a** first, if you are using [swiftenv](https://github.com/kylef/swiftenv) you can easily do that with command:
 
 ```shell
 $ swiftenv Install
