@@ -29,25 +29,30 @@ class User: UserProtocol {
     var password = ""
     var email = ""
     var group = Groups.user
-    var token = ""
+    var token: String?
     var pushTokens: [Token]?
     var permission: Permission?
     
     var bson: Document {
-        return [
+        var data: Document = [
             "username": ~name,
             "password": ~"\(password.md5)",
             "group": ~group.rawValue,
             "permission": ~permission!.bson,
-            "email": ~email,
-            "token": ~token,
+            "email": ~email
             //"pushTokens": ~pushTokens // FIXME: manage tokens array
         ]
+        
+        // check for token
+        guard token != nil else { return data }
+        
+        // add it
+        data["token"] = .string(token!)
+        
+        return data
     }
     
-    init() {
-        
-    }
+    init() {}
     
     init(withName name: String, andUsername username: String, andPassword password: String, andEmail email: String, andGroup group: Groups = Groups.user) {
         
