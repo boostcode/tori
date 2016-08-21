@@ -39,6 +39,7 @@ func setupDb() -> MongoKitten.Database {
         // TODO: create user func?
         admin.bson["name"] = ~adminName
         admin.bson["username"] = ~adminName
+        // TODO: add support for salt md5 from a key in JSON file
         admin.bson["password"] = ~adminPassword.md5
         admin.bson["email"] = ~adminEmail
         admin.bson["group"] = ~Groups.admin.rawValue
