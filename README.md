@@ -16,7 +16,11 @@
 
 ## Setup
 
-Install Swift **DEVELOPMENT-SNAPSHOT-2016-06-20-a** first.
+Install Swift **DEVELOPMENT-SNAPSHOT-2016-07-25-a** first, if you are using ()[] you can easily do that with command:
+
+```shell
+$ swiftenv Install
+```
 
 ## Installation
 
@@ -25,22 +29,21 @@ In order to run **tori**, you need to install [Kitura](https://github.com/IBM-Sw
 Then proceed in this way:
 
 1) Clone project
-```
-git clone https://github.com/boostcode/tori
-cd tori
-git submodule update --init --recursive
+```shell
+$ git clone https://github.com/boostcode/tori
+$ cd tori
+$ git submodule update --init --recursive
 ```
 
 2) Build
+```shell
+$ export TORI_CONFIG_DIR=/path/to/tori
+$ swift build
 ```
-export TORI_CONFIG_DIR=/path/to/tori
-make run
-```
-If any error raises up during ```make``` continue instead till it is finished.
 
 3) Run
-```
-.build/debug/tori
+```shell
+$ .build/debug/tori
 ```
 
 ## Credits
