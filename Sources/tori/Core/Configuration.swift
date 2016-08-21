@@ -41,7 +41,7 @@ func openConfigFile(type: ConfigFile) -> JSON {
         exit(1)
     }
 
-    let cfgJson = JSON(data: configData)
+    let cfgJson = JSON(data: configData as Data)
 
     if let configString = cfgJson.rawString() {
         Log.verbose(configString)

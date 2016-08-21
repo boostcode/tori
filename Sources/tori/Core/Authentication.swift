@@ -30,10 +30,10 @@ import LoggerAPI
 
 class AuthenticationRouter {
     
+    private let userCollection = db["User"]
+
     init() {
-        
-        let userCollection = db["User"]
-        
+                
         // MARK: - Login
         _ = router.all("/api/log*",
                    middleware: [
@@ -60,7 +60,7 @@ class AuthenticationRouter {
                 return
             }
             
-            guard let user = try! userCollection.findOne(matching: "username" == userName && "password" == userPassword.md5) else {
+            guard let user = try! self.userCollection.findOne(matching: "username" == userName && "password" == userPassword.md5) else {
                 res.error(withMsg: "wrong user or password provided")
                 return
             }
@@ -71,8 +71,11 @@ class AuthenticationRouter {
             var newUser = user
             newUser["token"] = .string(userToken)
             
-            // add new token
-            try! userCollection.update(matching: user, to: newUser)
+            print(user)
+            print(newUser)
+            
+            // update new token
+            try self.userCollection.update(matching: user, to: newUser)
             
             let responseJson = JSON([
                 "status": "ok",
@@ -119,7 +122,7 @@ class AuthenticationRouter {
                 return
             }
             
-            guard let user = try! userCollection.findOne(matching: "username" == userName && "token" == userToken) else {
+            guard let user = try! self.userCollection.findOne(matching: "username" == userName && "token" == userToken) else {
                 res.error(withMsg: "user not found")
                 return
             }
@@ -128,9 +131,8 @@ class AuthenticationRouter {
             var newUser = user
             newUser["token"] = .null
             
-            
             // store to db
-            try! userCollection.update(matching: user, to: newUser)
+            try! self.userCollection.update(matching: user, to: newUser)
             
             let responseJson = JSON([
                 "status": "ok",

@@ -15,6 +15,7 @@
  **/
 
 import Kitura
+import MongoKitten
 
 class Tori {
     

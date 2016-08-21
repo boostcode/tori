@@ -1,0 +1,5 @@
+framework module CHTTPParser {
+    umbrella "/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include"
+    link framework "CHTTPParser"
+    export *
+}

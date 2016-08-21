@@ -42,7 +42,6 @@ func setupDb() -> MongoKitten.Database {
         
         
         print(admin)
-        print(admin.bson)
         
         let _ = try! userCollection.insert(admin.bson)
         Log.debug("Setup / Added default admin user: \(adminName)")

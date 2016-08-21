@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>tori-APNS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>tori.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>8</integer>
 		</dict>
 		<key>tori.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,17 +22,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>______Target_CHttpParser</key>
+		<key>______Target_CHTTPParser</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>______Target_CryptoEssentials</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>______Target_Extension</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,6 +97,51 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_Socks</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksCore</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksCoreExampleTCPClient</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksCoreExampleTCPKeepAliveServer</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksCoreExampleTCPServer</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksExampleTCPClient</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksExampleTCPServer</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksExampleUDPClient</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SocksExampleUDPServer</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_Strand</key>
 		<dict>
 			<key>primary</key>
@@ -118,11 +153,6 @@
 			<true/>
 		</dict>
 		<key>______Target_tori</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>______Target_tori_APNS</key>
 		<dict>
 			<key>primary</key>
 			<true/>
