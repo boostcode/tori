@@ -61,6 +61,13 @@
             ReferencedContainer = "container:tori.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "TORI_CONFIG_DIR"
+            value = "/Users/matteocrippa/Repositories/tori"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
