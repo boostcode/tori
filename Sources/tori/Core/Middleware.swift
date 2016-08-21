@@ -116,7 +116,7 @@ class AdminOnly: RouterMiddleware {
 }
 
 
-class HasId: RouterMiddleware {
+class HasParameterId: RouterMiddleware {
     // shall pass only if an id is in querystring
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
         
@@ -130,21 +130,6 @@ class HasId: RouterMiddleware {
     }
 
 }
-
-
-// MARK: - Response
-class AllRemoteOriginMiddleware: RouterMiddleware {
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
-        // enable cors
-        response.headers.append("Access-Control-Allow-Origin", value: "*")
-        // set response to be only json formatted
-        response.headers.append("Content-Type", value: "application/json; charset=utf-8")
-        next()
-        
-    }
-}
-
 
 extension RouterRequest {
     func getUser() -> User? {

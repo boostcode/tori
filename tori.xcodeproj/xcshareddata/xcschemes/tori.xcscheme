@@ -392,6 +392,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_ToriAllowRemoteOrigin"
+               BuildableName = "ToriAllowRemoteOrigin.framework"
+               BlueprintName = "ToriAllowRemoteOrigin"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "______Target_tori"
                BuildableName = "tori"
                BlueprintName = "tori"

@@ -24,6 +24,8 @@ import SwiftyJSON
 
 import MongoKitten
 
+import ToriAllowRemoteOrigin
+
 // logger
 import HeliumLogger
 import LoggerAPI
@@ -137,10 +139,12 @@ class Route: PermissionSafe {
     func enableRoutes() {
 
         // sets all headers & validators
-        router.all("/api/\(slug)*", middleware: AllRemoteOriginMiddleware())
-        router.all("/api/\(slug)*", middleware: BodyParser())
-        router.all("/api/\(slug)*", middleware: CheckRequestIsValidJson())
-        router.all("/api/\(slug)*", middleware: TokenAuthentication())
+        router.all("/api/\(slug)*", middleware: [
+            AllowRemoteOrigin(),
+            BodyParser(),
+            CheckRequestIsValidJson(),
+            TokenAuthentication()
+        ])
 
         // GET all items
         router.get("/api/\(slug)") {

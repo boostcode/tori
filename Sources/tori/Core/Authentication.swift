@@ -24,6 +24,9 @@ import SwiftyJSON
 
 import MongoKitten
 
+import ToriAllowRemoteOrigin
+
+
 // logger
 import HeliumLogger
 import LoggerAPI
@@ -37,7 +40,7 @@ class AuthenticationRouter {
         // MARK: - Login
         _ = router.all("/api/log*",
                    middleware: [
-                    AllRemoteOriginMiddleware(),
+                    AllowRemoteOrigin(),
                     BodyParser(),
                     CheckRequestIsValidJson()
             ])
@@ -90,7 +93,7 @@ class AuthenticationRouter {
         // MARK: - Registration
         _ = router.all("/api/register",
                    middleware: [
-                    AllRemoteOriginMiddleware(),
+                    AllowRemoteOrigin(),
                     BodyParser(),
                     CheckRequestIsValidJson()
                 ]

@@ -152,6 +152,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_ToriAllowRemoteOrigin</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_tori</key>
 		<dict>
 			<key>primary</key>
