@@ -30,7 +30,7 @@ import LoggerAPI
 
 // MARK: - Quick handlers for response
 extension RouterResponse {
-    
+
     func error(withMsg msg: String) {
         Log.error("Route / \(msg)")
         try! self
@@ -100,40 +100,24 @@ class TokenAuthentication: RouterMiddleware {
 class AdminOnly: RouterMiddleware {
     // shall pass only users with admin privileges
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-        
+
         // FIXME: update or remove according UGO
-        
+
         /*let userRole = Role(rawValue:request.userInfo["Tori-Role"] as! Int)
-        
+
         if userRole != .Admin {
             response.error(withMsg: "user has no admin rights")
             return
         }*/
-        
-        next()
-        
-    }
-}
-
-
-class HasParameterId: RouterMiddleware {
-    // shall pass only if an id is in querystring
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-        
-        guard let _ = request.parameters["id"] else {
-            response.error(withMsg: "missing id in request")
-            return
-        }
 
         next()
-        
-    }
 
+    }
 }
 
 extension RouterRequest {
     func getUser() -> User? {
-        
+
         guard let userToken = self.userInfo["Tori-Token"] as? String else { return nil }
 
         let userCollection = db["User"]
@@ -141,7 +125,7 @@ extension RouterRequest {
         guard let user = try! userCollection.findOne(matching: "token" == userToken) else {
             return nil
         }
-        
+
         return User(bson: user)
     }
 }

@@ -7,6 +7,7 @@
     "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : 9223372036854775807,
     "9C479842BAB37E5A02B52F0D8BB690041F1A927F" : 9223372036854775807,
     "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA" : 9223372036854775807,
+    "FC2F0DF3A0391198B9921857849AF8CE96016062" : 9223372036854775807,
     "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : 9223372036854775807,
     "BF54732FAE03A5561B5A06A6DEAC6197900486D0" : 9223372036854775807,
     "4A88C7F5F6EA13C3C2A03CD1950D7F655F1E4F26" : 9223372036854775807,
@@ -23,6 +24,7 @@
     "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : "tori\/Packages\/HeliumLogger-0.15.0\/",
     "9C479842BAB37E5A02B52F0D8BB690041F1A927F" : "tori\/Packages\/Socks-0.10.0\/",
     "23A93BD79D6F4162360D9B57530A0BAC7A3E8EEA" : "tori\/Packages\/Strand-1.6.0\/",
+    "FC2F0DF3A0391198B9921857849AF8CE96016062" : "tori\/Packages\/ToriHasParameter-0.1.1\/",
     "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : "tori\/Packages\/MongoKitten-1.4.2\/",
     "BF54732FAE03A5561B5A06A6DEAC6197900486D0" : "tori\/",
     "4A88C7F5F6EA13C3C2A03CD1950D7F655F1E4F26" : "tori\/Packages\/SHA1-0.10.0\/",
@@ -102,6 +104,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CryptoKitten\/PBKDF2.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5C516C47506A9D397E80AC3A167806F3F811B4D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/boostcode\/Tori-HasParameter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FC2F0DF3A0391198B9921857849AF8CE96016062"
     }
   ]
 }

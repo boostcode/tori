@@ -12,6 +12,7 @@
 		_LinkFileRef_CHTTPParser_via_Kitura /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
 		_LinkFileRef_CHTTPParser_via_KituraNet /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
 		_LinkFileRef_CHTTPParser_via_ToriAllowRemoteOrigin /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
+		_LinkFileRef_CHTTPParser_via_ToriHasParameter /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
 		_LinkFileRef_CHTTPParser_via_tori /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
 		_LinkFileRef_CryptoEssentials_via_HMAC /* CryptoEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* CryptoEssentials.framework */; };
 		_LinkFileRef_CryptoEssentials_via_MD5 /* CryptoEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CryptoEssentials" /* CryptoEssentials.framework */; };
@@ -27,21 +28,26 @@
 		_LinkFileRef_HeliumLogger_via_tori /* HeliumLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_HeliumLogger" /* HeliumLogger.framework */; };
 		_LinkFileRef_KituraNet_via_Kitura /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraNet" /* KituraNet.framework */; };
 		_LinkFileRef_KituraNet_via_ToriAllowRemoteOrigin /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraNet" /* KituraNet.framework */; };
+		_LinkFileRef_KituraNet_via_ToriHasParameter /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraNet" /* KituraNet.framework */; };
 		_LinkFileRef_KituraNet_via_tori /* KituraNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraNet" /* KituraNet.framework */; };
 		_LinkFileRef_KituraSys_via_Kitura /* KituraSys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* KituraSys.framework */; };
 		_LinkFileRef_KituraSys_via_KituraNet /* KituraSys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* KituraSys.framework */; };
 		_LinkFileRef_KituraSys_via_ToriAllowRemoteOrigin /* KituraSys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* KituraSys.framework */; };
+		_LinkFileRef_KituraSys_via_ToriHasParameter /* KituraSys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* KituraSys.framework */; };
 		_LinkFileRef_KituraSys_via_tori /* KituraSys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraSys" /* KituraSys.framework */; };
 		_LinkFileRef_KituraTemplateEngine_via_Kitura /* KituraTemplateEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraTemplateEngine" /* KituraTemplateEngine.framework */; };
 		_LinkFileRef_KituraTemplateEngine_via_ToriAllowRemoteOrigin /* KituraTemplateEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraTemplateEngine" /* KituraTemplateEngine.framework */; };
+		_LinkFileRef_KituraTemplateEngine_via_ToriHasParameter /* KituraTemplateEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraTemplateEngine" /* KituraTemplateEngine.framework */; };
 		_LinkFileRef_KituraTemplateEngine_via_tori /* KituraTemplateEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_KituraTemplateEngine" /* KituraTemplateEngine.framework */; };
 		_LinkFileRef_Kitura_via_ToriAllowRemoteOrigin /* Kitura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Kitura" /* Kitura.framework */; };
+		_LinkFileRef_Kitura_via_ToriHasParameter /* Kitura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Kitura" /* Kitura.framework */; };
 		_LinkFileRef_Kitura_via_tori /* Kitura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Kitura" /* Kitura.framework */; };
 		_LinkFileRef_LoggerAPI_via_HeliumLogger /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
 		_LinkFileRef_LoggerAPI_via_Kitura /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
 		_LinkFileRef_LoggerAPI_via_KituraNet /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
 		_LinkFileRef_LoggerAPI_via_KituraSys /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
 		_LinkFileRef_LoggerAPI_via_ToriAllowRemoteOrigin /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
+		_LinkFileRef_LoggerAPI_via_ToriHasParameter /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
 		_LinkFileRef_LoggerAPI_via_tori /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_LoggerAPI" /* LoggerAPI.framework */; };
 		_LinkFileRef_MD5_via_MongoKitten /* MD5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_MD5" /* MD5.framework */; };
 		_LinkFileRef_MD5_via_tori /* MD5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_MD5" /* MD5.framework */; };
@@ -56,6 +62,7 @@
 		_LinkFileRef_Socket_via_Kitura /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* Socket.framework */; };
 		_LinkFileRef_Socket_via_KituraNet /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* Socket.framework */; };
 		_LinkFileRef_Socket_via_ToriAllowRemoteOrigin /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* Socket.framework */; };
+		_LinkFileRef_Socket_via_ToriHasParameter /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* Socket.framework */; };
 		_LinkFileRef_Socket_via_tori /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* Socket.framework */; };
 		_LinkFileRef_SocksCore_via_MongoKitten /* SocksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SocksCore" /* SocksCore.framework */; };
 		_LinkFileRef_SocksCore_via_Socks /* SocksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SocksCore" /* SocksCore.framework */; };
@@ -78,8 +85,10 @@
 		_LinkFileRef_Strand_via_tori /* Strand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Strand" /* Strand.framework */; };
 		_LinkFileRef_SwiftyJSON_via_Kitura /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SwiftyJSON" /* SwiftyJSON.framework */; };
 		_LinkFileRef_SwiftyJSON_via_ToriAllowRemoteOrigin /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SwiftyJSON" /* SwiftyJSON.framework */; };
+		_LinkFileRef_SwiftyJSON_via_ToriHasParameter /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SwiftyJSON" /* SwiftyJSON.framework */; };
 		_LinkFileRef_SwiftyJSON_via_tori /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SwiftyJSON" /* SwiftyJSON.framework */; };
 		_LinkFileRef_ToriAllowRemoteOrigin_via_tori /* ToriAllowRemoteOrigin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_ToriAllowRemoteOrigin" /* ToriAllowRemoteOrigin.framework */; };
+		_LinkFileRef_ToriHasParameter_via_tori /* ToriHasParameter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_ToriHasParameter" /* ToriHasParameter.framework */; };
 		"__src_cc_ref_Packages/BSON-3.5.6/Sources/Document+Conversion.swift" /* Document+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/BSON-3.5.6/Sources/Document+Conversion.swift" /* Document+Conversion.swift */; };
 		"__src_cc_ref_Packages/BSON-3.5.6/Sources/Document+DeveloperSupport.swift" /* Document+DeveloperSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/BSON-3.5.6/Sources/Document+DeveloperSupport.swift" /* Document+DeveloperSupport.swift */; };
 		"__src_cc_ref_Packages/BSON-3.5.6/Sources/Document+Flattening.swift" /* Document+Flattening.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/BSON-3.5.6/Sources/Document+Flattening.swift" /* Document+Flattening.swift */; };
@@ -241,6 +250,7 @@
 		"__src_cc_ref_Packages/SwiftyJSON-11.0.0/Source/LclJSONSerialization.swift" /* LclJSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/SwiftyJSON-11.0.0/Source/LclJSONSerialization.swift" /* LclJSONSerialization.swift */; };
 		"__src_cc_ref_Packages/SwiftyJSON-11.0.0/Source/SwiftyJSON.swift" /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/SwiftyJSON-11.0.0/Source/SwiftyJSON.swift" /* SwiftyJSON.swift */; };
 		"__src_cc_ref_Packages/ToriAllowRemoteOrigin-0.1.3/Sources/ToriAllowRemoteOrigin.swift" /* ToriAllowRemoteOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/ToriAllowRemoteOrigin-0.1.3/Sources/ToriAllowRemoteOrigin.swift" /* ToriAllowRemoteOrigin.swift */; };
+		"__src_cc_ref_Packages/ToriHasParameter-0.1.1/Sources/ToriHasParameter.swift" /* ToriHasParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/ToriHasParameter-0.1.1/Sources/ToriHasParameter.swift" /* ToriHasParameter.swift */; };
 		__src_cc_ref_Sources/tori/Core/Authentication.swift /* Core/Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/tori/Core/Authentication.swift /* Core/Authentication.swift */; };
 		__src_cc_ref_Sources/tori/Core/Configuration.swift /* Core/Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/tori/Core/Configuration.swift /* Core/Configuration.swift */; };
 		__src_cc_ref_Sources/tori/Core/Database.swift /* Core/Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/tori/Core/Database.swift /* Core/Database.swift */; };
@@ -256,169 +266,176 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		48D58C211D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C401D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_LoggerAPI";
 			remoteInfo = LoggerAPI;
 		};
-		48D58C221D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C411D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_KituraSys";
 			remoteInfo = KituraSys;
 		};
-		48D58C231D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C421D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_Socket";
 			remoteInfo = Socket;
 		};
-		48D58C241D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C431D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_CHTTPParser";
 			remoteInfo = CHTTPParser;
 		};
-		48D58C251D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C441D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_KituraNet";
 			remoteInfo = KituraNet;
 		};
-		48D58C261D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C451D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SwiftyJSON";
 			remoteInfo = SwiftyJSON;
 		};
-		48D58C271D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C461D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_KituraTemplateEngine";
 			remoteInfo = KituraTemplateEngine;
 		};
-		48D58C281D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C471D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_CryptoEssentials";
 			remoteInfo = CryptoEssentials;
 		};
-		48D58C291D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C481D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_HMAC";
 			remoteInfo = HMAC;
 		};
-		48D58C2A1D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C491D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_PBKDF2";
 			remoteInfo = PBKDF2;
 		};
-		48D58C2B1D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C4A1D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SocksCore";
 			remoteInfo = SocksCore;
 		};
-		48D58C2C1D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C4B1D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_Socks";
 			remoteInfo = Socks;
 		};
-		48D58C2D1D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C4C1D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_MD5";
 			remoteInfo = MD5;
 		};
-		48D58C2E1D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C4D1D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SCRAM";
 			remoteInfo = SCRAM;
 		};
-		48D58C2F1D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C4E1D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_SHA1";
 			remoteInfo = SHA1;
 		};
-		48D58C301D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C4F1D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_BSON";
 			remoteInfo = BSON;
 		};
-		48D58C311D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C501D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_Strand";
 			remoteInfo = Strand;
 		};
-		48D58C321D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C511D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_Kitura";
 			remoteInfo = Kitura;
 		};
-		48D58C331D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C521D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_HeliumLogger";
 			remoteInfo = HeliumLogger;
 		};
-		48D58C341D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C531D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_MongoKitten";
 			remoteInfo = MongoKitten;
 		};
-		48D58C351D6A6AE800D97303 /* PBXContainerItemProxy */ = {
+		48D58C541D6B400C00D97303 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = __RootObject_ /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "______Target_ToriAllowRemoteOrigin";
 			remoteInfo = ToriAllowRemoteOrigin;
 		};
+		48D58C551D6B400C00D97303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_ToriHasParameter";
+			remoteInfo = ToriHasParameter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		__PBXFileRef_BSON_Info.plist /* tori.xcodeproj/BSON_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/BSON_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_CHTTPParser_Info.plist /* tori.xcodeproj/CHTTPParser_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/CHTTPParser_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_CryptoEssentials_Info.plist /* tori.xcodeproj/CryptoEssentials_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/CryptoEssentials_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_HMAC_Info.plist /* tori.xcodeproj/HMAC_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/HMAC_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_HeliumLogger_Info.plist /* tori.xcodeproj/HeliumLogger_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/HeliumLogger_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_KituraNet_Info.plist /* tori.xcodeproj/KituraNet_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/KituraNet_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_KituraSys_Info.plist /* tori.xcodeproj/KituraSys_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/KituraSys_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_KituraTemplateEngine_Info.plist /* tori.xcodeproj/KituraTemplateEngine_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/KituraTemplateEngine_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_Kitura_Info.plist /* tori.xcodeproj/Kitura_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/Kitura_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_LoggerAPI_Info.plist /* tori.xcodeproj/LoggerAPI_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/LoggerAPI_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_MD5_Info.plist /* tori.xcodeproj/MD5_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/MD5_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_MongoKitten_Info.plist /* tori.xcodeproj/MongoKitten_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/MongoKitten_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_PBKDF2_Info.plist /* tori.xcodeproj/PBKDF2_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/PBKDF2_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_BSON_Info.plist /* Tori.xcodeproj/BSON_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/BSON_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_CHTTPParser_Info.plist /* Tori.xcodeproj/CHTTPParser_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/CHTTPParser_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_CryptoEssentials_Info.plist /* Tori.xcodeproj/CryptoEssentials_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/CryptoEssentials_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_HMAC_Info.plist /* Tori.xcodeproj/HMAC_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/HMAC_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_HeliumLogger_Info.plist /* Tori.xcodeproj/HeliumLogger_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/HeliumLogger_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_KituraNet_Info.plist /* Tori.xcodeproj/KituraNet_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/KituraNet_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_KituraSys_Info.plist /* Tori.xcodeproj/KituraSys_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/KituraSys_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_KituraTemplateEngine_Info.plist /* Tori.xcodeproj/KituraTemplateEngine_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/KituraTemplateEngine_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_Kitura_Info.plist /* Tori.xcodeproj/Kitura_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/Kitura_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_LoggerAPI_Info.plist /* Tori.xcodeproj/LoggerAPI_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/LoggerAPI_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_MD5_Info.plist /* Tori.xcodeproj/MD5_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/MD5_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_MongoKitten_Info.plist /* Tori.xcodeproj/MongoKitten_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/MongoKitten_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_PBKDF2_Info.plist /* Tori.xcodeproj/PBKDF2_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/PBKDF2_Info.plist; sourceTree = SOURCE_ROOT; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/BSON-3.5.6/Sources/Document+Conversion.swift" /* Document+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+Conversion.swift"; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/BSON-3.5.6/Sources/Document+DeveloperSupport.swift" /* Document+DeveloperSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+DeveloperSupport.swift"; sourceTree = "<group>"; };
@@ -581,11 +598,12 @@
 		"__PBXFileRef_Packages/SwiftyJSON-11.0.0/Source/LclJSONSerialization.swift" /* LclJSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LclJSONSerialization.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/SwiftyJSON-11.0.0/Source/SwiftyJSON.swift" /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/ToriAllowRemoteOrigin-0.1.3/Sources/ToriAllowRemoteOrigin.swift" /* ToriAllowRemoteOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToriAllowRemoteOrigin.swift; sourceTree = "<group>"; };
-		__PBXFileRef_SCRAM_Info.plist /* tori.xcodeproj/SCRAM_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/SCRAM_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_SHA1_Info.plist /* tori.xcodeproj/SHA1_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/SHA1_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_Socket_Info.plist /* tori.xcodeproj/Socket_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/Socket_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_SocksCore_Info.plist /* tori.xcodeproj/SocksCore_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/SocksCore_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_Socks_Info.plist /* tori.xcodeproj/Socks_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/Socks_Info.plist; sourceTree = SOURCE_ROOT; };
+		"__PBXFileRef_Packages/ToriHasParameter-0.1.1/Sources/ToriHasParameter.swift" /* ToriHasParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToriHasParameter.swift; sourceTree = "<group>"; };
+		__PBXFileRef_SCRAM_Info.plist /* Tori.xcodeproj/SCRAM_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/SCRAM_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_SHA1_Info.plist /* Tori.xcodeproj/SHA1_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/SHA1_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_Socket_Info.plist /* Tori.xcodeproj/Socket_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/Socket_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_SocksCore_Info.plist /* Tori.xcodeproj/SocksCore_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/SocksCore_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_Socks_Info.plist /* Tori.xcodeproj/Socks_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/Socks_Info.plist; sourceTree = SOURCE_ROOT; };
 		__PBXFileRef_Sources/tori/Core/Authentication.swift /* Core/Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Authentication.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/tori/Core/Configuration.swift /* Core/Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Configuration.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/tori/Core/Database.swift /* Core/Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core/Database.swift; sourceTree = "<group>"; };
@@ -598,12 +616,13 @@
 		"__PBXFileRef_Sources/tori/Extension/String+Extension.swift" /* Extension/String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension/String+Extension.swift"; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/tori/Routes/Dummy.swift /* Routes/Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes/Dummy.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Sources/tori/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Strand_Info.plist /* tori.xcodeproj/Strand_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/Strand_Info.plist; sourceTree = SOURCE_ROOT; };
-		__PBXFileRef_SwiftyJSON_Info.plist /* tori.xcodeproj/SwiftyJSON_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/SwiftyJSON_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_Strand_Info.plist /* Tori.xcodeproj/Strand_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/Strand_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_SwiftyJSON_Info.plist /* Tori.xcodeproj/SwiftyJSON_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/SwiftyJSON_Info.plist; sourceTree = SOURCE_ROOT; };
 		__PBXFileRef_Tests /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
-		__PBXFileRef_ToriAllowRemoteOrigin_Info.plist /* tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_Tori.xcodeproj/Configs/Project.xcconfig /* Tori.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tori.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
+		__PBXFileRef_ToriAllowRemoteOrigin_Info.plist /* Tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist; sourceTree = SOURCE_ROOT; };
+		__PBXFileRef_ToriHasParameter_Info.plist /* Tori.xcodeproj/ToriHasParameter_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tori.xcodeproj/ToriHasParameter_Info.plist; sourceTree = SOURCE_ROOT; };
 		__PBXFileRef_public /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
-		__PBXFileRef_tori.xcodeproj/Configs/Project.xcconfig /* tori.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = tori.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
 		"_____Product_BSON" /* BSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_CHTTPParser" /* CHTTPParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CHTTPParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_CryptoEssentials" /* CryptoEssentials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoEssentials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -622,17 +641,18 @@
 		"_____Product_Socket" /* Socket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_Socks" /* Socks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Socks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_SocksCore" /* SocksCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SocksCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksCoreExampleTCPClient" /* SocksCoreExampleTCPClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksCoreExampleTCPClient; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksCoreExampleTCPKeepAliveServer" /* SocksCoreExampleTCPKeepAliveServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksCoreExampleTCPKeepAliveServer; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksCoreExampleTCPServer" /* SocksCoreExampleTCPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksCoreExampleTCPServer; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksExampleTCPClient" /* SocksExampleTCPClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksExampleTCPClient; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksExampleTCPServer" /* SocksExampleTCPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksExampleTCPServer; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksExampleUDPClient" /* SocksExampleUDPClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksExampleUDPClient; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SocksExampleUDPServer" /* SocksExampleUDPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = SocksExampleUDPServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksCoreExampleTCPClient" /* <RelativePath:"SocksCoreExampleTCPClient"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksCoreExampleTCPClient\">"; path = SocksCoreExampleTCPClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksCoreExampleTCPKeepAliveServer" /* <RelativePath:"SocksCoreExampleTCPKeepAliveServer"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksCoreExampleTCPKeepAliveServer\">"; path = SocksCoreExampleTCPKeepAliveServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksCoreExampleTCPServer" /* <RelativePath:"SocksCoreExampleTCPServer"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksCoreExampleTCPServer\">"; path = SocksCoreExampleTCPServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksExampleTCPClient" /* <RelativePath:"SocksExampleTCPClient"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksExampleTCPClient\">"; path = SocksExampleTCPClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksExampleTCPServer" /* <RelativePath:"SocksExampleTCPServer"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksExampleTCPServer\">"; path = SocksExampleTCPServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksExampleUDPClient" /* <RelativePath:"SocksExampleUDPClient"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksExampleUDPClient\">"; path = SocksExampleUDPClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SocksExampleUDPServer" /* <RelativePath:"SocksExampleUDPServer"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"SocksExampleUDPServer\">"; path = SocksExampleUDPServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_Strand" /* Strand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Strand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_SwiftyJSON" /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"_____Product_ToriAllowRemoteOrigin" /* ToriAllowRemoteOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToriAllowRemoteOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_tori" /* tori */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = tori; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_ToriHasParameter" /* ToriHasParameter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ToriHasParameter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_tori" /* <RelativePath:"tori"> */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; name = "<RelativePath:\"tori\">"; path = tori; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -884,6 +904,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		"___LinkPhase_ToriHasParameter" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				_LinkFileRef_LoggerAPI_via_ToriHasParameter /* LoggerAPI.framework in Frameworks */,
+				_LinkFileRef_KituraSys_via_ToriHasParameter /* KituraSys.framework in Frameworks */,
+				_LinkFileRef_Socket_via_ToriHasParameter /* Socket.framework in Frameworks */,
+				_LinkFileRef_CHTTPParser_via_ToriHasParameter /* CHTTPParser.framework in Frameworks */,
+				_LinkFileRef_KituraNet_via_ToriHasParameter /* KituraNet.framework in Frameworks */,
+				_LinkFileRef_SwiftyJSON_via_ToriHasParameter /* SwiftyJSON.framework in Frameworks */,
+				_LinkFileRef_KituraTemplateEngine_via_ToriHasParameter /* KituraTemplateEngine.framework in Frameworks */,
+				_LinkFileRef_Kitura_via_ToriHasParameter /* Kitura.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		"___LinkPhase_tori" /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -909,6 +944,7 @@
 				_LinkFileRef_Strand_via_tori /* Strand.framework in Frameworks */,
 				_LinkFileRef_MongoKitten_via_tori /* MongoKitten.framework in Frameworks */,
 				_LinkFileRef_ToriAllowRemoteOrigin_via_tori /* ToriAllowRemoteOrigin.framework in Frameworks */,
+				_LinkFileRef_ToriHasParameter_via_tori /* ToriHasParameter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +956,7 @@
 			children = (
 				"_______Group_Socks" /* Socks */,
 				"_______Group_SCRAM" /* SCRAM */,
+				"_______Group_ToriHasParameter" /* ToriHasParameter */,
 				"_______Group_MongoKitten" /* MongoKitten */,
 				"_______Group_Kitura" /* Kitura */,
 				"_______Group_SocksExampleTCPClient" /* SocksExampleTCPClient */,
@@ -984,17 +1021,18 @@
 				"_____Product_BSON" /* BSON.framework */,
 				"_____Product_Socks" /* Socks.framework */,
 				"_____Product_SocksCore" /* SocksCore.framework */,
-				"_____Product_SocksCoreExampleTCPClient" /* SocksCoreExampleTCPClient */,
-				"_____Product_SocksCoreExampleTCPKeepAliveServer" /* SocksCoreExampleTCPKeepAliveServer */,
-				"_____Product_SocksCoreExampleTCPServer" /* SocksCoreExampleTCPServer */,
-				"_____Product_SocksExampleTCPClient" /* SocksExampleTCPClient */,
-				"_____Product_SocksExampleTCPServer" /* SocksExampleTCPServer */,
-				"_____Product_SocksExampleUDPClient" /* SocksExampleUDPClient */,
-				"_____Product_SocksExampleUDPServer" /* SocksExampleUDPServer */,
+				"_____Product_SocksCoreExampleTCPClient" /* <RelativePath:"SocksCoreExampleTCPClient"> */,
+				"_____Product_SocksCoreExampleTCPKeepAliveServer" /* <RelativePath:"SocksCoreExampleTCPKeepAliveServer"> */,
+				"_____Product_SocksCoreExampleTCPServer" /* <RelativePath:"SocksCoreExampleTCPServer"> */,
+				"_____Product_SocksExampleTCPClient" /* <RelativePath:"SocksExampleTCPClient"> */,
+				"_____Product_SocksExampleTCPServer" /* <RelativePath:"SocksExampleTCPServer"> */,
+				"_____Product_SocksExampleUDPClient" /* <RelativePath:"SocksExampleUDPClient"> */,
+				"_____Product_SocksExampleUDPServer" /* <RelativePath:"SocksExampleUDPServer"> */,
 				"_____Product_Strand" /* Strand.framework */,
 				"_____Product_MongoKitten" /* MongoKitten.framework */,
 				"_____Product_ToriAllowRemoteOrigin" /* ToriAllowRemoteOrigin.framework */,
-				"_____Product_tori" /* tori */,
+				"_____Product_ToriHasParameter" /* ToriHasParameter.framework */,
+				"_____Product_tori" /* <RelativePath:"tori"> */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1002,7 +1040,7 @@
 		"_____Configs_" /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_tori.xcodeproj/Configs/Project.xcconfig /* tori.xcodeproj/Configs/Project.xcconfig */,
+				__PBXFileRef_Tori.xcodeproj/Configs/Project.xcconfig /* Tori.xcodeproj/Configs/Project.xcconfig */,
 			);
 			name = Configs;
 			sourceTree = "<group>";
@@ -1038,7 +1076,7 @@
 				"__PBXFileRef_Packages/BSON-3.5.6/Sources/Value+Subscript.swift" /* Value+Subscript.swift */,
 				"__PBXFileRef_Packages/BSON-3.5.6/Sources/Value.swift" /* Value.swift */,
 				"__PBXFileRef_Packages/BSON-3.5.6/Sources/ValueConvertible.swift" /* ValueConvertible.swift */,
-				__PBXFileRef_BSON_Info.plist /* tori.xcodeproj/BSON_Info.plist */,
+				__PBXFileRef_BSON_Info.plist /* Tori.xcodeproj/BSON_Info.plist */,
 			);
 			name = BSON;
 			path = "Packages/BSON-3.5.6/Sources";
@@ -1049,7 +1087,7 @@
 			children = (
 				"__PBXFileRef_Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/http_parser.c" /* http_parser.c */,
 				"__PBXFileRef_Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/utils.c" /* utils.c */,
-				__PBXFileRef_CHTTPParser_Info.plist /* tori.xcodeproj/CHTTPParser_Info.plist */,
+				__PBXFileRef_CHTTPParser_Info.plist /* Tori.xcodeproj/CHTTPParser_Info.plist */,
 			);
 			name = CHTTPParser;
 			path = "Packages/CHTTPParser-0.3.0/Sources/CHTTPParser";
@@ -1073,7 +1111,7 @@
 				"__PBXFileRef_Packages/CryptoEssentials-0.10.0/Sources/Padding.swift" /* Padding.swift */,
 				"__PBXFileRef_Packages/CryptoEssentials-0.10.0/Sources/SecureBytes.swift" /* SecureBytes.swift */,
 				"__PBXFileRef_Packages/CryptoEssentials-0.10.0/Sources/Utils.swift" /* Utils.swift */,
-				__PBXFileRef_CryptoEssentials_Info.plist /* tori.xcodeproj/CryptoEssentials_Info.plist */,
+				__PBXFileRef_CryptoEssentials_Info.plist /* Tori.xcodeproj/CryptoEssentials_Info.plist */,
 			);
 			name = CryptoEssentials;
 			path = "Packages/CryptoEssentials-0.10.0/Sources";
@@ -1083,7 +1121,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/HMAC-0.10.0/Sources/HMAC.swift" /* HMAC.swift */,
-				__PBXFileRef_HMAC_Info.plist /* tori.xcodeproj/HMAC_Info.plist */,
+				__PBXFileRef_HMAC_Info.plist /* Tori.xcodeproj/HMAC_Info.plist */,
 			);
 			name = HMAC;
 			path = "Packages/HMAC-0.10.0/Sources";
@@ -1093,7 +1131,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/HeliumLogger-0.15.0/Sources/HeliumLogger/HeliumLogger.swift" /* HeliumLogger.swift */,
-				__PBXFileRef_HeliumLogger_Info.plist /* tori.xcodeproj/HeliumLogger_Info.plist */,
+				__PBXFileRef_HeliumLogger_Info.plist /* Tori.xcodeproj/HeliumLogger_Info.plist */,
 			);
 			name = HeliumLogger;
 			path = "Packages/HeliumLogger-0.15.0/Sources/HeliumLogger";
@@ -1140,7 +1178,7 @@
 				"__PBXFileRef_Packages/Kitura-0.27.0/Sources/Kitura/staticFileServer/FileServer.swift" /* staticFileServer/FileServer.swift */,
 				"__PBXFileRef_Packages/Kitura-0.27.0/Sources/Kitura/staticFileServer/ResponseHeadersSetter.swift" /* staticFileServer/ResponseHeadersSetter.swift */,
 				"__PBXFileRef_Packages/Kitura-0.27.0/Sources/Kitura/staticFileServer/StaticFileServer.swift" /* staticFileServer/StaticFileServer.swift */,
-				__PBXFileRef_Kitura_Info.plist /* tori.xcodeproj/Kitura_Info.plist */,
+				__PBXFileRef_Kitura_Info.plist /* Tori.xcodeproj/Kitura_Info.plist */,
 			);
 			name = Kitura;
 			path = "Packages/Kitura-0.27.0/Sources/Kitura";
@@ -1178,7 +1216,7 @@
 				"__PBXFileRef_Packages/Kitura-net-0.27.0/Sources/KituraNet/HTTPParser/HTTPParser.swift" /* HTTPParser/HTTPParser.swift */,
 				"__PBXFileRef_Packages/Kitura-net-0.27.0/Sources/KituraNet/HTTPParser/HTTPParserStatus.swift" /* HTTPParser/HTTPParserStatus.swift */,
 				"__PBXFileRef_Packages/Kitura-net-0.27.0/Sources/KituraNet/HTTPParser/URLParser.swift" /* HTTPParser/URLParser.swift */,
-				__PBXFileRef_KituraNet_Info.plist /* tori.xcodeproj/KituraNet_Info.plist */,
+				__PBXFileRef_KituraNet_Info.plist /* Tori.xcodeproj/KituraNet_Info.plist */,
 			);
 			name = KituraNet;
 			path = "Packages/Kitura-net-0.27.0/Sources/KituraNet";
@@ -1190,7 +1228,7 @@
 				"__PBXFileRef_Packages/Kitura-Sys-0.26.0/Sources/KituraSys/Group.swift" /* Group.swift */,
 				"__PBXFileRef_Packages/Kitura-Sys-0.26.0/Sources/KituraSys/Queue.swift" /* Queue.swift */,
 				"__PBXFileRef_Packages/Kitura-Sys-0.26.0/Sources/KituraSys/StringUtils.swift" /* StringUtils.swift */,
-				__PBXFileRef_KituraSys_Info.plist /* tori.xcodeproj/KituraSys_Info.plist */,
+				__PBXFileRef_KituraSys_Info.plist /* Tori.xcodeproj/KituraSys_Info.plist */,
 			);
 			name = KituraSys;
 			path = "Packages/Kitura-Sys-0.26.0/Sources/KituraSys";
@@ -1200,7 +1238,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/Kitura-TemplateEngine-0.26.0/Sources/KituraTemplateEngine/TemplateEngine.swift" /* TemplateEngine.swift */,
-				__PBXFileRef_KituraTemplateEngine_Info.plist /* tori.xcodeproj/KituraTemplateEngine_Info.plist */,
+				__PBXFileRef_KituraTemplateEngine_Info.plist /* Tori.xcodeproj/KituraTemplateEngine_Info.plist */,
 			);
 			name = KituraTemplateEngine;
 			path = "Packages/Kitura-TemplateEngine-0.26.0/Sources/KituraTemplateEngine";
@@ -1210,7 +1248,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/LoggerAPI-0.10.0/Sources/LoggerAPI/Logger.swift" /* Logger.swift */,
-				__PBXFileRef_LoggerAPI_Info.plist /* tori.xcodeproj/LoggerAPI_Info.plist */,
+				__PBXFileRef_LoggerAPI_Info.plist /* Tori.xcodeproj/LoggerAPI_Info.plist */,
 			);
 			name = LoggerAPI;
 			path = "Packages/LoggerAPI-0.10.0/Sources/LoggerAPI";
@@ -1220,7 +1258,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/MD5-0.10.0/Sources/MD5.swift" /* MD5.swift */,
-				__PBXFileRef_MD5_Info.plist /* tori.xcodeproj/MD5_Info.plist */,
+				__PBXFileRef_MD5_Info.plist /* Tori.xcodeproj/MD5_Info.plist */,
 			);
 			name = MD5;
 			path = "Packages/MD5-0.10.0/Sources";
@@ -1242,7 +1280,7 @@
 				"__PBXFileRef_Packages/MongoKitten-1.4.2/Sources/QueryBuilder.swift" /* QueryBuilder.swift */,
 				"__PBXFileRef_Packages/MongoKitten-1.4.2/Sources/Server.swift" /* Server.swift */,
 				"__PBXFileRef_Packages/MongoKitten-1.4.2/Sources/Socket.swift" /* Socket.swift */,
-				__PBXFileRef_MongoKitten_Info.plist /* tori.xcodeproj/MongoKitten_Info.plist */,
+				__PBXFileRef_MongoKitten_Info.plist /* Tori.xcodeproj/MongoKitten_Info.plist */,
 			);
 			name = MongoKitten;
 			path = "Packages/MongoKitten-1.4.2/Sources";
@@ -1252,7 +1290,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/PBKDF2-0.10.0/Sources/PBKDF2.swift" /* PBKDF2.swift */,
-				__PBXFileRef_PBKDF2_Info.plist /* tori.xcodeproj/PBKDF2_Info.plist */,
+				__PBXFileRef_PBKDF2_Info.plist /* Tori.xcodeproj/PBKDF2_Info.plist */,
 			);
 			name = PBKDF2;
 			path = "Packages/PBKDF2-0.10.0/Sources";
@@ -1262,7 +1300,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/SCRAM-0.10.0/Sources/SCRAM.swift" /* SCRAM.swift */,
-				__PBXFileRef_SCRAM_Info.plist /* tori.xcodeproj/SCRAM_Info.plist */,
+				__PBXFileRef_SCRAM_Info.plist /* Tori.xcodeproj/SCRAM_Info.plist */,
 			);
 			name = SCRAM;
 			path = "Packages/SCRAM-0.10.0/Sources";
@@ -1272,7 +1310,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/SHA1-0.10.0/Sources/SHA1.swift" /* SHA1.swift */,
-				__PBXFileRef_SHA1_Info.plist /* tori.xcodeproj/SHA1_Info.plist */,
+				__PBXFileRef_SHA1_Info.plist /* Tori.xcodeproj/SHA1_Info.plist */,
 			);
 			name = SHA1;
 			path = "Packages/SHA1-0.10.0/Sources";
@@ -1284,7 +1322,7 @@
 				"__PBXFileRef_Packages/Socket-0.7.6/Sources/Socket.swift" /* Socket.swift */,
 				"__PBXFileRef_Packages/Socket-0.7.6/Sources/SocketProtocols.swift" /* SocketProtocols.swift */,
 				"__PBXFileRef_Packages/Socket-0.7.6/Sources/SocketUtils.swift" /* SocketUtils.swift */,
-				__PBXFileRef_Socket_Info.plist /* tori.xcodeproj/Socket_Info.plist */,
+				__PBXFileRef_Socket_Info.plist /* Tori.xcodeproj/Socket_Info.plist */,
 			);
 			name = Socket;
 			path = "Packages/Socket-0.7.6/Sources";
@@ -1298,7 +1336,7 @@
 				"__PBXFileRef_Packages/Socks-0.10.0/Sources/Socks/SynchronousUDPServer.swift" /* SynchronousUDPServer.swift */,
 				"__PBXFileRef_Packages/Socks-0.10.0/Sources/Socks/TCPClient.swift" /* TCPClient.swift */,
 				"__PBXFileRef_Packages/Socks-0.10.0/Sources/Socks/UDPClient.swift" /* UDPClient.swift */,
-				__PBXFileRef_Socks_Info.plist /* tori.xcodeproj/Socks_Info.plist */,
+				__PBXFileRef_Socks_Info.plist /* Tori.xcodeproj/Socks_Info.plist */,
 			);
 			name = Socks;
 			path = "Packages/Socks-0.10.0/Sources/Socks";
@@ -1321,7 +1359,7 @@
 				"__PBXFileRef_Packages/Socks-0.10.0/Sources/SocksCore/TCPSocket.swift" /* TCPSocket.swift */,
 				"__PBXFileRef_Packages/Socks-0.10.0/Sources/SocksCore/Types.swift" /* Types.swift */,
 				"__PBXFileRef_Packages/Socks-0.10.0/Sources/SocksCore/UDPSocket.swift" /* UDPSocket.swift */,
-				__PBXFileRef_SocksCore_Info.plist /* tori.xcodeproj/SocksCore_Info.plist */,
+				__PBXFileRef_SocksCore_Info.plist /* Tori.xcodeproj/SocksCore_Info.plist */,
 			);
 			name = SocksCore;
 			path = "Packages/Socks-0.10.0/Sources/SocksCore";
@@ -1394,7 +1432,7 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/Strand-1.6.0/Sources/Strand.swift" /* Strand.swift */,
-				__PBXFileRef_Strand_Info.plist /* tori.xcodeproj/Strand_Info.plist */,
+				__PBXFileRef_Strand_Info.plist /* Tori.xcodeproj/Strand_Info.plist */,
 			);
 			name = Strand;
 			path = "Packages/Strand-1.6.0/Sources";
@@ -1405,7 +1443,7 @@
 			children = (
 				"__PBXFileRef_Packages/SwiftyJSON-11.0.0/Source/LclJSONSerialization.swift" /* LclJSONSerialization.swift */,
 				"__PBXFileRef_Packages/SwiftyJSON-11.0.0/Source/SwiftyJSON.swift" /* SwiftyJSON.swift */,
-				__PBXFileRef_SwiftyJSON_Info.plist /* tori.xcodeproj/SwiftyJSON_Info.plist */,
+				__PBXFileRef_SwiftyJSON_Info.plist /* Tori.xcodeproj/SwiftyJSON_Info.plist */,
 			);
 			name = SwiftyJSON;
 			path = "Packages/SwiftyJSON-11.0.0/Source";
@@ -1415,10 +1453,20 @@
 			isa = PBXGroup;
 			children = (
 				"__PBXFileRef_Packages/ToriAllowRemoteOrigin-0.1.3/Sources/ToriAllowRemoteOrigin.swift" /* ToriAllowRemoteOrigin.swift */,
-				__PBXFileRef_ToriAllowRemoteOrigin_Info.plist /* tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist */,
+				__PBXFileRef_ToriAllowRemoteOrigin_Info.plist /* Tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist */,
 			);
 			name = ToriAllowRemoteOrigin;
 			path = "Packages/ToriAllowRemoteOrigin-0.1.3/Sources";
+			sourceTree = "<group>";
+		};
+		"_______Group_ToriHasParameter" /* ToriHasParameter */ = {
+			isa = PBXGroup;
+			children = (
+				"__PBXFileRef_Packages/ToriHasParameter-0.1.1/Sources/ToriHasParameter.swift" /* ToriHasParameter.swift */,
+				__PBXFileRef_ToriHasParameter_Info.plist /* Tori.xcodeproj/ToriHasParameter_Info.plist */,
+			);
+			name = ToriHasParameter;
+			path = "Packages/ToriHasParameter-0.1.1/Sources";
 			sourceTree = "<group>";
 		};
 		"_______Group_tori" /* tori */ = {
@@ -1778,7 +1826,7 @@
 			);
 			name = SocksCoreExampleTCPClient;
 			productName = SocksCoreExampleTCPClient;
-			productReference = "_____Product_SocksCoreExampleTCPClient" /* SocksCoreExampleTCPClient */;
+			productReference = "_____Product_SocksCoreExampleTCPClient" /* <RelativePath:"SocksCoreExampleTCPClient"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_SocksCoreExampleTCPKeepAliveServer" /* SocksCoreExampleTCPKeepAliveServer */ = {
@@ -1795,7 +1843,7 @@
 			);
 			name = SocksCoreExampleTCPKeepAliveServer;
 			productName = SocksCoreExampleTCPKeepAliveServer;
-			productReference = "_____Product_SocksCoreExampleTCPKeepAliveServer" /* SocksCoreExampleTCPKeepAliveServer */;
+			productReference = "_____Product_SocksCoreExampleTCPKeepAliveServer" /* <RelativePath:"SocksCoreExampleTCPKeepAliveServer"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_SocksCoreExampleTCPServer" /* SocksCoreExampleTCPServer */ = {
@@ -1812,7 +1860,7 @@
 			);
 			name = SocksCoreExampleTCPServer;
 			productName = SocksCoreExampleTCPServer;
-			productReference = "_____Product_SocksCoreExampleTCPServer" /* SocksCoreExampleTCPServer */;
+			productReference = "_____Product_SocksCoreExampleTCPServer" /* <RelativePath:"SocksCoreExampleTCPServer"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_SocksExampleTCPClient" /* SocksExampleTCPClient */ = {
@@ -1829,7 +1877,7 @@
 			);
 			name = SocksExampleTCPClient;
 			productName = SocksExampleTCPClient;
-			productReference = "_____Product_SocksExampleTCPClient" /* SocksExampleTCPClient */;
+			productReference = "_____Product_SocksExampleTCPClient" /* <RelativePath:"SocksExampleTCPClient"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_SocksExampleTCPServer" /* SocksExampleTCPServer */ = {
@@ -1846,7 +1894,7 @@
 			);
 			name = SocksExampleTCPServer;
 			productName = SocksExampleTCPServer;
-			productReference = "_____Product_SocksExampleTCPServer" /* SocksExampleTCPServer */;
+			productReference = "_____Product_SocksExampleTCPServer" /* <RelativePath:"SocksExampleTCPServer"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_SocksExampleUDPClient" /* SocksExampleUDPClient */ = {
@@ -1863,7 +1911,7 @@
 			);
 			name = SocksExampleUDPClient;
 			productName = SocksExampleUDPClient;
-			productReference = "_____Product_SocksExampleUDPClient" /* SocksExampleUDPClient */;
+			productReference = "_____Product_SocksExampleUDPClient" /* <RelativePath:"SocksExampleUDPClient"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_SocksExampleUDPServer" /* SocksExampleUDPServer */ = {
@@ -1880,7 +1928,7 @@
 			);
 			name = SocksExampleUDPServer;
 			productName = SocksExampleUDPServer;
-			productReference = "_____Product_SocksExampleUDPServer" /* SocksExampleUDPServer */;
+			productReference = "_____Product_SocksExampleUDPServer" /* <RelativePath:"SocksExampleUDPServer"> */;
 			productType = "com.apple.product-type.tool";
 		};
 		"______Target_Strand" /* Strand */ = {
@@ -1939,6 +1987,30 @@
 			productReference = "_____Product_ToriAllowRemoteOrigin" /* ToriAllowRemoteOrigin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		"______Target_ToriHasParameter" /* ToriHasParameter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_ToriHasParameter" /* Build configuration list for PBXNativeTarget "ToriHasParameter" */;
+			buildPhases = (
+				CompilePhase_ToriHasParameter /* Sources */,
+				"___LinkPhase_ToriHasParameter" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				__Dependency_LoggerAPI /* PBXTargetDependency */,
+				__Dependency_KituraSys /* PBXTargetDependency */,
+				__Dependency_Socket /* PBXTargetDependency */,
+				__Dependency_CHTTPParser /* PBXTargetDependency */,
+				__Dependency_KituraNet /* PBXTargetDependency */,
+				__Dependency_SwiftyJSON /* PBXTargetDependency */,
+				__Dependency_KituraTemplateEngine /* PBXTargetDependency */,
+				__Dependency_Kitura /* PBXTargetDependency */,
+			);
+			name = ToriHasParameter;
+			productName = ToriHasParameter;
+			productReference = "_____Product_ToriHasParameter" /* ToriHasParameter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		"______Target_tori" /* tori */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = "_______Confs_tori" /* Build configuration list for PBXNativeTarget "tori" */;
@@ -1970,10 +2042,11 @@
 				__Dependency_Strand /* PBXTargetDependency */,
 				__Dependency_MongoKitten /* PBXTargetDependency */,
 				__Dependency_ToriAllowRemoteOrigin /* PBXTargetDependency */,
+				__Dependency_ToriHasParameter /* PBXTargetDependency */,
 			);
 			name = tori;
 			productName = tori;
-			productReference = "_____Product_tori" /* tori */;
+			productReference = "_____Product_tori" /* <RelativePath:"tori"> */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -2024,6 +2097,7 @@
 				"______Target_Strand" /* Strand */,
 				"______Target_MongoKitten" /* MongoKitten */,
 				"______Target_ToriAllowRemoteOrigin" /* ToriAllowRemoteOrigin */,
+				"______Target_ToriHasParameter" /* ToriHasParameter */,
 				"______Target_tori" /* tori */,
 			);
 		};
@@ -2387,6 +2461,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CompilePhase_ToriHasParameter /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				"__src_cc_ref_Packages/ToriHasParameter-0.1.1/Sources/ToriHasParameter.swift" /* ToriHasParameter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CompilePhase_tori /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -2412,107 +2494,112 @@
 		__Dependency_BSON /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_BSON" /* BSON */;
-			targetProxy = 48D58C301D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C4F1D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_CHTTPParser /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_CHTTPParser" /* CHTTPParser */;
-			targetProxy = 48D58C241D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C431D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_CryptoEssentials /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_CryptoEssentials" /* CryptoEssentials */;
-			targetProxy = 48D58C281D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C471D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_HMAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_HMAC" /* HMAC */;
-			targetProxy = 48D58C291D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C481D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_HeliumLogger /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_HeliumLogger" /* HeliumLogger */;
-			targetProxy = 48D58C331D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C521D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Kitura /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Kitura" /* Kitura */;
-			targetProxy = 48D58C321D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C511D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_KituraNet /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_KituraNet" /* KituraNet */;
-			targetProxy = 48D58C251D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C441D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_KituraSys /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_KituraSys" /* KituraSys */;
-			targetProxy = 48D58C221D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C411D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_KituraTemplateEngine /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_KituraTemplateEngine" /* KituraTemplateEngine */;
-			targetProxy = 48D58C271D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C461D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_LoggerAPI /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_LoggerAPI" /* LoggerAPI */;
-			targetProxy = 48D58C211D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C401D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_MD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_MD5" /* MD5 */;
-			targetProxy = 48D58C2D1D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C4C1D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_MongoKitten /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_MongoKitten" /* MongoKitten */;
-			targetProxy = 48D58C341D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C531D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_PBKDF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_PBKDF2" /* PBKDF2 */;
-			targetProxy = 48D58C2A1D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C491D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SCRAM /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SCRAM" /* SCRAM */;
-			targetProxy = 48D58C2E1D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C4D1D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SHA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SHA1" /* SHA1 */;
-			targetProxy = 48D58C2F1D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C4E1D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Socket /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Socket" /* Socket */;
-			targetProxy = 48D58C231D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C421D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Socks /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Socks" /* Socks */;
-			targetProxy = 48D58C2C1D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C4B1D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SocksCore /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SocksCore" /* SocksCore */;
-			targetProxy = 48D58C2B1D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C4A1D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_Strand /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_Strand" /* Strand */;
-			targetProxy = 48D58C311D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C501D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_SwiftyJSON /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_SwiftyJSON" /* SwiftyJSON */;
-			targetProxy = 48D58C261D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C451D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 		__Dependency_ToriAllowRemoteOrigin /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "______Target_ToriAllowRemoteOrigin" /* ToriAllowRemoteOrigin */;
-			targetProxy = 48D58C351D6A6AE800D97303 /* PBXContainerItemProxy */;
+			targetProxy = 48D58C541D6B400C00D97303 /* PBXContainerItemProxy */;
+		};
+		__Dependency_ToriHasParameter /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_ToriHasParameter" /* ToriHasParameter */;
+			targetProxy = 48D58C551D6B400C00D97303 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2522,7 +2609,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/BSON_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/BSON_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2539,9 +2626,9 @@
 				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/CHTTPParser_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/CHTTPParser_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MODULEMAP_FILE = tori.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap;
+				MODULEMAP_FILE = Tori.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = CHTTPParser;
@@ -2556,7 +2643,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/CryptoEssentials_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/CryptoEssentials_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2572,7 +2659,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/HMAC_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/HMAC_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2588,7 +2675,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/HeliumLogger_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/HeliumLogger_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2608,7 +2695,7 @@
 					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
 					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
 				);
-				INFOPLIST_FILE = tori.xcodeproj/Kitura_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Kitura_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2628,7 +2715,7 @@
 					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
 					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
 				);
-				INFOPLIST_FILE = tori.xcodeproj/KituraNet_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/KituraNet_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2644,7 +2731,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/KituraSys_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/KituraSys_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2660,7 +2747,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/KituraTemplateEngine_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/KituraTemplateEngine_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2676,7 +2763,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/LoggerAPI_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/LoggerAPI_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2692,7 +2779,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/MD5_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/MD5_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2708,7 +2795,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/MongoKitten_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/MongoKitten_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2724,7 +2811,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/PBKDF2_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/PBKDF2_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2740,7 +2827,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SCRAM_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SCRAM_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2756,7 +2843,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SHA1_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SHA1_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2772,7 +2859,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/Socket_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Socket_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2788,7 +2875,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/Socks_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Socks_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2804,7 +2891,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SocksCore_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SocksCore_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2911,7 +2998,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/Strand_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Strand_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2927,7 +3014,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SwiftyJSON_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SwiftyJSON_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2947,11 +3034,31 @@
 					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
 					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
 				);
-				INFOPLIST_FILE = tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ToriAllowRemoteOrigin;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		_ReleaseConf_ToriHasParameter /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = (
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
+				);
+				INFOPLIST_FILE = Tori.xcodeproj/ToriHasParameter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ToriHasParameter;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_VERSION = 3.0;
@@ -2980,7 +3087,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/BSON_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/BSON_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -2998,9 +3105,9 @@
 				DEFINES_MODULE = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/CHTTPParser_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/CHTTPParser_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MODULEMAP_FILE = tori.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap;
+				MODULEMAP_FILE = Tori.xcodeproj/GeneratedModuleMap/CHTTPParser/module.modulemap;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = CHTTPParser;
@@ -3016,7 +3123,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/CryptoEssentials_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/CryptoEssentials_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3033,7 +3140,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/HMAC_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/HMAC_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3050,7 +3157,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/HeliumLogger_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/HeliumLogger_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3071,7 +3178,7 @@
 					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
 					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
 				);
-				INFOPLIST_FILE = tori.xcodeproj/Kitura_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Kitura_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3092,7 +3199,7 @@
 					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
 					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
 				);
-				INFOPLIST_FILE = tori.xcodeproj/KituraNet_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/KituraNet_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3109,7 +3216,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/KituraSys_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/KituraSys_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3126,7 +3233,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/KituraTemplateEngine_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/KituraTemplateEngine_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3143,7 +3250,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/LoggerAPI_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/LoggerAPI_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3160,7 +3267,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/MD5_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/MD5_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3177,7 +3284,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/MongoKitten_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/MongoKitten_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3194,7 +3301,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/PBKDF2_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/PBKDF2_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3211,7 +3318,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SCRAM_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SCRAM_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3228,7 +3335,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SHA1_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SHA1_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3245,7 +3352,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/Socket_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Socket_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3262,7 +3369,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/Socks_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Socks_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3279,7 +3386,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SocksCore_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SocksCore_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3394,7 +3501,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/Strand_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/Strand_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3411,7 +3518,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = tori.xcodeproj/SwiftyJSON_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/SwiftyJSON_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -3432,11 +3539,32 @@
 					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
 					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
 				);
-				INFOPLIST_FILE = tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist;
+				INFOPLIST_FILE = Tori.xcodeproj/ToriAllowRemoteOrigin_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = ToriAllowRemoteOrigin;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		"___DebugConf_ToriHasParameter" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				HEADER_SEARCH_PATHS = (
+					"/Users/matteocrippa/Repositories/tori/Packages/CCurl-0.2.1",
+					"/Users/matteocrippa/Repositories/tori/Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/include",
+				);
+				INFOPLIST_FILE = Tori.xcodeproj/ToriHasParameter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ToriHasParameter;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3464,14 +3592,14 @@
 		};
 		"_____Release_" /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_tori.xcodeproj/Configs/Project.xcconfig /* tori.xcodeproj/Configs/Project.xcconfig */;
+			baseConfigurationReference = __PBXFileRef_Tori.xcodeproj/Configs/Project.xcconfig /* Tori.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		"_______Debug_" /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_tori.xcodeproj/Configs/Project.xcconfig /* tori.xcodeproj/Configs/Project.xcconfig */;
+			baseConfigurationReference = __PBXFileRef_Tori.xcodeproj/Configs/Project.xcconfig /* Tori.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
@@ -3736,6 +3864,15 @@
 			buildConfigurations = (
 				"___DebugConf_ToriAllowRemoteOrigin" /* Debug */,
 				_ReleaseConf_ToriAllowRemoteOrigin /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_ToriHasParameter" /* Build configuration list for PBXNativeTarget "ToriHasParameter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_ToriHasParameter" /* Debug */,
+				_ReleaseConf_ToriHasParameter /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

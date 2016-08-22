@@ -157,6 +157,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_ToriHasParameter</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_tori</key>
 		<dict>
 			<key>primary</key>

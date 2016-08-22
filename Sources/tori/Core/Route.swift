@@ -25,6 +25,7 @@ import SwiftyJSON
 import MongoKitten
 
 import ToriAllowRemoteOrigin
+import ToriHasParameter
 
 // logger
 import HeliumLogger
@@ -145,10 +146,17 @@ class Route: PermissionSafe {
             CheckRequestIsValidJson(),
             TokenAuthentication()
         ])
+        
+        // set validator for params based calls
+        router.all("/api/\(slug)/:id", middleware: [HasParameter(params: ["id"])])
+        
+        // GET single item with Id
+        /*router.get("/api/\(slug)/:id") { req, res, next in
+            Log.debug(req)
+        }*/
 
         // GET all items
-        router.get("/api/\(slug)") {
-            req, res, next in
+        router.get("/api/\(slug)") { req, res, next in
             
             // pre hook handler
             if self.preHook?(type: .getAll) == false {
@@ -190,32 +198,35 @@ class Route: PermissionSafe {
             Log.debug(response.description)
             
             res.json(withJson: response)
+            
+            next()
 
         }
-        // FIXME: swift crashes, need to user later version where lvalue bug has been fixed already
-        /*
-        // GET single item with Id
-        router.get("/api/\(slug)/:id", middleware: HasId()) {
-            req, res, next in
-            Log.debug(req)
-        }
-
+        
+        // FIXME: Check issue with other routes, fail to compile, need new version of swift3 ?
+        
         // POST creates a new item
-        router.post("/api/\(slug)") {
+/*        router.post("/api/\(slug)") {
             req, res, next in
             Log.debug(req)
 
+        }*/
+
+
+        // GET single item with Id
+  /*      router.get("/api/\(slug)/:id") {
+            req, res, next in
+            Log.debug(req)
         }
 
         // PUT updates an existing item
-        router.put("/api/\(slug)/:id", middleware: HasId()) {
+        router.put("/api/\(slug)/:id") {
             req, res, next in
             Log.debug(req)
-
         }
 
         // DELETE removes an existing item
-        router.delete("/api/\(slug)/:id", middleware: HasId()) {
+        router.delete("/api/\(slug)/:id") {
             req, res, next in
             Log.debug(req)
         }*/

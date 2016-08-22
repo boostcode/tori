@@ -23,7 +23,8 @@ let package = Package(
       .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 15),
       .Package(url: "https://github.com/PlanTeam/MongoKitten.git", majorVersion: 1, minor: 4),
       .Package(url: "https://github.com/boostcode/Tori-AllowRemoteOrigin.git", majorVersion:0, minor: 1),
+      .Package(url: "https://github.com/boostcode/Tori-HasParameter.git", majorVersion:0, minor: 1),
       //.Package(url: "https://github.com/boostcode/Tori-APNS.git", majorVersion: 0, minor: 2)
     ],
-    exclude: ["Tests", "public","Makefile", "Package-Builder"]
+    exclude: ["Tests", "public", "Makefile", "Package-Builder"]
 )
