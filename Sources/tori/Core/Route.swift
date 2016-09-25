@@ -17,7 +17,7 @@
 import Foundation
 
 import Kitura
-import KituraSys
+//import KituraSys
 import KituraNet
 
 import SwiftyJSON
@@ -83,8 +83,8 @@ class Route: PermissionSafe {
     var blacklistedKeys: [String]
     
     // hooks
-    var preHook: ((type: RouteTypes) -> Bool)?
-    var postHook: ((type: RouteTypes, response: JSON) -> JSON)?
+    var preHook: ((_ type: RouteTypes) -> Bool)?
+    var postHook: ((_ type: RouteTypes, _ response: JSON) -> JSON)?
 
     init(withPath slug: String, withSchema schema:[String: RouteDocumentType], withPermission permission: Permission, andBlacklistingKeys blacklistedKeys: [String] = []) {
         assert(slug.characters.count > 0, "Schema must contain at least a key")
@@ -111,19 +111,19 @@ class Route: PermissionSafe {
                 switch obj.value {
                 
                 case .permission:
-                    dict[obj.key] = item[obj.key].string
+                    dict[obj.key] = item[obj.key].string as AnyObject?
                 case .date:
-                    dict[obj.key] = item[obj.key].string
+                    dict[obj.key] = item[obj.key].string as AnyObject?
                 case .boolean:
-                    dict[obj.key] = item[obj.key].bool
+                    dict[obj.key] = item[obj.key].bool as AnyObject?
                 case .double:
-                    dict[obj.key] = item[obj.key].double
+                    dict[obj.key] = item[obj.key].double as AnyObject?
                 case .int:
-                    dict[obj.key] = item[obj.key].int
+                    dict[obj.key] = item[obj.key].int as AnyObject?
                 case .objectId:
-                    dict[obj.key] = item[obj.key].objectIdValue!.hexString
+                    dict[obj.key] = item[obj.key].objectIdValue!.hexString as AnyObject?
                 case .string:
-                    dict[obj.key] = item[obj.key].string
+                    dict[obj.key] = item[obj.key].string as AnyObject?
                 default:
                     // TODO: Document is not handled
                     // TODO: Array is not handled
@@ -159,7 +159,7 @@ class Route: PermissionSafe {
         router.get("/api/\(slug)") { req, res, next in
             
             // pre hook handler
-            if self.preHook?(type: .getAll) == false {
+            if self.preHook?(.getAll) == false {
                 return
             }
             
@@ -191,7 +191,7 @@ class Route: PermissionSafe {
             ]
 
             // post hook handler
-            if let hookedResponse = self.postHook?(type: .getAll, response: response) {
+            if let hookedResponse = self.postHook?(.getAll, response) {
                 response = hookedResponse
             }
             

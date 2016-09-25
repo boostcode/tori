@@ -20,8 +20,8 @@ import Glibc
 #endif
 
 // kitura
-import KituraSys
-import KituraNet
+//import KituraSys
+//import KituraNet
 import Kitura
 
 // mongodb orm

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "9999"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,20 +17,6 @@
                BlueprintIdentifier = "______Target_LoggerAPI"
                BuildableName = "LoggerAPI.framework"
                BlueprintName = "LoggerAPI"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_KituraSys"
-               BuildableName = "KituraSys.framework"
-               BlueprintName = "KituraSys"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -59,6 +45,20 @@
                BlueprintIdentifier = "______Target_CHTTPParser"
                BuildableName = "CHTTPParser.framework"
                BlueprintName = "CHTTPParser"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_SSLService"
+               BuildableName = "SSLService.framework"
+               BlueprintName = "SSLService"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -140,9 +140,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_CryptoEssentials"
-               BuildableName = "CryptoEssentials.framework"
-               BlueprintName = "CryptoEssentials"
+               BlueprintIdentifier = "______Target_Bridging"
+               BuildableName = "Bridging.framework"
+               BlueprintName = "Bridging"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -154,9 +154,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_MD5"
-               BuildableName = "MD5.framework"
-               BlueprintName = "MD5"
+               BlueprintIdentifier = "______Target_Mustache"
+               BuildableName = "Mustache.framework"
+               BlueprintName = "Mustache"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -168,9 +168,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_HMAC"
-               BuildableName = "HMAC.framework"
-               BlueprintName = "HMAC"
+               BlueprintIdentifier = "______Target_KituraMustache"
+               BuildableName = "KituraMustache.framework"
+               BlueprintName = "KituraMustache"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -182,9 +182,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PBKDF2"
-               BuildableName = "PBKDF2.framework"
-               BlueprintName = "PBKDF2"
+               BlueprintIdentifier = "______Target_Spectre"
+               BuildableName = "Spectre.framework"
+               BlueprintName = "Spectre"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -196,9 +196,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SCRAM"
-               BuildableName = "SCRAM.framework"
-               BlueprintName = "SCRAM"
+               BlueprintIdentifier = "______Target_PathKit"
+               BuildableName = "PathKit.framework"
+               BlueprintName = "PathKit"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -210,9 +210,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SHA1"
-               BuildableName = "SHA1.framework"
-               BlueprintName = "SHA1"
+               BlueprintIdentifier = "______Target_Stencil"
+               BuildableName = "Stencil.framework"
+               BlueprintName = "Stencil"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_KituraStencil"
+               BuildableName = "KituraStencil.framework"
+               BlueprintName = "KituraStencil"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -266,9 +280,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksCoreExampleTCPClient"
-               BuildableName = "SocksCoreExampleTCPClient"
-               BlueprintName = "SocksCoreExampleTCPClient"
+               BlueprintIdentifier = "______Target_MongoCryptoEssentials"
+               BuildableName = "MongoCryptoEssentials.framework"
+               BlueprintName = "MongoCryptoEssentials"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -280,93 +294,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksCoreExampleTCPKeepAliveServer"
-               BuildableName = "SocksCoreExampleTCPKeepAliveServer"
-               BlueprintName = "SocksCoreExampleTCPKeepAliveServer"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksCoreExampleTCPServer"
-               BuildableName = "SocksCoreExampleTCPServer"
-               BlueprintName = "SocksCoreExampleTCPServer"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksExampleTCPClient"
-               BuildableName = "SocksExampleTCPClient"
-               BlueprintName = "SocksExampleTCPClient"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksExampleTCPServer"
-               BuildableName = "SocksExampleTCPServer"
-               BlueprintName = "SocksExampleTCPServer"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksExampleUDPClient"
-               BuildableName = "SocksExampleUDPClient"
-               BlueprintName = "SocksExampleUDPClient"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SocksExampleUDPServer"
-               BuildableName = "SocksExampleUDPServer"
-               BlueprintName = "SocksExampleUDPServer"
-               ReferencedContainer = "container:tori.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_Strand"
-               BuildableName = "Strand.framework"
-               BlueprintName = "Strand"
+               BlueprintIdentifier = "______Target_MongoHMAC"
+               BuildableName = "MongoHMAC.framework"
+               BlueprintName = "MongoHMAC"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -381,6 +311,62 @@
                BlueprintIdentifier = "______Target_MongoKitten"
                BuildableName = "MongoKitten.framework"
                BlueprintName = "MongoKitten"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_MongoMD5"
+               BuildableName = "MongoMD5.framework"
+               BlueprintName = "MongoMD5"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_MongoPBKDF2"
+               BuildableName = "MongoPBKDF2.framework"
+               BlueprintName = "MongoPBKDF2"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_MongoSCRAM"
+               BuildableName = "MongoSCRAM.framework"
+               BlueprintName = "MongoSCRAM"
+               ReferencedContainer = "container:tori.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_MongoSHA1"
+               BuildableName = "MongoSHA1.framework"
+               BlueprintName = "MongoSHA1"
                ReferencedContainer = "container:tori.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -432,8 +418,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
       <AdditionalOptions>

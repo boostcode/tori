@@ -22,6 +22,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_Bridging</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_CHTTPParser</key>
 		<dict>
 			<key>primary</key>
@@ -47,7 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_KituraMustache</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_KituraNet</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_KituraStencil</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +87,52 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_MongoCryptoEssentials</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_MongoHMAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_MongoKitten</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_MongoMD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_MongoPBKDF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_MongoSCRAM</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_MongoSHA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_Mustache</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_PBKDF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_PathKit</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +143,11 @@
 			<true/>
 		</dict>
 		<key>______Target_SHA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_SSLService</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -138,6 +198,16 @@
 			<true/>
 		</dict>
 		<key>______Target_SocksExampleUDPServer</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_Spectre</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_Stencil</key>
 		<dict>
 			<key>primary</key>
 			<true/>

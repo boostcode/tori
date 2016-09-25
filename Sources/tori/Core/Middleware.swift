@@ -17,7 +17,6 @@
 import Foundation
 
 import Kitura
-import KituraSys
 import KituraNet
 
 import SwiftyJSON
@@ -54,8 +53,20 @@ extension RouterResponse {
 
 // MARK: - Request
 class CheckRequestIsValidJson: RouterMiddleware {
-    // validate current json request
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
+    /// validate current json request
+    /// Handle an incoming HTTP request.
+    ///
+    /// - Parameter request: The `RouterRequest` object used to get information
+    ///                     about the HTTP request.
+    /// - Parameter response: The `RouterResponse` object used to respond to the
+    ///                       HTTP request
+    /// - Parameter next: The closure to invoke to enable the Router to check for
+    ///                  other handlers or middleware to work with this request.
+    ///
+    /// - Throws: Any `ErrorType`. If an error is thrown, processing of the request
+    ///          is stopped, the error handlers, if any are defined, will be invoked,
+    ///          and the user will get a response with a status code of 500.
+    public func handle(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) throws {
 
         if request.method != RouterMethod.get {
 
@@ -76,43 +87,65 @@ class CheckRequestIsValidJson: RouterMiddleware {
 }
 
 class TokenAuthentication: RouterMiddleware {
-    // token based authentication
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
+    /// token based authentication
+    /// Handle an incoming HTTP request.
+    ///
+    /// - Parameter request: The `RouterRequest` object used to get information
+    ///                     about the HTTP request.
+    /// - Parameter response: The `RouterResponse` object used to respond to the
+    ///                       HTTP request
+    /// - Parameter next: The closure to invoke to enable the Router to check for
+    ///                  other handlers or middleware to work with this request.
+    ///
+    /// - Throws: Any `ErrorType`. If an error is thrown, processing of the request
+    ///          is stopped, the error handlers, if any are defined, will be invoked,
+    ///          and the user will get a response with a status code of 500.
+    public func handle(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) throws {
         guard let userToken = request.headers["Tori-Token"] else {
             response.error(withMsg: "missing Tori-Token")
             return
         }
-
+        
         let userCollection = db["User"]
-
-        guard let user = try! userCollection.findOne(matching: "token" == userToken) else {
+        
+        guard (try! userCollection.findOne(matching: "token" == userToken)) != nil else {
             response.error(withMsg: "invalid Tori-Token")
             return
         }
-
+        
         request.userInfo.updateValue(userToken, forKey: "Tori-Token")
-
+        
         next()
     }
+
 }
 
 class AdminOnly: RouterMiddleware {
-    // shall pass only users with admin privileges
-    func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-
+    /// Handle an incoming HTTP request.
+    ///
+    /// - Parameter request: The `RouterRequest` object used to get information
+    ///                     about the HTTP request.
+    /// - Parameter response: The `RouterResponse` object used to respond to the
+    ///                       HTTP request
+    /// - Parameter next: The closure to invoke to enable the Router to check for
+    ///                  other handlers or middleware to work with this request.
+    ///
+    /// - Throws: Any `ErrorType`. If an error is thrown, processing of the request
+    ///          is stopped, the error handlers, if any are defined, will be invoked,
+    ///          and the user will get a response with a status code of 500.
+    public func handle(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) throws {
         // FIXME: update or remove according UGO
-
+        
         /*let userRole = Role(rawValue:request.userInfo["Tori-Role"] as! Int)
-
-        if userRole != .Admin {
-            response.error(withMsg: "user has no admin rights")
-            return
-        }*/
-
+         
+         if userRole != .Admin {
+         response.error(withMsg: "user has no admin rights")
+         return
+         }*/
+        
         next()
-
     }
+
 }
 
 extension RouterRequest {
