@@ -17,7 +17,6 @@
 import Foundation
 
 import Kitura
-//import KituraSys
 import KituraNet
 
 import SwiftyJSON

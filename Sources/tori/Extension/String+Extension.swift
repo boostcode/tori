@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-//import MD5
 import MongoMD5
 
 extension String {
