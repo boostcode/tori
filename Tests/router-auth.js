@@ -10,7 +10,7 @@ var adminUserPassword = "admin";
 
 describe('Authentication', function(){
          
-         it('can login admin', function(done){
+         it('admin can login', function(done){
             
             api.post('/api/login')
             .type('json')
@@ -28,5 +28,10 @@ describe('Authentication', function(){
                  done();
             });
         });
+         
+         
+         it('can create new user', function(done){
+            
+            });
 
 });
