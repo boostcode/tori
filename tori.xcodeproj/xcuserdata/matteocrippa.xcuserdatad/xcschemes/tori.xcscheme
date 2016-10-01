@@ -64,7 +64,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "TORI_CONFIG_DIR"
-            value = "/Users/matteocrippa/Repositories/tori"
+            value = "/Volumes/HDD/matteocrippa/Repositories/tori"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

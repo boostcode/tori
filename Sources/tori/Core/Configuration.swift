@@ -37,7 +37,7 @@ func openConfigFile(type: ConfigFile) -> JSON {
         exit(1)
     }
     guard let configData = NSData(contentsOfFile: configDir + "/" + type.rawValue) else {
-        Log.error(errorPrefix+"Please check your config.json file exists at path "+configDir + "/config_db.json")
+        Log.error(errorPrefix+"Please check your config file exists at path "+configDir + "/config_db.json")
         exit(1)
     }
 
