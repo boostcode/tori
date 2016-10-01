@@ -2,3 +2,4 @@
 .vagrant
 Packages
 *.pkg
+Tests/node_modules/*

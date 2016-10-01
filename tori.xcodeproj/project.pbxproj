@@ -32,9 +32,16 @@
             path = 'public';
             sourceTree = '<group>';
         };
+        '__PBXFileRef_Tests' = {
+            isa = PBXFileReference;
+            lastKnownFileType = folder;
+            name = 'Tests';
+            path = 'Tests';
+            sourceTree = '<group>';
+        };
         ___RootGroup_ = {
             isa = PBXGroup;
-            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_, '__PBXFileRef_public', Dependencies_, _______Tests_, ____Products_);
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_, '__PBXFileRef_public','__PBXFileRef_Tests', Dependencies_, _______Tests_, ____Products_);
             sourceTree = '<group>';
         };
         _______Group_LoggerAPI = {
