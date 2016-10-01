@@ -137,6 +137,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_ResponseTime</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_SCRAM</key>
 		<dict>
 			<key>primary</key>
