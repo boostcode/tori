@@ -26,7 +26,7 @@ let package = Package(
       .Package(url: "https://github.com/PlanTeam/MongoKitten.git", majorVersion: 1, minor: 7),
       .Package(url: "https://github.com/boostcode/Tori-AllowRemoteOrigin.git", majorVersion:0, minor: 2),
       .Package(url: "https://github.com/boostcode/Tori-HasParameter.git", majorVersion:0, minor: 2),
-      //.Package(url: "https://github.com/boostcode/Tori-APNS.git", majorVersion: 0, minor: 2)
+      .Package(url: "https://github.com/boostcode/Tori-APNS.git", majorVersion: 0, minor: 3)
     ],
     exclude: ["Tests", "public", "Makefile", "Package-Builder"]
 )
