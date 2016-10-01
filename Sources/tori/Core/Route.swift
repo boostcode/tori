@@ -19,12 +19,15 @@ import Foundation
 import Kitura
 import KituraNet
 
+// plugins
+import ToriAllowRemoteOrigin
+import ToriHasParameter
+import ResponseTime
+
 import SwiftyJSON
 
 import MongoKitten
 
-import ToriAllowRemoteOrigin
-import ToriHasParameter
 
 // logger
 import HeliumLogger
@@ -143,7 +146,8 @@ class Route: PermissionSafe {
             AllowRemoteOrigin(),
             BodyParser(),
             CheckRequestIsValidJson(),
-            TokenAuthentication()
+            TokenAuthentication(),
+            ResponseTime()
         ])
         
         // set validator for params based calls
