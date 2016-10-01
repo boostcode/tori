@@ -1,7 +1,7 @@
 {
     "allowRegistration": true,
-    "dbHost": "localhost",
-    "dbPort": 32771,
+    "dbHost": "127.0.0.1",
+    "dbPort": 27017,
     "dbName": "tori-db",
     "dbUsername": "",
     "dbPassword": "",
