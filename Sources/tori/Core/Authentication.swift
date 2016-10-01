@@ -44,8 +44,7 @@ class AuthenticationRouter {
                     CheckRequestIsValidJson()
             ])
         
-        router.post("/api/login") {
-            req, res, next in
+        router.post("/api/login") { req, res, _ in
             
             guard case let .json(json) = req.body! else {
                 res.error(withMsg: "request is not in json format")
@@ -86,7 +85,6 @@ class AuthenticationRouter {
             
             res.json(withJson: responseJson)
             
-            next()
         }
         
         // MARK: - Registration
@@ -97,8 +95,7 @@ class AuthenticationRouter {
                     CheckRequestIsValidJson()
                 ]
         )
-        router.post("/api/register") {
-            req, res, next in
+        router.post("/api/register") { req, res, _ in
             
             guard isRegistrationEnabled() else {
                 res.error(withMsg: "Registration disabled")
@@ -111,8 +108,7 @@ class AuthenticationRouter {
         
         // MARK: - Logout
         router.all("/api/logout", middleware: TokenAuthentication())
-        router.get("/api/logout") {
-            req, res, next in
+        router.get("/api/logout") { req, res, _ in
             
             guard let user = req.getUser() else {
                 res.error(withMsg: "user not found")
@@ -131,8 +127,6 @@ class AuthenticationRouter {
                 "action": "logout"])
             
             res.json(withJson: responseJson)
-
-            next()
 
         }
 
