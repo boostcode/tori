@@ -139,7 +139,7 @@ class Route: PermissionSafe {
     func enableRoutes() {
 
         // sets all headers & validators
-        router.all("/api/\(slug)*", middleware: [
+        router.all("/api/"+slug+"/*", middleware: [
             AllowRemoteOrigin(),
             BodyParser(),
             CheckRequestIsValidJson(),
@@ -147,15 +147,15 @@ class Route: PermissionSafe {
         ])
         
         // set validator for params based calls
-        router.all("/api/\(slug)/:id", middleware: [HasParameter(params: ["id"])])
+        router.all("/api/"+slug+"/:id", middleware: [HasParameter(params: ["id"])])
         
         // GET single item with Id
-        /*router.get("/api/\(slug)/:id") { req, res, next in
-            Log.debug(req)
-        }*/
+        router.get("/api/"+slug+"/:id") { req, res, _ in
+            //Log.debug(req.body)
+        }
 
         // GET all items
-        router.get("/api/\(slug)") { req, res, next in
+        router.get("/api/"+slug) { req, res, _ in
             
             // pre hook handler
             if self.preHook?(.getAll) == false {
@@ -198,36 +198,28 @@ class Route: PermissionSafe {
             
             res.json(withJson: response)
             
-            next()
-
         }
         
         // FIXME: Check issue with other routes, fail to compile, need new version of swift3 ?
         
         // POST creates a new item
-/*        router.post("/api/\(slug)") {
-            req, res, next in
-            Log.debug(req)
-
-        }*/
-
+        router.post("/api/"+slug) { req, res, _ in
+            //Log.debug(req)
+        }
 
         // GET single item with Id
-  /*      router.get("/api/\(slug)/:id") {
-            req, res, next in
-            Log.debug(req)
+        router.get("/api/"+slug+"/:id") { req, res, _ in
+            //Log.debug(req)
         }
 
         // PUT updates an existing item
-        router.put("/api/\(slug)/:id") {
-            req, res, next in
-            Log.debug(req)
+        router.put("/api/"+slug+"/:id") { req, res, _ in
+            //Log.debug(req)
         }
 
         // DELETE removes an existing item
-        router.delete("/api/\(slug)/:id") {
-            req, res, next in
-            Log.debug(req)
-        }*/
+        router.delete("/api/"+slug+"/:id") { req, res, _ in
+            //Log.debug(req)
+        }
     }
 }
